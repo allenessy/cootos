@@ -8,3 +8,8 @@ echo "<br>";
 //声明常量，并打印常量值
 define ('ABSPATH', dirname(__FILE__));
 echo ABSPATH;
+
+//单引号照字面意义进行处理
+echo '$var';
+//双引号内的值将被打印
+echo "$var";
