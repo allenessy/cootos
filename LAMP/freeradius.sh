@@ -1,7 +1,9 @@
 #!/bin/sh
 #hostname="127.0.0.1"
 #post="3306"
+#设置MySQL用户名
 username="root"
+#设置MySQL密码
 password="password"
 dbname="radius"
 
@@ -48,7 +50,9 @@ sed -i '712s/#//' /etc/raddb/radiusd.conf
 sed -i '717s/#//' /etc/raddb/radiusd.conf
 
 \cp -f /etc/raddb/sql.conf /etc/raddb/sql.conf_bak
+#设置MySQL用户
 sed -i 's/login = "radius"/login = "root"/g' /etc/raddb/sql.conf
+#设置MySQL密码
 sed -i 's/password = "radpass"/password = "password"/g' /etc/raddb/sql.conf
 sed -i '100s/#//' /etc/raddb/sql.conf
 
