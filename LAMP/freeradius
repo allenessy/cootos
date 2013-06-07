@@ -130,7 +130,7 @@ sqlcounter monthlytrafficcounter {
 WHERE UserName='%{%k}' AND UNIX_TIMESTAMP(AcctStartTime) > '%b'"
 }
 添加NAS服务器:
-INSERT INTO nas (nasname,shortname,secret) VALUES ('testname.cootos.com','testname','testing123');
+INSERT INTO nas (nasname,shortname,secret) VALUES ('127.0.0.1','localhost','testing123');
 
 
 yum安装radiusclient
