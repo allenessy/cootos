@@ -159,7 +159,7 @@ INCLUDE /usr/share/radiusclient-ng/dictionary.ascend
 INCLUDE /usr/share/radiusclient-ng/dictionary.compat
 INCLUDE /usr/share/radiusclient-ng/dictionary.sip
 cd /usr/share/radiusclient-ng
-wget https://covpn.googlecode.com/files/dictionary.microsoft
+wget https://raw.github.com/allenessy/cootos/master/LAMP/dictionary.microsoft
 
 NAS上添加认证服务器
 vi /etc/radiusclient-ng/servers
