@@ -1,8 +1,8 @@
 #!/bin/sh
 #hostname="127.0.0.1"
 #post="3306"
-username="用户名"
-password="密码"
+username="root"
+password="password"
 dbname="radius"
 
 #mysql_conn="mysql -u${username} -p${password}"
@@ -48,8 +48,8 @@ sed -i '712s/#//' /etc/raddb/radiusd.conf
 sed -i '717s/#//' /etc/raddb/radiusd.conf
 
 \cp -f /etc/raddb/sql.conf /etc/raddb/sql.conf_bak
-sed -i 's/login = "radius"/login = "用户名"/g' /etc/raddb/sql.conf
-sed -i 's/password = "radpass"/password = "密码"/g' /etc/raddb/sql.conf
+sed -i 's/login = "radius"/login = "root"/g' /etc/raddb/sql.conf
+sed -i 's/password = "radpass"/password = "password"/g' /etc/raddb/sql.conf
 sed -i '100s/#//' /etc/raddb/sql.conf
 
 \cp -f /etc/raddb/sites-available/default /etc/raddb/sites-available/default_bak
