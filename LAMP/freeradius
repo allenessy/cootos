@@ -163,11 +163,11 @@ wget https://covpn.googlecode.com/files/dictionary.microsoft
 
 NAS上添加认证服务器
 vi /etc/radiusclient-ng/servers
-www.cootos.com testing123
+www.xxx.com testing123
 
 vi /etc/radiusclient-ng/radiusclient.conf
-authserver   www.cootos.com:1812      #第37行
-acctserver   www.cootos.com:1813      #第42行
+authserver   www.xxx.com:1812      #第37行
+acctserver   www.xxx.com:1813      #第42行
 
 vi /etc/raddb/sites-available/default
 在一下字段中加入sqlippool
