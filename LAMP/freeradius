@@ -1,0 +1,197 @@
+查看CentOS 系统版本：
+cat /etc/redhat-release
+
+添加EPEL源
+epel-release el6
+rpm -Uvh http://mirrors.yun-idc.com/epel/6/i386/epel-release-6-8.noarch.rpm
+epel-release el5
+rpm -Uvh http://mirrors.sohu.com/fedora-epel/5/i386/epel-release-5-4.noarch.rpm
+
+获取公网IP
+ip=`ifconfig | grep 'inet addr:' | grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}'`
+if [ ! -n "$ip" ]; then
+    ip=`ifconfig | grep 'inet' | grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $2}'`
+fi
+
+yum 安装相关软件依赖包
+yum -y install gcc gcc-c++ make cmake automake autoconf unzip gmp gmp-devel flex bison perl iptables ppp freeradius*
+
+#Create MySQL Database  创建MYSQL 数据库，
+
+mysql -uroot -p
+   CREATE DATABASE radius;
+   GRANT ALL ON radius.* TO radius@localhost IDENTIFIED BY "radpass";
+   exit
+
+mysql -uroot -p radius < /etc/raddb/sql/mysql/schema.sql
+mysql -uroot -p radius < /etc/raddb/sql/mysql/nas.sql
+mysql -uroot -p radius < /etc/raddb/sql/mysql/ippool.sql
+mysql -uroot -p radius < /etc/raddb/sql/mysql/wimax.sql
+mysql -uroot -p radius < /etc/raddb/sql/mysql/cui.sql
+
+mysql -uroot -p
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('user','Auth-Type',':=','Local');
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('user','Service-Type',':=','Framed-User');
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('user','Framed-IP-Address',':=','255.255.255.255');
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('user','Framed-IP-Netmask',':=','255.255.255.0');
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('user','Acct-Interim-Interval',':=','600');
+INSERT INTO radgroupreply (groupname,attribute,op,VALUE) VALUES ('user','Max-Monthly-Traffic',':=','536870912000');
+INSERT INTO radgroupcheck (groupname,attribute,op,VALUE) VALUES ('user','Simultaneous-Use',':=','1');
+
+#以上前四行是PPP用的参数，不用改动，acct-interim-interval是计算流量的间隔（600秒），意味着每隔10分钟记录当前流量。最后一行是每月最大流量，这里是5G（单位是字节）。
+
+##启用流量统计
+##在 字典文件 /etc/raddb/dictionary 末尾添加如下两行
+
+vi /etc/raddb/dictionary
+ATTRIBUTE Max-Monthly-Traffic 3003 integer
+ATTRIBUTE Monthly-Traffic-Limit 3004 integer
+
+#输入测试用户信息:
+mysql -uroot -p
+INSERT INTO radcheck (username,attribute,op,VALUE) VALUES ('test','Cleartext-Password',':=','test');
+INSERT INTO radusergroup (username,groupname) VALUES ('test','user');
+
+cp -a /etc/raddb/radiusd.conf  /etc/raddb/radiusd.conf.bak
+vi /etc/raddb/radiusd.conf
+$INCLUDE  sql.conf  去掉改行前面的#注释   在700行
+$INCLUDE sql/mysql/counter.conf   去掉改行前面的#注释  在712行
+$INCLUDE sqlippool.conf  去掉改行前面的#注释 在717行
+
+cp -a /etc/raddb/sql.conf /etc/raddb/sql.conf.bak
+vi /etc/raddb/sql.conf
+database = "mysql"
+server   = "localhost"
+login    = "用户名"
+password = "密码"
+readclients = yes   #第100行 ，取消前面的注释，打开NAS数据库功能。
+
+vi /etc/raddb/sites-available/default
+vi /etc/raddb/sites-enabled/inner-tunnel 
+sql     去掉所有sql前面的#注释
+#files   所有files前面加上#注释
+#radutmp 所有radutmp前面加上#注释
+#unix 所有unix前面加上#注释
+
+#Define a Client IP设置客户端IP  如果是用MYSQL数据库就不用设置了
+vi /etc/raddb/clients.conf
+client NAME {
+  ipaddr = IPADDRESS
+  secret = SECRET
+}
+#Start the server in debugging mode
+#在一个SSH窗口中输入：
+radiusd -X
+#至到显示Read to process requests.新打开一个SSH，输入：
+radtest test test localhost 0 testing123
+#显示rad_recv: Access-Accept packet from host  就是正常
+
+#关于提示：rad_recv: Access-Request packet from host的问题
+#故障原因：/etc/raddb/sql.conf, 把readclients = yes 前面的#取消掉。第100行。意思是没有读取数据库中nas表的相关信息，所以造成了服务器的拒绝服务
+
+昨天在一台centos 5.6的电脑上安装freeradius的时候，又出现了这个问题，今天找到了解决方案：
+关于freeradius链接不上数据库的问题，
+rpm -qa|grep freeradius
+查看是否已经安装freeradius-mysql
+yum -y install freeradius-mysql
+find / -name rlm_sql_mysql.so
+
+cp /usr/lib64/freeradius/rlm_sql_mysql.so /usr/lib
+cp /usr/lib64/freeradius/rlm_sql_mysql.so /usr/lib64
+还有一个问题需要注意:
+vi /etc/hosts
+::1 前面加上# 注释
+ipv6导致的服务器没有响应的问题。
+
+端口占用问题：
+lsof -i:1812  查看pid为1812的进程
+kill pid      杀掉pid进程
+
+###折腾了整整一天的问题总算是找到了
+vi /etc/raddb/sql/mysql/dialup.conf
+#去掉279-282前面的#注释，打开（控制同时在线用户数）
+simul_count_query = "SELECT COUNT(*) \
+                              FROM ${acct_table1} \
+                              WHERE username = '%{SQL-User-Name}' \
+                              AND acctstoptime IS NULL"
+sql_user_name = "%{%{Stripped-User-Name}:-%{%{User-Name}:-DEFAULT}}"  #添加第25行前面加上#注释
+sql_user_name = "%{User-Name}"  #取消第27行前面的#注释
+
+##在 /etc/raddb/sql/mysql/counter.conf 文件末尾添加如下字段
+vi /etc/raddb/sql/mysql/counter.conf
+sqlcounter monthlytrafficcounter {
+    counter-name = Monthly-Traffic
+    check-name = Max-Monthly-Traffic
+    reply-name = Monthly-Traffic-Limit
+    sqlmod-inst = sql
+    key = User-Name
+    reset = monthly
+    query = "SELECT SUM(acctinputoctets + acctoutputoctets) DIV 1024 FROM radacct \
+WHERE UserName='%{%k}' AND UNIX_TIMESTAMP(AcctStartTime) > '%b'"
+}
+添加NAS服务器:
+INSERT INTO nas (nasname,shortname,secret) VALUES ('testname.cootos.com','testname','testing123');
+
+
+yum安装radiusclient
+添加dag源：
+vi /etc/yum.repos.d/dag.repo
+[dag]
+name=Dag RPM Repository
+baseurl=http://apt.sw.be/redhat/el$releasever/en/$basearch/dag
+gpgcheck=1
+gpgkey=http://dag.wieers.com/rpm/packages/RPM-GPG-KEY.dag.txt
+enabled=1
+#保存好就可以使用dag源了。
+
+yum -y install radiusclient-ng*
+vi /etc/radiusclient-ng/radiusclient.conf
+修改 authserver 和acctserver
+authserver localhost:1812 #用户验证服务器(如果不是本机，请指定IP)（可以为多个，依次尝试）
+acctserver localhost:1813 #用户账户记录服务器(如果不是本机，请指定IP)
+#注释掉bindaddr * （75行），pppd提示unrecognized keyword: bindaddr
+
+###添加字典  在末尾加入以下字典
+vi /usr/share/radiusclient-ng/dictionary
+INCLUDE /usr/share/radiusclient-ng/dictionary.merit
+INCLUDE /usr/share/radiusclient-ng/dictionary.microsoft
+INCLUDE /usr/share/radiusclient-ng/dictionary.ascend
+INCLUDE /usr/share/radiusclient-ng/dictionary.compat
+INCLUDE /usr/share/radiusclient-ng/dictionary.sip
+cd /usr/share/radiusclient-ng
+wget https://covpn.googlecode.com/files/dictionary.microsoft
+
+NAS上添加认证服务器
+vi /etc/radiusclient-ng/servers
+www.cootos.com testing123
+
+vi /etc/radiusclient-ng/radiusclient.conf
+authserver   www.cootos.com:1812      #第37行
+acctserver   www.cootos.com:1813      #第42行
+
+vi /etc/raddb/sites-available/default
+在一下字段中加入sqlippool
+ accounting {
+        sqlippool
+ }
+ post-auth {
+        sqlippool
+ }
+在radippool数据表中添加ip池 
+INSERT INTO radippool (pool_name, framedipaddress) VALUES ('main_pool', '10.19.11.2');
+INSERT INTO radippool (pool_name, framedipaddress) VALUES ('main_pool', '10.19.11.3');
+INSERT INTO radippool (pool_name, framedipaddress) VALUES ('main_pool', '10.19.11.4');
+INSERT INTO radippool (pool_name, framedipaddress) VALUES ('main_pool', '10.19.11.5');
+INSERT INTO radippool (pool_name, framedipaddress) VALUES ('main_pool', '10.19.11.6');
+INSERT INTO radippool (pool_name, framedipaddress) VALUES ('main_pool', '10.19.11.7');
+INSERT INTO radippool (pool_name, framedipaddress) VALUES ('main_pool', '10.19.11.8');
+INSERT INTO radippool (pool_name, framedipaddress) VALUES ('main_pool', '10.19.11.9');
+添加到radgroupcheck这样user组的用户都可以分到main_pool里的ip。
+INSERT into radgroupcheck (groupname,attribute,op,value) values('user', 'Pool-Name', ':=', 'main_pool');
+
+ps -C radiusd             查看freeradius进程PID
+service radiusd status    查看freeradius当前状态
+service radiusd start     启动freeradius
+service radiusd stop      关闭freeradius
+service radiusd restart   重启freeradius
+chkconfig radiusd on      开机启动freeradius
