@@ -54,8 +54,8 @@ EOF
 yum install -y make autoconf automake curl-devel gcc gcc-c++ gtk+-devel zlib-devel pcre-devel gd gettext gettext-devel kernel keyutils patch perl kernel-headers compat* mpfr cpp glibc libgomp libstdc++-devel ppl cloog-ppl keyutils-libs-devel libcom_err-devel libsepol-devel libselinux-devel krb5-devel libXpm* freetype freetype-devel freetype* fontconfig fontconfig-devel libjpeg* libpng* php-common php-gd ncurses* libtool* libxml2 libxml2-devel patch policycoreutils bison gnutls-utils
 ##############################
 wget http://www.cmake.org/files/v2.8/cmake-2.8.11.1.tar.gz
-tar -zxvf cmake-2.8.11.tar.gz
-cd cmake-2.8.11
+tar -zxvf cmake-2.8.11.1.tar.gz
+cd cmake-2.8.11.1
 ./bootstrap
 make
 make install
