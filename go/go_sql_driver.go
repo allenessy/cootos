@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	db,err := sql.Open("mysql","ciswp:xt246402@tcp(localhost:3306)/wp?charset=utf8")
+	db,err := sql.Open("mysql","用户名:密码@tcp(localhost:3306)/数据库名?charset=utf8")
 	if err != nil {
 		panic(err.Error())
 	}
