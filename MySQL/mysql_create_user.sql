@@ -36,3 +36,12 @@ FLUSH PRIVILEGES;
 DROP USER 'root'@'localhost';
 DROP USER 'root'@'::1';
 DROP USER 'root'@'127.0.0.1';
+
+//添加远程登录用户
+SELECT password('密码');
+GRANT ALL ON *.* TO '用户名'@'%' IDENTIFIED BY PASSWORD '哈希值密码';
+
+//打开远程登录端口(默认3306)
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT
+/etc/init.d/iptables save
+/etc/init.d/iptables restart
