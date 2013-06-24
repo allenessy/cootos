@@ -9,3 +9,12 @@ mysqld --install<br>
 安装完成。<br>
 mysql -uroot<br>
 进入mysql看看<br>
+<br/>
+
+MySQL修改默认用户密码
+<pre>
+SELECT host,user,password FROM mysql.user;
+DROP USER ''@'localhost';
+UPDATE mysql.user set Password=password("123456") WHERE User="root";
+FLUSH PRIVILEGES;
+</pre>
