@@ -5,10 +5,14 @@ MySQL下载地址：
 解压到D:\mysql目录下<br>
 D:\mysql\bin 加入PATH系统变量。<br>
 用管理员模式打开cmd,进入D:\mysql目录执行：<br>
+<pre>
 mysqld --install<br>
-安装完成。<br>
-mysql -uroot<br>
-进入mysql看看<br>
+</pre>
+安装完成。<br/>
+<pre>
+mysql -uroot<br/>
+</pre>
+进入mysql看看<br/>
 <br/>
 
 MySQL修改默认用户密码
