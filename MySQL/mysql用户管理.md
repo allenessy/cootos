@@ -1,12 +1,11 @@
 创建无密码的MySQL用户
-
-  `CREATE USER '用户名'@'localhost'`
-
-
+<pre>
+CREATE USER '用户名'@'localhost';
+</pre>
 创建明文密码的MySQL用户
-
-  `CREATE USER '用户名'@'localhost' IDENTIFIED BY '密码';`
-
+<pre>
+CREATE USER '用户名'@'localhost' IDENTIFIED BY '密码';
+</pre>
 创建哈希值密码的MySQL用户
 <pre>
 SELECT password('密码');
