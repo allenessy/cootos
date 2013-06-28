@@ -93,8 +93,9 @@ Go语言版”Hello world!”
 执行：`go run hello.go`   
 输出：`Hello,World!`   
 
-Go基础知识:
+Go基础知识:   
 2. demo.go
+
 	//当前程序的包名
 	package main 
 	
