@@ -71,15 +71,17 @@ Markdown 支持有序列表和无序列表。
       title="Google">Google</a> than from
       <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a>
       or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
+
 ###代码区块
    
 和程序相关的写作或是标签语言原始码通常会有已经排版好的代码区块，通常这些区块我们并不希望它以一般段落文件的方式去排版，而是照原来的样子显示，Markdown 会用 <pre> 和 <code> 标签来把代码区块包起来。   
    
 要在 Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以，例如，下面的输入：
+<pre>
+这是一个普通段落：
 
-      这是一个普通段落：
-	
-    这是一个代码区块。
+	这是一个代码区块。
+</pre>
 Markdown 会转换成：
 
 	<p>这是一个普通段落：</p>
