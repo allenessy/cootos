@@ -148,3 +148,27 @@ Go程序是通过 package 来组织的（与python类似）
 通过在函数体外部使用 var 关键字来进行全局变量的声明与赋值    
 通过 type 关键字来进行结构(struct)或接口(interface)的声明    
 通过 func 关键字来进行函数的声明    
+
+Go导入 package 的格式
+<pre>
+import "fmt"
+import "os"
+import "io"
+import "time"
+import "strings"
+</pre>
+更方便的写法为：
+<pre>
+import (
+	"fmt"
+	"io"
+	"os"
+	"strings"
+	"time"
+)
+</pre>
+
+导入包之后，就可以使用格式`<PackageName>`.`<FuncName>`   
+来对包中的函数进行调用    
+如果导入包之后 未调用 其中的函数或者类型将会报出编译错误：     
+	imported and not used: "io"
