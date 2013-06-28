@@ -80,44 +80,44 @@ Go编程基础
 Go语言版”Hello world!”
 hello.go
 
-		package main
-		
-		import (
-		  "fmt"
-		)
-		
-		func main() {
-			fmt.Printf("Hello,World!")
-		}
-</pre>
+	package main
+	
+	import (
+	  "fmt"
+	)
+	
+	func main() {
+		fmt.Printf("Hello,World!")
+	}
+
 执行：`go run hello.go`   
 输出：`Hello,World!`   
 
 Go基础知识:
 
-		//当前程序的包名
-		package main 
-		
-		//导入其它的包
-		import "fmt"
-		
-		//常量的定义
-		const PI = 3.14
-		
-		//全局变量的声明与赋值
-		var name = "gopher"
-		
-		//一般类型声明
-		type newType int 
-		
-		//结构的声明
-		type gopher struct{}
-		
-		//接口的声明
-		type golang interface{}
-		
-		//由 main 函数作为程序入口点启动
-		func main() {
-			fmt.Println("Hello,World!你好，世界！")
-		}
+//当前程序的包名
+package main 
+
+//导入其它的包
+import "fmt"
+
+//常量的定义
+const PI = 3.14
+
+//全局变量的声明与赋值
+var name = "gopher"
+
+//一般类型声明
+type newType int 
+
+//结构的声明
+type gopher struct{}
+
+//接口的声明
+type golang interface{}
+
+//由 main 函数作为程序入口点启动
+func main() {
+	fmt.Println("Hello,World!你好，世界！")
+}
 
