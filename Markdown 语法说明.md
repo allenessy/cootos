@@ -58,17 +58,17 @@ I get 10 times more traffic from [Google] [1] than from
 </code></pre>
 如果改成用链接名称的方式写：
 <pre><code>
-I get 10 times more traffic from [Google][] than from
-[Yahoo][] or [MSN][].
-
-  [google]: http://google.com/        "Google"
-  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
-  [msn]:    http://search.msn.com/    "MSN Search"
-</code></pre>
+I get 10 times more traffic from [Google][] than from             
+[Yahoo][] or [MSN][].              
+                  
+  [google]: http://google.com/        "Google"                
+  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"                 
+  [msn]:    http://search.msn.com/    "MSN Search"               
+</pre>
 上面两种写法都会产生下面的 HTML。
-<pre><code>
-<p>I get 10 times more traffic from <a href="http://google.com/"
-title="Google">Google</a> than from
-<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a>
-or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
-</code></pre>
+<pre>
+<p>I get 10 times more traffic from <a href="http://google.com/"                
+title="Google">Google</a> than from                
+<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a>                
+or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>              
+</pre>
