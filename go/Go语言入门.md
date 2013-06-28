@@ -171,4 +171,4 @@ import (
 导入包之后，就可以使用格式`<PackageName>`.`<FuncName>`   
 来对包中的函数进行调用    
 如果导入包之后 未调用 其中的函数或者类型将会报出编译错误：     
-	imported and not used: "io"
+<pre>imported and not used: "io"</pre>
