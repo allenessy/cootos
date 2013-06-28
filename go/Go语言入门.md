@@ -338,7 +338,7 @@ i,m,n,o := 13,14,15,16
 Go中不存在隐式转换，所有类型转换必须显式声明       
 转换只能发生在两种相互兼容的类型之间           
 类型转换的格式：         
-<pre><ValueA> [:]= <TypeOfValueA>(<ValueB>)</pre>
+<pre><code><ValueA> [:]= <TypeOfValueA>(<ValueB>)</code></pre>
            
 <pre>
 //在相互兼容的两种类型之间进行转换
