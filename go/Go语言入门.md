@@ -137,7 +137,7 @@ Go注释方法
 /* */：多行注释    
 
 
-Go程序的一般结构：basic_structure.go    
+Go程序的一般结构：demo.go    
     
 Go程序是通过 package 来组织的（与python类似）    
 只有 package 名称为 main 的包可以包含 main 函数    
