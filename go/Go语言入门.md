@@ -257,15 +257,15 @@ type (
 ###Go基本类型
 <p>
 &nbsp;&nbsp;&nbsp;&nbsp;布尔型：bool<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长度：1字节<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长度：1字节<br/>
 取值范围：true, false<br/>
 注意事项：不可以用数字代表true或false<br/>
 <br/>
 整型：int/uint<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据运行平台可能为32或64位<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据运行平台可能为32或64位<br/>
 <br/>
 &nbsp;&nbsp;8位整型：int8/uint8<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;长度：1字节<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长度：1字节<br/>
 取值范围：-128~127/0~255<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;字节型：byte（uint8别名）<br/>
 <br/>
