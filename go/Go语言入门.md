@@ -131,7 +131,7 @@ const&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fallthrou
 continue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var<br>
 </p>
 
-Go注释方法    
+###Go注释方法    
     
 // ：单行注释    
 /* */：多行注释    
@@ -149,7 +149,7 @@ Go程序是通过 package 来组织的（与python类似）
 通过 type 关键字来进行结构(struct)或接口(interface)的声明    
 通过 func 关键字来进行函数的声明    
 
-Go导入 package 的格式
+###Go导入 package 的格式
 <pre>
 import "fmt"
 import "os"
@@ -172,7 +172,7 @@ import (
 来对包中的函数进行调用    
 如果导入包之后 未调用 其中的函数或者类型将会报出编译错误：     
 <pre>imported and not used: "io"</pre>
-package 别名    
+###package 别名    
      
 当使用第三方包时，包名可能会非常接近或者相同，此时就可以使用    
 别名来进行区别和调用
@@ -198,4 +198,23 @@ func main() {
 	//使用省略调用
 	Println("Hello world!")
 }
+</pre>
+
+###可见性规则
+     
+Go语言中，使用 大小写 来决定该 常量、变量、类型、接口、结构    
+或函数 是否可以被外部包所调用：     
+	根据约定，函数名首字母 小写 即为private     
+<pre>
+func getField(){
+	...
+}
+</pre>
+
+函数名首字母 大写 即为public
+
+<pre>
+func Getfile(){
+	...
+	}
 </pre>
