@@ -95,6 +95,7 @@ func main() {
 
 *Go基础知识:
 <pre>
+<code>
 //当前程序的包名
 package main 
 
@@ -120,4 +121,4 @@ type golang interface{}
 func main() {
 	fmt.Println("Hello,World!你好，世界！")
 }
-</pre>
+</code></pre>
