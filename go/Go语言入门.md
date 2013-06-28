@@ -256,26 +256,26 @@ type (
 
 ###Go基本类型
 <p>
-布尔型：bool<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长度：1字节<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;取值范围：true, false<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意事项：不可以用数字代表true或false<br/>
+&nbsp;&nbsp;布尔型：bool<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;长度：1字节<br/>
+取值范围：true, false<br/>
+注意事项：不可以用数字代表true或false<br/>
 <br/>
 整型：int/uint<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;根据运行平台可能为32或64位<br/>
 <br/>
 8位整型：int8/uint8<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长度：1字节<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;取值范围：-128~127/0~255<br/>
+&nbsp;&nbsp;&nbsp;长度：1字节<br/>
+取值范围：-128~127/0~255<br/>
 &nbsp;字节型：byte（uint8别名）<br/>
 <br/>
 16位整型：int16/uint16<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;长度：2字节<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长度：2字节<br/>
 取值范围：-32768~32767/0~65535<br/>
 <br/>
 32位整型：int32（rune）/uint32<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;长度：4字节<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;取值范围：-2^32/2~2^32/2-1/0~2^32-1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长度：4字节<br/>
+&nbsp;&nbsp;取值范围：-2^32/2~2^32/2-1/0~2^32-1<br/>
 <br/>
 64位整型：int64/uint64<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;长度：8字节<br/>
@@ -290,9 +290,9 @@ type (
 足够保存指针的 32 位或 64 位整数型：uintptr<br/>
 <br/>
 其它值类型：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array、struct、string<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array、struct、string<br/>
 引用类型：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slice、map、chan<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slice、map、chan<br/>
 <br/>
 接口类型：inteface<br/>
 函数类型：func<br/>
