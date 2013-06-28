@@ -172,3 +172,30 @@ import (
 来对包中的函数进行调用    
 如果导入包之后 未调用 其中的函数或者类型将会报出编译错误：     
 <pre>imported and not used: "io"</pre>
+package 别名    
+     
+当使用第三方包时，包名可能会非常接近或者相同，此时就可以使用    
+别名来进行区别和调用
+<pre>
+import (
+	io "fmt"
+)
+</pre>
+<pre>
+//使用别名调用包
+io.Println("Hello world!")
+</pre>
+省略调用   
+    
+不建议使用，易混淆    
+不可以和别名同时使用
+<pre>
+import (
+	. "fmt"
+)
+
+func main() {
+	//使用省略调用
+	Println("Hello world!")
+}
+</pre>
