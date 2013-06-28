@@ -18,3 +18,31 @@ This is an H2
 
 ###### 这是 H6
 </pre>
+列表   
+   
+Markdown 支持有序列表和无序列表。   
+   
+无序列表使用星号、加号或是减号作为列表标记：   
+<pre>
+*   Red
+*   Green
+*   Blue
+</pre>
+等同于：
+<pre>
++   Red
++   Green
++   Blue
+</pre>
+也等同于：
+<pre>
+-   Red
+-   Green
+-   Blue
+</pre>
+有序列表则使用数字接着一个英文句点：
+<pre>
+1.  Bird
+2.  McHale
+3.  Parish
+</pre>
