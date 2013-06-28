@@ -8,7 +8,7 @@
 
 * Go的主要特点有哪些？
 
-类型安全 和 内存安全
+  类型安全 和 内存安全
 以非常直观和极低代价的方案实现 高并发
 高效的垃圾回收机制
 快速编译（同时解决C语言中头文件太多的问题）
@@ -25,7 +25,7 @@ UTF-8编码支持
 
 * Go目前有多少实际应用和资源？
 
-全球最大视频网站 Youtube（谷歌）
+  全球最大视频网站 Youtube（谷歌）
 七牛云储存以及旗下网盘服务（Q盘）
 爱好者开发的Go论坛及博客
 已用Go开发服务端的著名企业：谷歌、盛大、七牛、360
@@ -77,7 +77,7 @@ go test：运行测试文件
 go doc：查看文档（CHM手册）
 
 
-* Go语言版”Hello world!”
+Go语言版”Hello world!”
 hello.go
 <pre>
 package main
@@ -93,7 +93,7 @@ func main() {
 执行：`go run hello.go`
 输出：`Hello,World!`
 
-* Go基础知识:
+Go基础知识:
 <pre>
 //当前程序的包名
 package main 
