@@ -90,8 +90,8 @@ func main() {
 	fmt.Printf("Hello,World!")
 }
 </pre>
-执行：`go run hello.go`
-输出：`Hello,World!`
+执行：`go run hello.go`   
+输出：`Hello,World!`   
 
 Go基础知识:
 <pre>
