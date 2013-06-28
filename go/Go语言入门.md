@@ -348,3 +348,79 @@ b := int(a)
 //以下表达式无法通过编译
 d := int(c)
 </pre>
+###单元测试
+         
+请尝试运行以下代码，看会发生什么，并思考为什么。           
+
+<pre>
+func main() {
+	var a int = 65
+	b := string(a)
+	fmt.Println(b)
+}
+</pre>
+
+string() 表示将数据转换成文本格式，因为计算机中存储的任何东西              
+本质上都是数字，因此此函数自然地认为我们需要的是用数字65表示         
+的文本 A。          
+             
+###常量的定义             
+
+常量的值在编译时就已经确定              
+常量的定义格式与变量基本相同             
+等号右侧必须是常量或者常量表达式            
+常量表达式中的函数必须是内置函数          
+
+<pre>
+//定义单个变量
+const a int = 1
+const b = 'A'
+const (
+	text   = "123"
+	length = len(text)
+	num    = b * 20
+)
+
+//同时定义多个变量
+const i,j,k = 1,"2",'3'
+const (
+	text2,length2,num2 = "456",len(text2),k*10
+）
+</pre>
+
+常量的初始化规则与枚举             
+             
+在定义常量组时，如果不提供初始值，则表示将使用上行的表达式             
+使用相同的表达式不代表具有相同的值                
+iota是常量的计数器，从0开始，组中每定义1个常量自动递增1             
+通过初始化规则与iota可以达到枚举的效果               
+每遇到一个const关键字，iota就会重置为0           
+
+<pre>
+const (
+	//a与b都为"A"
+	a = "A"
+	b
+	c = iota
+	d //d 的值为3
+)
+
+const (
+	e = iota
+	f //f 的值为1
+）
+</pre>
+
+<pre>
+//星期枚举
+const (
+	//第一个常量不可省略表达式
+	Monday = iota
+	Tuesday
+	Wednesday
+	Thursday
+	Friday
+	Saturday
+	Sunday
+)
+</pre>
