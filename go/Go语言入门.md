@@ -79,8 +79,8 @@ Go编程基础
 
 Go语言版”Hello world!”
 hello.go
-<pre>
-package main
+
+		package main
 
 import (
   "fmt"
@@ -94,8 +94,8 @@ func main() {
 输出：`Hello,World!`   
 
 Go基础知识:
-<pre>
-//当前程序的包名
+
+		//当前程序的包名
 package main 
 
 //导入其它的包
@@ -120,4 +120,4 @@ type golang interface{}
 func main() {
 	fmt.Println("Hello,World!你好，世界！")
 }
-</pre>
+
