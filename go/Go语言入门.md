@@ -121,7 +121,7 @@ Go基础知识:
 		fmt.Println("Hello,World!你好，世界！")
 	}
 
-Go内置关键字（25个均为小写）
+###Go内置关键字（25个均为小写）
 <p>
 break&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interface&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select<br/>
 case&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;go&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct<br/>
@@ -130,20 +130,20 @@ const&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fallthrou
 continue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;import&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var<br>
 </p>
 
-Go注释方法
-<
-// ：单行注释
-/* */：多行注释
+Go注释方法    
+    
+// ：单行注释    
+/* */：多行注释    
 
 
-Go程序的一般结构：basic_structure.go
-
-Go程序是通过 package 来组织的（与python类似）
-只有 package 名称为 main 的包可以包含 main 函数
-一个可执行程序 有且仅有 一个 main 包
-
-通过 import 关键字来导入其它非 main 包
-通过 const 关键字来进行常量的定义
-通过在函数体外部使用 var 关键字来进行全局变量的声明与赋值
-通过 type 关键字来进行结构(struct)或接口(interface)的声明
-通过 func 关键字来进行函数的声明
+Go程序的一般结构：basic_structure.go    
+    
+Go程序是通过 package 来组织的（与python类似）    
+只有 package 名称为 main 的包可以包含 main 函数    
+一个可执行程序 有且仅有 一个 main 包    
+    
+通过 import 关键字来导入其它非 main 包    
+通过 const 关键字来进行常量的定义    
+通过在函数体外部使用 var 关键字来进行全局变量的声明与赋值    
+通过 type 关键字来进行结构(struct)或接口(interface)的声明    
+通过 func 关键字来进行函数的声明    
