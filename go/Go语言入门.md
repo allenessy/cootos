@@ -78,7 +78,7 @@ Go编程基础
 
 
 Go语言版”Hello world!”    
-1. hello.go
+hello.go
 
 	package main
 	
@@ -94,7 +94,7 @@ Go语言版”Hello world!”
 输出：`Hello,World!`   
 
 Go基础知识:   
-2. demo.go
+demo.go
 
 	//当前程序的包名
 	package main 
