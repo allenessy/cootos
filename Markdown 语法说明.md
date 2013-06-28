@@ -1,7 +1,6 @@
 
-
-*标题*
-Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。   
+*标题*   
+Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。      
    
 类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如：   
   This is an H1
