@@ -16,3 +16,5 @@ Go编程语言:<a href="https://zh-golang.appspot.com/">https://zh-golang.appspo
 Go指南:<a href="http://tour.golanger.com/#1">http://tour.golanger.com/#1</a><br/>
 Go 语言中文翻译项目:<a href="https://code.google.com/p/golang-china/">https://code.google.com/p/golang-china/</a><br/>
 go 中文论坛:<a href="https://groups.google.com/forum/#!forum/golang-china">https://groups.google.com/forum/#!forum/golang-china</a><br/>
+
+Go web测试:<a href="http://play.golang.org/">http://play.golang.org/</a><br/>
