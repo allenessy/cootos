@@ -14,3 +14,4 @@ golang中文社区:<a href="http://bbs.mygolang.com/forum.php">http://bbs.mygola
 Go语言代码分享:<a href="http://www.sharejs.com/codes/go/">http://www.sharejs.com/codes/go/</a><br/>
 Go编程语言:<a href="https://zh-golang.appspot.com/">https://zh-golang.appspot.com/</a><br/>
 Go指南:<a href="http://tour.golanger.com/#1">http://tour.golanger.com/#1</a><br/>
+Go 语言中文翻译项目:<a href="https://code.google.com/p/golang-china/">https://code.google.com/p/golang-china/</a><br/>
