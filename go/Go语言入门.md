@@ -424,3 +424,244 @@ const (
 	Sunday
 )
 </pre>
+###运算符
+            
+Go中的运算符均是从左至右结合               
+              
+优先级（从高到低）                        
+               
+^      !                                               （一元运算符）                   
+*       /    %    <<    >>    &      &^
++      -     |      ^                                （二元运算符）                   
+==   !=   <    <=    >=    >
+<-                                              （专门用于channel）                           
+&&
+||              
+                  
+###单元测试
+          
+请尝试结合常量的iota与<<运算符实现计算机储存单位的枚举               
+<pre>
+const (
+	_		   = iota
+	KB float64 = 1 << (iota * 10)
+	MB
+	GB
+	TB
+	PB
+	EB
+	ZB
+	YB
+)
+</pre>
+
+<pre>
+1024
+1.048576e+06
+1.073741824e+09
+1.099511627776e+12
+1.125899906842624e+15
+1.152921504606847e+18
+1.1805916207174113e+21
+1.2089258196146292e+24
+</pre>
+
+###指针
+                
+Go虽然保留了指针，但与其它编程语言不同的是，在Go当中不              
+支持指针运算以及”->”运算符，而直接采用”.”选择符来操作指针                            
+目标对象的成员               
+              
+操作符”&”取变量地址，使用”*”通过指针间接访问目标对象               
+默认值为 nil 而非 NULL               
+               
+           
+递增递减语句                 
+                        
+在Go当中，++ 与 -- 是作为语句而并不是作为表达式              
+            
+###判断语句if
+                  
+条件表达式没有括号                    
+支持一个初始化表达式（可以是并行方式）              
+左大括号必须和条件语句或else在同一行              
+支持单行模式                 
+初始化语句中的变量为block级别，同时隐藏外部同名变量                
+1.0.3版本中的编译器BUG                
+            
+<pre>
+func main() {
+	a := true
+	if a, b, c := 1, 2, 3; a+b+c > 6 {
+		fmt.Println("大于6")	
+	} else {
+		fmt.Println("小于等于6")
+		fmt.Println(a)
+	}
+	fmt.Println(a)
+}
+</pre>
+
+###循环语句for           
+                 
+Go只有for一个循环语句关键字，但支持3种形式               
+初始化和步进表达式可以是多个值             
+条件语句每次循环都会被重新检查，因此不建议在条件语句中               
+使用函数，尽量提前计算好条件并以变量或常量代替           
+左大括号必须和条件语句在同一行             
+            
+<pre>
+func main() {
+	a := 1
+	for {
+		a++
+		if a > 3 {
+			break
+		}
+	}
+	fmt.Println(a)
+}
+</pre>
+
+<pre>
+func main() {
+	a := 1
+	for a <= 3 {
+		a++
+	}
+	fmt.Println(a)
+}
+</pre>
+
+<pre>
+func main() {
+	a := 1
+	for i := 0; i < 3; i++ {
+		a++
+	}
+	fmt.Println(a）
+}
+</pre>
+###选择语句switch
+           
+可以使用任何类型或表达式作为条件语句           
+不需要写break，一旦条件符合自动终止          
+如希望继续执行下一个case，需使用fallthrough语句            
+支持一个初始化表达式（可以是并行方式），右侧需跟分号           
+左大括号必须和条件语句在同一行            
+              
+<pre>
+func main() {
+	a := 1
+	switch a {
+	case 0:
+		fmt.Println("a=0")
+	case 1:
+		fmt.Println("a=1")
+	}
+	fmt.Println(a)
+}
+</pre>
+<pre>
+func main() {
+	a := 1
+	switch {
+	case a >= 0:
+		fmt.Println("a=0")
+		fallthrough
+	case a >= 1:
+		fmt.Println("a=1")
+	}
+	fmt.Println(a)
+}
+</pre>
+<pre>
+func main() {
+	switch a := 1; {
+	case a >= 0:
+		fmt.Println("a=0")
+		fallthrough
+	case a >= 1:
+		fmt.Println("a=1")
+	}
+}
+</pre>
+
+###跳转语句goto, break, continue        
+               
+三个语法都可以配合标签使用            
+标签名区分大小写，若不使用会造成编译错误           
+Break与continue配合标签可用于多层循环的跳出             
+Goto是调整执行位置，与其它2个语句配合标签的结果并不相同            
+          
+<pre>
+func main() {
+LABEL:
+	for {
+		for i := 0; i < 100; i++ {
+			if i > 2 {
+				break LABEL
+			} else {
+				fmt.Println(i)
+			}
+		}
+	}
+}
+</pre>
+
+<pre>
+func main() {
+LABEL:
+	for i := 0; i < 10; i++ {
+		for {
+			fmt.Println(i)
+			continue LABEL
+		}
+	}
+}
+</pre>
+###单元测试       
+              
+将下图中的continue替换成goto，程序运行的结果还一样吗？                 
+请尝试并思考为什么。            
+<pre>
+func main() {
+LABEL:
+	for i := 0; i < 10; i++ {
+		for {
+			fmt.Println(i)
+			continue LABEL
+		}
+	}
+}
+</pre>
+Goto是调整执行位置           
+             
+###数组Array
+           
+定义数组的格式：var `<varName>` [n]`<type>`，n>=0                  
+数组长度也是类型的一部分，因此具有不同长度的数组为不同类型           
+注意区分指向数组的指针和指针数组              
+数组在Go中为值类型                
+数组之间可以使用==或!=进行比较，但不可以使用`<或>`                 
+可以使用new来创建数组，此方法返回一个指向数组的指针            
+Go支持多维数组             
+          
+            
+Go语言版冒泡排序          
+         
+###切片Slice
+         
+其本身并不是数组，它指向底层的数组               
+作为变长数组的替代方案，可以关联底层数组的局部或全部            
+为引用类型             
+可以直接创建或从底层数组获取生成            
+使用len()获取元素个数，cap()获取容量          
+一般使用make()创建              
+如果多个slice指向相同底层数组，其中一个的值改变会影响全部            
+              
+make([]T, len, cap)            
+其中cap可以省略，则和len的值相同            
+len表示存数的元素个数，cap表示容量              
+
+
