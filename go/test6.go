@@ -25,4 +25,8 @@ func main() {
 	var data string = "abc"
 	fmt.Printf("MD5:%s\n", a(data))
 	fmt.Printf("SHA1:%s\n", b(data))
+//MD5加密	
+	h := md5.New()
+	io.WriteString(h, "allen.w")
+	fmt.Printf("%x", h.Sum(nil))
 }
