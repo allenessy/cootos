@@ -1,7 +1,7 @@
 package main
 
 import (
-   "fmt"
+	"fmt"
 )
 
 /*
@@ -16,7 +16,7 @@ import (
 
 func main() {
 	fmt.Println(^2)
- 	fmt.Println(1 ^ 2)
+	fmt.Println(1 ^ 2)
 	fmt.Println(!true)
 	fmt.Println(1 << 10)
 	fmt.Println(1 << 10 << 10)
@@ -27,6 +27,6 @@ func main() {
 	fmt.Println(6 &^ 11)
 	a := 1
 	if a > 0 && (10/a) > 1 {
-	fmt.Println("OK")
-  	}
+		fmt.Println("OK")
+	}
 }
