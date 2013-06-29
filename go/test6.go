@@ -1,7 +1,7 @@
 package main
 
 import (
-  "crypto/md5"
+	"crypto/md5"
 	"crypto/sha1"
 	"fmt"
 	"io"
