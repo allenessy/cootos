@@ -378,7 +378,8 @@ const (
 	length = len(text)
 	num    = b * 20
 )
-
+</pre>
+<pre>
 //同时定义多个变量
 const i,j,k = 1,"2",'3'
 const (
@@ -402,13 +403,13 @@ const (
 		c = iota
 		d //d 的值为3
 	)
-	
+<br/>
+
 	const (
 		e = iota
 		f //f 的值为1
 	）
 <br/>
-
 
 	//星期枚举
 	const (
