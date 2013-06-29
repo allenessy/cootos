@@ -453,7 +453,7 @@ Go中的运算符均是从左至右结合
 		ZB
 		YB
 	)
-<br/>
+输出:<br/>
 
 	1024
 	1.048576e+06
@@ -488,18 +488,18 @@ Go虽然保留了指针，但与其它编程语言不同的是，在Go当中不
 初始化语句中的变量为block级别，同时隐藏外部同名变量                
 1.0.3版本中的编译器BUG                
             
-<pre>
-func main() {
-	a := true
-	if a, b, c := 1, 2, 3; a+b+c > 6 {
-		fmt.Println("大于6")	
-	} else {
-		fmt.Println("小于等于6")
+
+	func main() {
+		a := true
+		if a, b, c := 1, 2, 3; a+b+c > 6 {
+			fmt.Println("大于6")	
+		} else {
+			fmt.Println("小于等于6")
+			fmt.Println(a)
+		}
 		fmt.Println(a)
 	}
-	fmt.Println(a)
-}
-</pre>
+
 
 ###循环语句for           
                  
@@ -509,38 +509,38 @@ Go只有for一个循环语句关键字，但支持3种形式
 使用函数，尽量提前计算好条件并以变量或常量代替           
 左大括号必须和条件语句在同一行             
             
-<pre>
-func main() {
-	a := 1
-	for {
-		a++
-		if a > 3 {
-			break
+
+	func main() {
+		a := 1
+		for {
+			a++
+			if a > 3 {
+				break
+			}
 		}
+		fmt.Println(a)
 	}
-	fmt.Println(a)
-}
-</pre>
 
-<pre>
-func main() {
-	a := 1
-	for a <= 3 {
-		a++
-	}
-	fmt.Println(a)
-}
-</pre>
 
-<pre>
-func main() {
-	a := 1
-	for i := 0; i < 3; i++ {
-		a++
+
+	func main() {
+		a := 1
+		for a <= 3 {
+			a++
+		}
+		fmt.Println(a)
 	}
-	fmt.Println(a）
-}
-</pre>
+
+
+
+	func main() {
+		a := 1
+		for i := 0; i < 3; i++ {
+			a++
+		}
+		fmt.Println(a）
+	}
+
 ###选择语句switch
            
 可以使用任何类型或表达式作为条件语句           
@@ -549,42 +549,42 @@ func main() {
 支持一个初始化表达式（可以是并行方式），右侧需跟分号           
 左大括号必须和条件语句在同一行            
               
-<pre>
-func main() {
-	a := 1
-	switch a {
-	case 0:
-		fmt.Println("a=0")
-	case 1:
-		fmt.Println("a=1")
+
+	func main() {
+		a := 1
+		switch a {
+		case 0:
+			fmt.Println("a=0")
+		case 1:
+			fmt.Println("a=1")
+		}
+		fmt.Println(a)
 	}
-	fmt.Println(a)
-}
-</pre>
-<pre>
-func main() {
-	a := 1
-	switch {
-	case a >= 0:
-		fmt.Println("a=0")
-		fallthrough
-	case a >= 1:
-		fmt.Println("a=1")
+
+
+	func main() {
+		a := 1
+		switch {
+		case a >= 0:
+			fmt.Println("a=0")
+			fallthrough
+		case a >= 1:
+			fmt.Println("a=1")
+		}
+		fmt.Println(a)
 	}
-	fmt.Println(a)
-}
-</pre>
-<pre>
-func main() {
-	switch a := 1; {
-	case a >= 0:
-		fmt.Println("a=0")
-		fallthrough
-	case a >= 1:
-		fmt.Println("a=1")
+
+
+	func main() {
+		switch a := 1; {
+		case a >= 0:
+			fmt.Println("a=0")
+			fallthrough
+		case a >= 1:
+			fmt.Println("a=1")
+		}
 	}
-}
-</pre>
+
 
 ###跳转语句goto, break, continue        
                
@@ -593,47 +593,47 @@ func main() {
 Break与continue配合标签可用于多层循环的跳出             
 Goto是调整执行位置，与其它2个语句配合标签的结果并不相同            
           
-<pre>
-func main() {
-LABEL:
-	for {
-		for i := 0; i < 100; i++ {
-			if i > 2 {
-				break LABEL
-			} else {
-				fmt.Println(i)
+
+	func main() {
+	LABEL:
+		for {
+			for i := 0; i < 100; i++ {
+				if i > 2 {
+					break LABEL
+				} else {
+					fmt.Println(i)
+				}
 			}
 		}
 	}
-}
-</pre>
 
-<pre>
-func main() {
-LABEL:
+
+
+	func main() {
+	LABEL:
 	for i := 0; i < 10; i++ {
-		for {
-			fmt.Println(i)
-			continue LABEL
+			for {
+				fmt.Println(i)
+				continue LABEL
+			}
 		}
 	}
-}
-</pre>
+
 ###单元测试       
               
 将下图中的continue替换成goto，程序运行的结果还一样吗？                 
 请尝试并思考为什么。            
-<pre>
-func main() {
-LABEL:
-	for i := 0; i < 10; i++ {
-		for {
-			fmt.Println(i)
-			continue LABEL
+
+	func main() {
+	LABEL:
+		for i := 0; i < 10; i++ {
+			for {
+				fmt.Println(i)
+				continue LABEL
+			}
 		}
 	}
-}
-</pre>
+
 Goto是调整执行位置           
              
 ###数组Array
