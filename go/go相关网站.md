@@ -22,5 +22,5 @@ Go web测试:<a href="http://play.golang.org/">http://play.golang.org/</a><br/>
 
 ###Go框架:
 go-mysql-driver:<a href="https://github.com/go-sql-driver/mysql">https://github.com/go-sql-driver/mysql</a><br/>
-Revel:<a href="https://github.com/robfig/revel">https://github.com/robfig/revel</a><br/>
-Beego:<a href="https://github.com/astaxie/beego">https://github.com/astaxie/beego</a><br/>
+revel:<a href="https://github.com/robfig/revel">https://github.com/robfig/revel</a><br/>
+beego:<a href="https://github.com/astaxie/beego">https://github.com/astaxie/beego</a><br/>
