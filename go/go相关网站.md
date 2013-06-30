@@ -3,7 +3,7 @@ Sublime Text 2:<a href="http://www.sublimetext.com/2">http://www.sublimetext.com
 gocode:<a href="https://github.com/nsf/gocode">https://github.com/nsf/gocode</a><br/>
 msysgit:<a href="https://code.google.com/p/msysgit/">https://code.google.com/p/msysgit/</a><br/>
 TortoiseGit:<a href="https://code.google.com/p/tortoisegit/">https://code.google.com/p/tortoisegit/</a><br/>
-go-mysql-driver:<a href="https://github.com/go-sql-driver/mysql">https://github.com/go-sql-driver/mysql</a><br/>
+
 
 
 Go相关教程：<br/>
@@ -18,3 +18,9 @@ Go 语言中文翻译项目:<a href="https://code.google.com/p/golang-china/">ht
 go 中文论坛:<a href="https://groups.google.com/forum/#!forum/golang-china">https://groups.google.com/forum/#!forum/golang-china</a><br/>
 
 Go web测试:<a href="http://play.golang.org/">http://play.golang.org/</a><br/>
+
+
+###Go框架:
+go-mysql-driver:<a href="https://github.com/go-sql-driver/mysql">https://github.com/go-sql-driver/mysql</a><br/>
+Revel:<a href="https://github.com/robfig/revel">https://github.com/robfig/revel</a><br/>
+Beego:<a href="https://github.com/astaxie/beego">https://github.com/astaxie/beego</a><br/>
