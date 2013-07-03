@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+//浏览器发送http.Request(请求)包,服务器接收到请求包之后开始处理请求包，服务器调用自身服务，返回HTTP Response (响应)包
 func cis_http(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	fmt.Println(r.Form)
