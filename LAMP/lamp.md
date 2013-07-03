@@ -22,6 +22,9 @@ MongoDB<br/>
 NoSQL数据库<br/>
 <a href="http://www.mongodb.org/">http://www.mongodb.org/</a><br/>
 <br/>
+InnoSQL<br/>
+<a href="https://github.com/NetEase/InnoSQL">https://github.com/NetEase/InnoSQL</a><br/>
+<br/>
 Bootstrap<br/>
 简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。<br/>
 <a href="http://www.bootcss.com/">http://www.bootcss.com/</a><br/>
