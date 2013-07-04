@@ -8,7 +8,7 @@
     )
     
     func main() {
-  	fmt.Println("Hello wolrd!你好，世界!")
+  	    fmt.Println("Hello wolrd!你好，世界!")
     }
 输出如下：
 
