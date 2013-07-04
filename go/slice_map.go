@@ -39,12 +39,14 @@ func main() {
 	x["第一个"] = 4.5
 	x["第二个"] = 5.6
 	fmt.Println(x)
+	//map有两个返回值，第二个返回值，如果不存在key,那么ok为false,如果存在key,ok为true
 	xx, ok := x["第一个"]
 	if ok {
 		fmt.Println(xx)
 	} else {
 		fmt.Println("不存在")
 	}
+	//删除key为"第一个"的元素
 	delete(x, "第一个")
 
 	map1 := map[string]int{"a": 10, "b": 11, "c": 12}
