@@ -82,7 +82,7 @@ Go语言对于已声明但未使用的变量会在编译阶段报错，比如下
     func test() {
         var a bool //一般声明
         b := false //简短声明
-        c = true   //赋值操作
+        a = true   //赋值操作
     }
 ####数值类型
 Go语言里面直接定义好的位数的类型：rune,int8,int16,int32,int64和byte,uint8,uint16,uint32,uint64.      
