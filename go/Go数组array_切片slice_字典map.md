@@ -59,22 +59,23 @@ slice有一些简便的操作。<br/>
 + 如果从一个数组里面直接获取slice，可以这样array[:]，因为默认第一个序列是0，第二个是数组的长度，即等价于array[0:len(array)]    
 下面这个例子展示了更多关于slice的操作。<br/>                
 
+
     //声明一个数组
     var a = [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'}
     
     //声明两个slice
     var as, bs []byte
     
-	//演示一些简便操作
-	as = a[:3] //等价于 as = a[0:3]
-	as = a[5:] //等价于 as = a[5:9]
-	as = a[:] //等价于 as = a[0:9]
+    //演示一些简便操作
+    as = a[:3] //等价于 as = a[0:3]
+    as = a[5:] //等价于 as = a[5:9]
+    as = a[:] //等价于 as = a[0:9]
     
-	as = a[3:7] //as包含元素 d,e,f,g len=4,cap=7
-	bs = as[1:3] //bs包含as[1],as[2]也就是e,f
-	bs = as[:3] //bs包含as[0],as[1],as[2]也就是d,e,f
-	bs = as[0:5] //对slice的slice可以在cap范围内扩展，此时bs包含：d,e,f,g,h
-	bs = as[:] //bs包含所有as的元素：d,e,f,g
+    as = a[3:7] //as包含元素 d,e,f,g len=4,cap=7
+    bs = as[1:3] //bs包含as[1],as[2]也就是e,f
+    bs = as[:3] //bs包含as[0],as[1],as[2]也就是d,e,f
+    bs = as[0:5] //对slice的slice可以在cap范围内扩展，此时bs包含：d,e,f,g,h
+    bs = as[:] //bs包含所有as的元素：d,e,f,g
 slice是引用类型，所以当引用改变其中元素的值时，其他的所有引用都会改变改值，例如：
 
     
