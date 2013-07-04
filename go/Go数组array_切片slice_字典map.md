@@ -57,6 +57,7 @@ slice有一些简便的操作。
  - slice 的默认开始位置是0,array[:n]等价于array[0:n]
  - slice 的第二个序列默认是数组的长度，array[n:]等价于array[n:len(array)]           
  - 如果从一个数组里面直接获取slice，可以这样array[:]，因为默认第一个序列是0，第二个是数组的长度，即等价于array[0:len(array)]    
+
 下面这个例子展示了更多关于slice的操作。
 
     //声明一个数组
