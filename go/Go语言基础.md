@@ -1,14 +1,14 @@
 ###你好，Go
-
-  package main
   
-  import (
-    "fmt"
-  )
-  
-  func main() {
+    package main
+    
+    import (
+        "fmt"
+    )
+    
+    func main() {
   	fmt.Println("Hello wolrd!你好，世界!")
-  }
+    }
 输出如下：
 
   Hello wolrd!你好，世界!
