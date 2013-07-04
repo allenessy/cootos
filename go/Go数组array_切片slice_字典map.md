@@ -59,7 +59,7 @@ slice有一些简便的操作。<br/>
 * 如果从一个数组里面直接获取slice，可以这样array[:]，因为默认第一个序列是0，第二个是数组的长度，即等价于array[0:len(array)]    
 下面这个例子展示了更多关于slice的操作。
 <br/>                
-
+<pre>
     //声明一个数组
     var a = [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'}
     
@@ -76,6 +76,7 @@ slice有一些简便的操作。<br/>
     bs = as[:3] //bs包含as[0],as[1],as[2]也就是d,e,f
     bs = as[0:5] //对slice的slice可以在cap范围内扩展，此时bs包含：d,e,f,g,h
     bs = as[:] //bs包含所有as的元素：d,e,f,g
+</pre>
 slice是引用类型，所以当引用改变其中元素的值时，其他的所有引用都会改变改值，例如：
 
     
