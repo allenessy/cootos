@@ -10,7 +10,7 @@ func main() {
 	z["map"] = "map字典的声明需要在使用之前使用make初始化："
 
 	fmt.Println(z["slice"])
-	//创建一个slice
+	//创建一个值(value)为int的slice
 	a := []int{1, 2, 3, 4, 6}
 	for k, v := range a {
 		fmt.Println("a的索引为 = :", k)
