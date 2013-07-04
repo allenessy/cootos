@@ -10,7 +10,7 @@ func main() {
 	z["map"] = "map字典的声明需要在使用之前使用make初始化："
 
 	fmt.Println(z["slice"])
-
+	//创建一个slice
 	a := []int{1, 2, 3, 4, 6}
 	for k, v := range a {
 		fmt.Println("a的索引为 = :", k)
@@ -33,7 +33,8 @@ func main() {
 	}
 
 	fmt.Println(z["map"])
-
+	
+	//创建一个map类型，以字符串为键(key),float32为值(value)
 	x := make(map[string]float32)
 	x["第一个"] = 4.5
 	x["第二个"] = 5.6
