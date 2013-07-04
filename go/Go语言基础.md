@@ -174,19 +174,19 @@ Go语言内置有一个error类型，专门用来处理错误信息，Go语言�
 <br/>
 
     const (
-        a = iota
-        b
-        c
+        a = iota  // a == 0
+        b         // b == 1
+        c         // c == 2
     )
 <br/>
 
     const (
-        a = iota
-        b
-        c
+        a = iota  // a == 0
+        b         // b == 1
+        c         // c == 2
     )
     
-    const d = iota
+    const d = iota // d == 0
 ####Go语言程序设计的一些规则
 + 大写字母开头的变量是可导出的，即其他包可以读取，是公用变量；小写字母开头的不可导出，是私有变量。         
 + 大写字母开头的函数也是一样，相当于class中带public关键词的公有函数；小写字母开头就是有private关键词的私有函数。                 
