@@ -59,11 +59,11 @@ slice有一些简便的操作。<br/>
 + 如果从一个数组里面直接获取slice，可以这样array[:]，因为默认第一个序列是0，第二个是数组的长度，即等价于array[0:len(array)]    
 下面这个例子展示了更多关于slice的操作。<br/>                
 
-	//声明一个数组
-	var a = [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'}
+    //声明一个数组
+    var a = [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'}
     
-	//声明两个slice
-	var as, bs []byte
+    //声明两个slice
+    var as, bs []byte
     
 	//演示一些简便操作
 	as = a[:3] //等价于 as = a[0:3]
