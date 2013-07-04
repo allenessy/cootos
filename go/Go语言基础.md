@@ -137,4 +137,30 @@ Go语言中可以使用"+"操作符来连接两个字符串：
           wolrd`
 “`”括起来的字符串为Raw字符串，即字符串在代码中的形式就是打印时的形式，它没有字符转义，换行也将原样输出。
 ####错误类型
+Go语言内置有一个error类型，专门用来处理错误信息，Go语言的package里面还专门有一个包errors来处理错误。
 
+    err := errors.New("错误信息")
+    if err != nil {
+        fmt.Print(err)
+    }
+####分组声明：
+
+    import (
+        "fmt"
+        "os"
+    )
+<br/>
+
+    const (
+        a = 100
+        b = 3.1415
+        c = "Go"
+    )
+<br/>
+
+    var (
+        a int
+        b float32
+        c string
+    )
+   
