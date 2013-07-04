@@ -52,14 +52,13 @@ slice通过array[i:j]来获取，其中i是数组开始位置，j是结束位置
     //c是数组a的另一个slice
 	c = a[3:5]
     //c的元素是：a[3]、a[4]
-* 注：slice和数组在声明数组时，方括号内写明了数组的长度或使用...自动计算长度，而声明slice时，方括号内没有任何字符。                         
-slice有一些简便的操作。<br/>
-* slice 的默认开始位置是0,array[:n]等价于array[0:n]
-* slice 的第二个序列默认是数组的长度，array[n:]等价于array[n:len(array)]           
-* 如果从一个数组里面直接获取slice，可以这样array[:]，因为默认第一个序列是0，第二个是数组的长度，即等价于array[0:len(array)]    
+ - 注：slice和数组在声明数组时，方括号内写明了数组的长度或使用...自动计算长度，而声明slice时，方括号内没有任何字符。                         
+slice有一些简便的操作。    
+ - slice 的默认开始位置是0,array[:n]等价于array[0:n]
+ - slice 的第二个序列默认是数组的长度，array[n:]等价于array[n:len(array)]           
+ - 如果从一个数组里面直接获取slice，可以这样array[:]，因为默认第一个序列是0，第二个是数组的长度，即等价于array[0:len(array)]    
 下面这个例子展示了更多关于slice的操作。
-<br/>                
-<pre>
+
     //声明一个数组
     var a = [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'}
     
@@ -76,7 +75,7 @@ slice有一些简便的操作。<br/>
     bs = as[:3] //bs包含as[0],as[1],as[2]也就是d,e,f
     bs = as[0:5] //对slice的slice可以在cap范围内扩展，此时bs包含：d,e,f,g,h
     bs = as[:] //bs包含所有as的元素：d,e,f,g
-</pre>
+
 slice是引用类型，所以当引用改变其中元素的值时，其他的所有引用都会改变改值，例如：
 
     
