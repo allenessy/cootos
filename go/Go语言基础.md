@@ -45,4 +45,17 @@ Go语言对于已声明但未使用的变量会在编译阶段报错，比如下
     func main() {
         var i int
     }
+修改为：
+    package main
+
+    import (
+        "fmt"
+    )
+
+    func main() {
+    	  var a int
+       	a = 10
+      	fmt.Println(a)
+    }
+
 ###常量
