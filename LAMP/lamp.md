@@ -15,11 +15,19 @@ XAMPP<br/>
 <a href="http://www.apachefriends.org/zh_cn/xampp.html">http://www.apachefriends.org/zh_cn/xampp.html</a><br/>
 php<br>
 <a href="http://www.php.net/">http://www.php.net/</a><br>
+Zend Guard Loader<br/>
+<a href="http://www.zend.com/en/products/guard/downloads">http://www.zend.com/en/products/guard/downloads</a><br/>
 Java JDK JRE<br/>
 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br/>
 <br/>
 FileZilla<br/>
 <a href="https://filezilla-project.org/">https://filezilla-project.org/</a><br/>
+###开发工具
+Zend Studio<br/>
+<a href="http://www.zend.com/en/products/studio/">http://www.zend.com/en/products/studio/</a><br/>
+Eclipse<br/>
+<a href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a><br/>
+
 ###数据库
 MySQL<br>
 <a href="http://dev.mysql.com/downloads/">http://dev.mysql.com/downloads/</a><br>
