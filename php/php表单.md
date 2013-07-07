@@ -19,7 +19,8 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
     <fieldset><legend>用户注册</legend>
     <p><label>用户名：<input type="text" name="name" /></label></p>
     <p><label>密码：<input type="password" name="password" /></label></p>
-    <p><label for="gender">性别：</label><input type="radio" name="gender" value="1" />男<input type="radio" name="gender" value="0" />女</p>
+    <p><label for="gender">性别：</label><input type="radio" name="gender" value="1" />男
+    <input type="radio" name="gender" value="0" />女</p>
     <p><label>年龄：
     <select name="age">
         <option value="0-29">30岁以下</option>
@@ -31,3 +32,7 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
     </form>
     </body>
     </html>
+
+你也可以为HTML表单标签制定一种字符编码：
+
+    <form accept-charset="utf-8">
