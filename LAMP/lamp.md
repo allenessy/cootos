@@ -38,3 +38,11 @@ jQuery<br/>
 <br/>
 node.js<br/>
 <a href="http://nodejs.org/">http://nodejs.org/</a><br/>
+
+###图形库
+GraphicsMagick<br/>
+<a href="http://www.graphicsmagick.org/">http://www.graphicsmagick.org/</a><br/>
+ImageMagick<br/>
+<a href="http://www.imagemagick.org/script/index.php">http://www.imagemagick.org/script/index.php</a><br/>
+imagick<br/>
+<a href="http://pecl.php.net/package/imagick">http://pecl.php.net/package/imagick</a><br/>
