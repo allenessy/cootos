@@ -11,6 +11,8 @@ Apache Tomcat<br/>
 <a href="http://tomcat.apache.org/">http://tomcat.apache.org/</a><br/>
 GlassFish<br/>
 <a href="https://glassfish.java.net/">https://glassfish.java.net/</a><br/>
+XAMPP<br/>
+<a href="http://www.apachefriends.org/zh_cn/xampp.html">http://www.apachefriends.org/zh_cn/xampp.html</a><br/>
 php<br>
 <a href="http://www.php.net/">http://www.php.net/</a><br>
 <br>
