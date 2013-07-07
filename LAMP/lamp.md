@@ -3,17 +3,14 @@ APR<br>
 APR-util<br>
 APR-iconv<br>
 <a href="http://apr.apache.org/">http://apr.apache.org/</a><br>
-<br>
-Apache<br>
+Apache<br/>
 <a href="http://httpd.apache.org/">http://httpd.apache.org/</a><br>
-<br>
-Nginx<br>
+Nginx<br/>
 <a href="http://nginx.org/">http://nginx.org/</a><br>
 Apache Tomcat<br/>
 <a href="http://tomcat.apache.org/">http://tomcat.apache.org/</a><br/>
 GlassFish<br/>
 <a href="https://glassfish.java.net/">https://glassfish.java.net/</a><br/>
-<br>
 php<br>
 <a href="http://www.php.net/">http://www.php.net/</a><br>
 <br>
