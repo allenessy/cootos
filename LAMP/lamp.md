@@ -12,19 +12,17 @@ Nginx<br>
 php<br>
 <a href="http://www.php.net/">http://www.php.net/</a><br>
 <br>
+###数据库
 MySQL<br>
 <a href="http://dev.mysql.com/downloads/">http://dev.mysql.com/downloads/</a><br>
-<br>
 PostgreSQL<br>
 <a href="http://www.postgresql.org/">http://www.postgresql.org/</a><br>
-<br/>
 MongoDB<br/>
 NoSQL数据库<br/>
 <a href="http://www.mongodb.org/">http://www.mongodb.org/</a><br/>
-<br/>
 InnoSQL<br/>
 <a href="https://github.com/NetEase/InnoSQL">https://github.com/NetEase/InnoSQL</a><br/>
-<br/>
+###web框架
 Bootstrap<br/>
 简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。<br/>
 <a href="http://www.bootcss.com/">http://www.bootcss.com/</a><br/>
