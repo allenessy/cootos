@@ -44,14 +44,11 @@ InnoSQL<br/>
 Bootstrap<br/>
 简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。<br/>
 <a href="http://www.bootcss.com/">http://www.bootcss.com/</a><br/>
-<br/>
 AngularJS<br/>
 HTML enhanced for web apps! Google JS框架<br/>
 <a href="http://angularjs.org/">http://angularjs.org/</a><br/>
-<br/>
 jQuery<br/>
 <a href="http://jquery.com/">http://jquery.com/</a><br/>
-<br/>
 node.js<br/>
 <a href="http://nodejs.org/">http://nodejs.org/</a><br/>
 
