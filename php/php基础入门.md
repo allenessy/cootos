@@ -59,7 +59,7 @@ echo、print 是 PHP 的内置函数，用于输出1个或多个字符串。
 
     $text1 = "hello";
     $text2 = "world";
-    echo = $text1 . " " .$text2;
+    echo $text1 . " " .$text2;
 
 为了分隔这两个变量，我们在 $text1 与 $text2 之间插入了一个空格，使用了两个两件运算符。
 ####strlen() 函数
