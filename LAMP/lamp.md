@@ -15,6 +15,8 @@ XAMPP<br/>
 <a href="http://www.apachefriends.org/zh_cn/xampp.html">http://www.apachefriends.org/zh_cn/xampp.html</a><br/>
 php<br>
 <a href="http://www.php.net/">http://www.php.net/</a><br>
+Java JDK JRE<br/>
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br/>
 <br/>
 FileZilla<br/>
 <a href="https://filezilla-project.org/">https://filezilla-project.org/</a><br/>
