@@ -82,44 +82,6 @@ switch,最适合代替较长的if-elseif-else条件语句。switch语法是：
 
 switch条件语句将$variable的值与不同的case作比较，当它发现一个匹配时，就会执行其后的代码，直至遇到break,如果没有发现匹配，则会执行default
 
-验证表单数据需要使用条件语句以及许多函数、运算符和表达式。一个常用的标准函数是isset(),它用于测试一个变量是否具有值（包括0、FALSE，或者一个空字符串，但不能是NULL）。    
-使用isset()函数的一个问题是：空字符串测试为TRUE,这意味着 它不是验证HTML表单中文本输入和文本框的有效方式。要检查用户输入到文本元素中的内容，可以使用empty()函数。它将检查一个变量是否具有空(empty)值：空字符串、0、NULL或FALSE。     
-表单验证的第一个目标是确保在表单元素中输入或选择了某些内容。第二个目标是确保提交的数据具有正确的类型（数字、字符串）、正确的格式（如电子邮件）或特定的可接受值（如$gender应该等于1或0）    
 
-    if(!empty($_POST['name'])){
-        $name=$_POST['name'];
-    }else{
-    	$name=NULL;
-    	echo '<p class="error">请输入您的用户名！</p>';
-    }
-    
-    if(!empty($_POST['password'])){
-    	$password=$_POST['password'];
-    }else{
-    	$password=NULL;
-    	echo '<p class="error">请输入您的密码!</p>';
-    }
-    
-    $gender=$_POST['gender'];
-    if($gender == '0') {
-        echo '<p><b>Good day,Sir!</b></p>';
-    }elseif($gender == '1') {
-        echo '<p><b>Good day,Madam!</b></p>';
-    }else{
-        echo '<p><b>您还没有选择性别！</b></p>';
-    }
-    
-    if(!empty($_POST['age'])){
-    	$age=$_POST['age'];
-    }else{
-    	$age=NULL;
-    	echo '<p class="error">您还没有选择年龄！</p>';
-    }
-    
-    if ( $name && $password && $gender && $age){
-        echo '谢谢您的注册!';
-    }else{
-        echo '您还有选项没有输入';
-    }
 
 
