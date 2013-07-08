@@ -100,10 +100,13 @@ switch条件语句将$variable的值与不同的case作比较，当它发现一�
     	echo '<p class="error">请输入您的密码!</p>';
     }
     
-    if (isset($_POST['gender'])){
-        $gender=$_POST['gender'];
-        }else{
-    	$gender=NULL;
+    $gender=$_POST['age'];
+    if($gender == '0') {
+        echo '<p><b>Good day,Sir!</b></p>';
+    }elseif($gender == '1') {
+        echo '<p><b>Good day,Madam!</b></p>';
+    }else{
+        echo '<p><b>您还没有选择性别！</b></p>';
     }
     
     if(!empty($_POST['age'])){
