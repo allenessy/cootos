@@ -36,3 +36,13 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
 你也可以为HTML表单标签制定一种字符编码：
 
     <form accept-charset="utf-8">
+
+处理HTML表单： form.php
+
+    $name=$_POST['name'];
+    $password=$_POST['password'];
+    $gender=$_POST['gender'];
+    $age=$_POST['age'];
+    //接收并打印出输入到HTML表单中的信息
+    echo $name . '<br/>' . $password . '<br/>' . $gender . '<br/>' . $age;
+
