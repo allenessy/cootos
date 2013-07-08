@@ -86,3 +86,11 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
     }else{
         echo '您还有选项没有输入';
     }
+    
+    if(!empty($_POST['name']) && !empty($_POST['password']) && !empty($_POST['gender']) && !empty($_POST['age'])){
+        echo "<p>thank you,<b>{$_POST['name']}</b></p>";
+    }else{
+    	echo '<p>please go back and fill out the from again.</p>';
+    }
+
+条件语句检查这4个输入框都不能为空。通过使用“与”运算符`&&`,仅当这三个子条件语句都为真时整个条件语句才为真。
