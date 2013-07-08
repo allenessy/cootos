@@ -19,8 +19,8 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
     <fieldset><legend>用户注册</legend>
     <p><label>用户名：<input type="text" name="name" /></label></p>
     <p><label>密码：<input type="password" name="password" /></label></p>
-    <p><label for="gender">性别：</label><input type="radio" name="gender" value="1" />男
-    <input type="radio" name="gender" value="0" />女</p>
+    <p><label for="gender">性别：</label><input type="radio" name="gender" value="M" />男
+    <input type="radio" name="gender" value="F" />女</p>
     <p><label>年龄：
     <select name="age">
         <option value="0-29">30岁以下</option>
@@ -66,9 +66,9 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
     }
     
     $gender=$_POST['gender'];
-    if($gender == '0') {
+    if($gender == 'M') {
         echo '<p><b>Good day,Sir!</b></p>';
-    }elseif($gender == '1') {
+    }elseif($gender == 'F') {
         echo '<p><b>Good day,Madam!</b></p>';
     }else{
         echo '<p><b>您还没有选择性别！</b></p>';
