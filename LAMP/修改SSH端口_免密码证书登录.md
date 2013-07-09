@@ -18,7 +18,7 @@
     /etc/init.d/sshd restart      
         
 配置防火墙，打开需要端口：      
-vi /etc/sysconfig/iptables      
+    vi /etc/sysconfig/iptables      
 
     iptables -P INPUT ACCEPT
     iptables -P FORWARD ACCEPT
