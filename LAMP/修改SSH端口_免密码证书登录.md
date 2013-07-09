@@ -58,3 +58,20 @@ vi /etc/sysconfig/iptables
     touch ~/.ssh/authorized_keys
     vi ~/.ssh/authorized_keys
 
+一些出错信息：
+
+    [root@li414-184 ~]# /etc/init.d/sshd restart
+    Stopping sshd:                                             [  OK  ]
+    cat: /proc/sys/crypto/fips_enabled: No such file or directory
+    /etc/init.d/sshd: line 50: [: too many arguments
+    Starting sshd:                                             [  OK  ]
+
+
+vi /etc/init.d/sshd       
+找到地50行:    
+
+    if [ ! -s $RSA1_KEY -a `cat /proc/sys/crypto/fips_enabled` -eq 0 ]; then
+
+修改为：
+
+    if [ ! -s "$RSA1_KEY" -a "'sysctl -n -e crypto.fips_enables'" = 0 ]; then
