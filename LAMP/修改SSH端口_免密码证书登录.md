@@ -75,3 +75,18 @@ vi /etc/init.d/sshd
 修改为：
 
     if [ ! -s "$RSA1_KEY" -a "'sysctl -n -e crypto.fips_enables'" = 0 ]; then
+
+关闭SELINUX
+vi /etc/selinux/config
+
+    #SELINUX=enforcing      #注释掉
+    #SELINUXTYPE=targeted   #注释掉
+    SELINUX=disabled        #增加
+    :wq!                    #保存退出
+
+链接不上SSH的话，关闭SELinux就可以了。
+
+又是TM的SELinux惹的祸，关闭SELinux解决问题：     
+暂时关闭（重启后恢复）：   
+
+    setenforce 0
