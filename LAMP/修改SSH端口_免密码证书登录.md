@@ -5,7 +5,7 @@
 
 这样就建立了没有登录权限的用户。
 
-vi /etc/ssh/sshd_config
+    vi /etc/ssh/sshd_config
 
     #Port 22                        //第13行  修改为Port 2222 指定SSH连接的端口号，不建议使用默认22端口
     Protocol 2                      //第21行  2,1允许SSH1和SSH2连接，建议设置成 Protocal 2
@@ -15,7 +15,7 @@ vi /etc/ssh/sshd_config
 
 重启SSH
 
-/etc/init.d/sshd restart      
+    /etc/init.d/sshd restart      
         
 配置防火墙，打开需要端口：      
 vi /etc/sysconfig/iptables      
@@ -76,17 +76,72 @@ vi /etc/init.d/sshd
 
     if [ ! -s "$RSA1_KEY" -a "'sysctl -n -e crypto.fips_enables'" = 0 ]; then
 
-关闭SELINUX
-vi /etc/selinux/config
+关闭SELINUX     
+    vi /etc/selinux/config
 
     #SELINUX=enforcing      #注释掉
     #SELINUXTYPE=targeted   #注释掉
     SELINUX=disabled        #增加
     :wq!                    #保存退出
 
-链接不上SSH的话，关闭SELinux就可以了。
-
-又是TM的SELinux惹的祸，关闭SELinux解决问题：     
-暂时关闭（重启后恢复）：   
+链接不上SSH的话，关闭SELinux就可以了    
+       
+又是TM的SELinux惹的祸，关闭SELinux解决问题：         
+暂时关闭（重启后恢复）：        
 
     setenforce 0
+
+在重启 iptables 时，我遇到如下报错：
+
+    /etc/init.d/iptables restart
+    
+    Setting chains to policy ACCEPT: security raw nat mangle fi[FAILED]
+
+出现这个错误的原因是 Linode VPS 安装 CentOS 5.5 以后内核版本造成的，解决方法如下：    
+     
+编辑 /etc/init.d/iptables 找到： #144行
+
+    vi /etc/init.d/iptables
+
+    echo -n $”${IPTABLES}: Setting chains to policy $policy: ”
+    ret=0
+    for i in $tables; do
+    echo -n “$i ”
+    case “$i” in
+    +    security)
+    +    $IPTABLES -t filter -P INPUT $policy \
+    +        && $IPTABLES -t filter -P OUTPUT $policy \
+    +        && $IPTABLES -t filter -P FORWARD $policy \
+    +        || let ret+=1
+    +    ;;
+    raw)
+    $IPTABLES -t raw -P PREROUTING $policy \
+    && $IPTABLES -t raw -P OUTPUT $policy \
+    || let ret+=1
+    ;;
+
+    filter)
+    $IPTABLES -t filter -P INPUT $policy \
+    && $IPTABLES -t filter -P OUTPUT $policy \
+    && $IPTABLES -t filter -P FORWARD $policy \
+    || let ret+=1
+    ;;
+
+前面有＋号的为添加的
+
+    security)
+    $IPTABLES -t filter -P INPUT $policy \
+    && $IPTABLES -t filter -P OUTPUT $policy \
+    && $IPTABLES -t filter -P FORWARD $policy \
+    || let ret+=1
+    ;;
+
+然后保存退出
+
+重启 iptables 服务：
+
+    [root@localhost ~]# service iptables restart
+    iptables: Flushing firewall rules:                         [  OK  ]
+    iptables: Setting chains to policy ACCEPT: security raw nat[  OK  ]filter
+    iptables: Unloading modules:                               [  OK  ]
+    iptables: Applying firewall rules:                         [  OK  ]
