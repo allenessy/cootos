@@ -32,3 +32,101 @@ PHP支持两种数组：索引数组( indexed array )和关联数组( associativ
     $array[] = 'Mrray';
 
 现在 $array[0]='Jemaine',$ayyar[1]='Bret',$array[2]='Mrray' (由于数组的索引从0开始)
+
+修改数组
+如果指定一个键，并且已经存在用那个相同的键进行索引的一个值，则新值将重写现有的值，例如：
+
+    $array['fan'] = 'Mel';
+	$array['fan'] = 'Dave';
+	$array[2] = 'apple';
+	$array[2] = 'orange';
+
+除了一次添加一个元素这种方式之外，也可以使用array()函数，只有一个步骤即可构建一个完整的数组：
+
+	$ar = array( 'IA' => 'Iowa', 'MD' => 'Maryland');
+	$ar = array( 'Clem Snide','Shins','Eles' );
+
+或者，如果你设置了第一个数字键值，那么此后添加的值将是可以递增的键：
+
+	$day = array(1 => 'Sun','Mon','Tue');
+	echo $day[3];
+
+在引用数组之前，也可以使用array()函数初始化它：
+
+	$ar = array();
+	$ar[] = 'Flight';
+
+在PHP中初始化数组（或者任何变量）不是必需的，但它可以使代码更清晰，并且有助于避免错误。            
+最后，如果你想创建连续数字的数组，那么可以使用range()函数：        
+
+	$ay = range(1,10);
+
+###访问数组
+当你确切知道键是什么或者如果你只想引用一个元素时，可以这样做。要访问每个数组元素，可以使用foreach循环：
+
+	foreach ($array as $value){
+			//Do something with $value
+	}
+foreach循环将会迭代$array中的每个元素，并把每个元素的值赋予$value变量。要访问键和值，可以使用：
+
+	foreach ($array as $key => $value){
+			echo "The value at $key is $value.";
+	}
+
+(你可以使用任何有效的变量名称代替$key和$value，如果你愿意，可以只使用$k和$v)
+
+	$months = array(1 => '一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月');
+	$days = range (1,31);
+	$years = range (1970,2013);
+	
+月份下拉菜单：
+	
+	echo '<select name="month">';
+	foreach ($months as $key => $value){
+		echo "<option value=\"$key\"> $value</option>\n";
+	}
+	echo '</select>';
+	
+日期下拉菜单：
+	
+	echo '<select name="day">';
+	foreach ($days as $value){
+		echo "<option value=\"$value\"> $value</option>\n";
+	}
+	echo '</select';
+	
+年份下拉菜单：
+	
+	echo '<select name="year">';
+	foreach ($years as $value){
+		echo "<option value=\"$value\"> $value</option>\n";
+	}
+	echo '</select>';
+
+要确定数组中元素的个数，可以使用count()函数。
+
+	$num = count($array);
+
+range()函数也可以创建连续字母的数组：
+
+	$ar = range('a','z')
+
+数组的键可以是由多个单词组成的字符串，比如first name或phone number
+is_array()函数可以确认一个变量是数组类型
+
+###多维数组
+包含其他数组的数组-将会创建一个多维数组
+
+	$ar = array(2,3,4,5,7, ...);
+	$ar1 = array(30,42,66,70, ...);
+	$num = array('ar' => $ar,'ar1' => $ar1);
+
+打印输出$ar[2]:
+
+	echo '多维数组$ar1[2] = ' . "{$num[$ar1][2]}";
+	
+
+
+
+
+
