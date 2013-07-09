@@ -125,7 +125,60 @@ is_array()函数可以确认一个变量是数组类型
 
 	echo '多维数组$ar1[2] = ' . "{$num[$ar1][2]}";
 	
+通过使用其他数组作为值来创建多维数组。使用两个foreach循环（将一个foreach循环嵌套在另一个内部）可以访问每个数组元素
 
+	$mexico = array(
+	'YU' => 'Yucatan',
+	'BC' => 'Baja Calfornia',
+	'OA' => 'Oaxaca'
+	);
+	
+	$us = array(
+	'MD' => 'Maryland',
+	'IL' => 'Illinois',
+	'PA' => 'Pennsylvania',
+	'IA' => 'Iwoa'
+	);
+	
+	$canada = array(
+	'QC' => 'Quebec',
+	'AB' => 'Alberta',
+	'NT' => 'Northwest Territories',
+	'YT' => 'Yukon',
+	'PE' => 'Prince Edward Island'
+	);
+	
+	$n_america = array{
+	'Mexiao' => $mexico,
+	'United States' => $us,
+	'Canada' => $canada
+	);
+	
+	foreach ($n_america as $country => $list){
+		echo "<h2>$country</h2><ul>";
+		foreach ($list as $k => $v){
+			echo "<li>$k - $v</li>\n";
+		}
+		echo '</ul>';
+	}
+
+多维数组也可以来自于HTML表单。例如，如果表单具有一系列名称为interests[]的复选框：
+
+	<input type="checkbox" name="interests[]" value="Music" />Music
+	<input type="checkbox" name="interests[]" value="Movies" />Movies
+	<input type="checkbox" name="interests[]" value="Books" />Books
+	
+接收的PHP页面中的$_POST是多维的。$_POST['interests']是一个数组，并用$_POST['interests'][0]存储第一个选中的复选框的值（例如，Movies），用$_POST['interests'][1]存储第二个选中的复选框的值（例如，Books）,等等。注意：只会把选中的复选框传递到PHP页面。    
+如果HTML表单的选择菜单允许进行多重选择，也可以以多维数组结束：
+
+	<select name="interests[]" multiple="multiple">
+		<option value="Music">Music </option>
+		<option value="Movies">Movies </option>
+		<option value="Books">Books </option>
+		<option value="Napping">Napping </option>
+	</select>
+
+同样，只会把所选的值传递到PHP页面。
 
 
 
