@@ -82,6 +82,60 @@ switch,最适合代替较长的if-elseif-else条件语句。switch语法是：
 
 switch条件语句将$variable的值与不同的case作比较，当它发现一个匹配时，就会执行其后的代码，直至遇到break,如果没有发现匹配，则会执行default
 
+###for 和 while 循环
+我们在访问数组中的每个元素时，已经使用过一种循环，即 foreach 下面你将使用的两种循环类型是for和while   
+while循环看起来如下所示：
 
+    while (condition){
+		//Do something.
+	}
+
+只要循环的条件(condition)为真，就会执行循环。一旦条件为假，就会停止循环。如果条件永远不会为真，就永远不会执行循环。
+
+for循环具有更复杂的语法：
+
+	for (initial expression;condition;closing expression){
+			//Do something.
+	}
+
+while循环的流程图表示：
+	
+						  |
+				          ↓
+			 ------------条件<--------
+			|             |           |
+			|	          |           |
+			|	          ↓           |
+			|	如果为TRUE,就执行它---
+			|	
+		    |
+			|
+			↓
+    一旦条件为FALSE，就退出循环			
+
+在第一次执行循环时，会运行初始化表达式(initial expression).然后检查条件，如果条件为真，就执行循环的内容。执行之后，将会运行结束表达式，并再次检查条件。这个过程会继续下去，直到条件为假。
+
+	for ($i = i;$i <= 10;$i++){
+			echo $i;
+	}
+
+流程图：
+
+						 for
+						  |
+						  ↓
+					 初始表达式
+						  |
+				          ↓
+			 ------------条件<--------
+			|             |           |
+			|	          |       表达式之后
+			|	          ↓           |
+			|	如果为TRUE,就执行它---
+			|	
+		    |
+			|
+			↓
+    一旦条件为FALSE，就退出循环
 
 
