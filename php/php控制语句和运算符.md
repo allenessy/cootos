@@ -138,4 +138,12 @@ while循环的流程图表示：
 			↓
     一旦条件为FALSE，就退出循环
 
+使用循环：
+
+	echo '<select name="day">';
+	for($day=1;$day<=31;$day++){
+		echo "<option value=\"$day\">$day</option>";
+	}
+	echo '</select>';
+
 
