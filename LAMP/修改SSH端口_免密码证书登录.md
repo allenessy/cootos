@@ -15,11 +15,11 @@
 
 重启SSH
 
-    /etc/init.d/sshd restart      
+    /etc/init.d/sshd restart
         
 配置防火墙，打开需要端口：
 
-    vi /etc/sysconfig/iptables      
+    vi /etc/sysconfig/iptables
 
     iptables -P INPUT ACCEPT
     iptables -P FORWARD ACCEPT
@@ -77,7 +77,8 @@ vi /etc/init.d/sshd
 
     if [ ! -s "$RSA1_KEY" -a "'sysctl -n -e crypto.fips_enables'" = 0 ]; then
 
-关闭SELINUX     
+关闭SELINUX   
+
     vi /etc/selinux/config
 
     #SELINUX=enforcing      #注释掉
