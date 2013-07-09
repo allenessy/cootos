@@ -9,11 +9,11 @@
  
 一、
 
-    修改`vi /etc/udev/rules.d/70-persistent-net.rules` 文件 
-    删除掉 关于 eth0 的信息。修改 第二条 eth1 的网卡的名字为 eth0. 
+修改`vi /etc/udev/rules.d/70-persistent-net.rules` 文件 
+删除掉 关于 eth0 的信息。修改 第二条 eth1 的网卡的名字为 eth0. 
  
-    修改 `/etc/sysconfig/network-scripts/ifcfg-eth0` 中mac地址为 `/etc/udev/rules.d/70-persistent-net.rules` 修改后的eth0的    mac地址。 
-    reboot 重启服务器。
+修改 `/etc/sysconfig/network-scripts/ifcfg-eth0` 中mac地址为 `/etc/udev/rules.d/70-persistent-net.rules` 修改后的eth0的    mac地址。 
+reboot 重启服务器。
 
 
 二、
@@ -24,6 +24,6 @@
     # PCI device 0x8086:0x100f (e1000) SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", 
     ATTR{address}=="00:0c:29:79:c8:b9", ATTR{type}=="1", KERNEL=="eth*", NAME="eth1" 
 
-    70-persistent-net.rules里面存放着centos系统认到的网卡信息和系统文件eth*的绑定。照着修改就行了，可以看到MAC信息，网卡名称eth1。
+70-persistent-net.rules里面存放着centos系统认到的网卡信息和系统文件eth*的绑定。照着修改就行了，可以看到MAC信息，网卡名称eth1。
 
     vi /etc/sysconfig/network-scripts/ifcfg-eth1
