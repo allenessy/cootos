@@ -25,3 +25,10 @@ PHP支持两种数组：索引数组( indexed array )和关联数组( associativ
 
 如果数组使用字符串作为键，用于括住键的引号将使语法变得混乱，引发解析错误。    
 为了解决这个问题，当数组使用字符串作为它的键时，把数组名和键包括在花括号中。
+###创建数组
+
+    $array[] = 'Jemaine';
+    $array[] = 'Bret';
+    $array[] = 'Mrray';
+
+现在 $array[0]='Jemaine',$ayyar[1]='Bret',$array[2]='Mrray' (由于数组的索引从0开始)
