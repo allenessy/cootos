@@ -38,7 +38,7 @@ vi /etc/sysconfig/iptables
 添加NAT转发：
 
     iptables -t nat -A POSTROUTING -o eth0  -j MASQUERADE
-
+<br/>
 
     iptables -t nat -A POSTROUTING -o eth1  -j MASQUERADE
 
