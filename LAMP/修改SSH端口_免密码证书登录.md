@@ -13,7 +13,9 @@ vi /etc/ssh/sshd_config
     #PermitEmptyPasswords no        //第65行    不允许空密码登录
     PasswordAuthentication yes  //第66行  改为 PasswordAuthentication no   取消密码认证登录
 
-/etc/init.d/sshd restart      //重启SSH        
+重启SSH
+
+/etc/init.d/sshd restart      
         
 配置防火墙，打开需要端口：      
 vi /etc/sysconfig/iptables      
