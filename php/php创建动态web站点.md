@@ -20,11 +20,11 @@ footer.php
 
 index.php
 
-    <?php include (./header.php); ?>
+    <?php include ('./header.php'); ?>
     <?php
     echo 'hello world!';
     ?>
-    <?php include (./footer.php); ?>
+    <?php include ('./footer.php'); ?>
 
 修改`header.php`,方便修改网站标题：
 
@@ -39,8 +39,8 @@ index.php
 那么相应的index.php,也需要修改为以下：
 
     <?php $page_title='allen.w'; ?>
-    <?php include (./header.php); ?>
+    <?php include ('./header.php'); ?>
     <?php
     echo 'hello world!';
     ?>
-    <?php include (./footer.php); ?>
+    <?php include ('./footer.php'); ?>
