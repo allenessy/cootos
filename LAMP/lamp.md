@@ -2,59 +2,59 @@
 APR    
 APR-util    
 APR-iconv      
-[http://apr.apache.org/](http://apr.apache.org/)
+[http://apr.apache.org/](http://apr.apache.org/)    
 Apache    
-[http://httpd.apache.org/](http://httpd.apache.org/)
+[http://httpd.apache.org/](http://httpd.apache.org/)    
 Nginx     
-[http://nginx.org/](http://nginx.org/)
+[http://nginx.org/](http://nginx.org/)    
 Apache Tomcat      
-[http://tomcat.apache.org/](http://tomcat.apache.org/)
+[http://tomcat.apache.org/](http://tomcat.apache.org/)    
 GlassFish    
-[https://glassfish.java.net/](https://glassfish.java.net/)
+[https://glassfish.java.net/](https://glassfish.java.net/)    
 XAMPP     
-[http://www.apachefriends.org/zh_cn/xampp.html](http://www.apachefriends.org/zh_cn/xampp.html)
+[http://www.apachefriends.org/zh_cn/xampp.html](http://www.apachefriends.org/zh_cn/xampp.html)    
 php     
-[http://www.php.net/](http://www.php.net/)
+[http://www.php.net/](http://www.php.net/)    
 Zend Guard Loader     
-[http://www.zend.com/en/products/guard/downloads](http://www.zend.com/en/products/guard/downloads)
+[http://www.zend.com/en/products/guard/downloads](http://www.zend.com/en/products/guard/downloads)    
 Java JDK JRE     
-[http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+[http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)    
 
 ###开发工具
 Zend Studio    
-[http://www.zend.com/en/products/studio/](http://www.zend.com/en/products/studio/)
+[http://www.zend.com/en/products/studio/](http://www.zend.com/en/products/studio/)    
 Eclipse    
-[http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/)
+[http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/)    
 FileZilla    
-[https://filezilla-project.org/](https://filezilla-project.org/)
+[https://filezilla-project.org/](https://filezilla-project.org/)    
 
 ###数据库
 MySQL    
-[http://dev.mysql.com/downloads/](http://dev.mysql.com/downloads/)
+[http://dev.mysql.com/downloads/](http://dev.mysql.com/downloads/)    
 MySQL Workbench    
-[http://dev.mysql.com/downloads/tools/workbench/](http://dev.mysql.com/downloads/tools/workbench/)
+[http://dev.mysql.com/downloads/tools/workbench/](http://dev.mysql.com/downloads/tools/workbench/)    
 PostgreSQL    
-[http://www.postgresql.org/](http://www.postgresql.org/)
+[http://www.postgresql.org/](http://www.postgresql.org/)    
 MongoDB    NoSQL数据库    
-[http://www.mongodb.org/](http://www.mongodb.org/)
+[http://www.mongodb.org/](http://www.mongodb.org/)    
 InnoSQL   
-[https://github.com/NetEase/InnoSQL](https://github.com/NetEase/InnoSQL)
+[https://github.com/NetEase/InnoSQL](https://github.com/NetEase/InnoSQL)    
 ###web框架
 Bootstrap   
 简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。    
-[http://www.bootcss.com/](http://www.bootcss.com/)
+[http://www.bootcss.com/](http://www.bootcss.com/)    
 AngularJS   
 HTML enhanced for web apps! Google JS框架    
-[http://angularjs.org/](http://angularjs.org/)
+[http://angularjs.org/](http://angularjs.org/)    
 jQuery    
-[http://jquery.com/](http://jquery.com/)
+[http://jquery.com/](http://jquery.com/)    
 node.js
-[http://nodejs.org/](http://nodejs.org/)
+[http://nodejs.org/](http://nodejs.org/)    
 
 ###图形库
 GraphicsMagick    
-[http://www.graphicsmagick.org/](http://www.graphicsmagick.org/)
+[http://www.graphicsmagick.org/](http://www.graphicsmagick.org/)    
 ImageMagick    
-[http://www.imagemagick.org/script/index.php](http://www.imagemagick.org/script/index.php)
+[http://www.imagemagick.org/script/index.php](http://www.imagemagick.org/script/index.php)    
 imagick    
-[http://pecl.php.net/package/imagick](http://pecl.php.net/package/imagick)
+[http://pecl.php.net/package/imagick](http://pecl.php.net/package/imagick)    
