@@ -106,7 +106,7 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
     		echo 'error';
     	}
     }else{
-    	echo '<form action="demo.php" method="post">
+    	echo '<form action="" method="post">
     <div>
     用户名：<input name="name" type="text" />
     </div>
