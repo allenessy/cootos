@@ -94,3 +94,36 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
     }
 
 条件语句检查这4个输入框都不能为空。通过使用“与”运算符`&&`,仅当这三个子条件语句都为真时整个条件语句才为真。
+###再论处理HTML表单
+为了让一个页面同时显示和处理表单，必须使用一个条件语句检查应该采取哪种动作（显示或处理）:
+
+    <?php
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if(isset($_POST['name'])){
+    		$name=$_POST['name'];
+    		echo $name. ',早上好';
+    	}else{
+    		echo 'error';
+    	}
+    }else{
+    	echo '<form action="demo.php" method="post">
+    <div>
+    用户名：<input name="name" type="text" />
+    </div>
+    <div>
+    <input type="submit" name="submit" value="登陆" />
+    </div>
+    </form>';
+    }
+    ?>
+
+如上所述，通过检查POST方法判断页面是否被请求，这是非常好的测试表单提交的手段（前提是表单使用的是POST方法）
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
+
+你还可以涌过使用无值的action属性，让表单提交回它自身。
+
+    <form action="" method="post">
+
+通过这样做，表单将总是提交回这个相同的页面，即使你往后更改了脚本的名称也会如此。
+
