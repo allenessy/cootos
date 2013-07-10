@@ -127,3 +127,36 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
 
 通过这样做，表单将总是提交回这个相同的页面，即使你往后更改了脚本的名称也会如此。
 
+###建立黏性表单
+要预先设置文本框中输入的内容，可使用它的value属性：
+
+    <input type="text" name="city" value="Innsbruck" />
+
+要让PHP预先设置该值，可打印相应的变量（这假定存在被引用的变量）：
+
+	<input type="text" name="city" value="<?php echo $city; ?>" />
+
+为了预先设置单选按钮或复选框的状态（即预先检查它们），可以把代码checked="checked"添加到它们的输入标签中。
+
+	<input type="radio" name="gender" value="F" <?php if ($gender == 'F'){
+		echo 'checked="checked"';
+	}?> />
+
+为了预先设置textarea的值，可以把该值放在textarea标签之间：
+
+	<textarea name="comments" rows="10" cols="50"><?php echo $comments; ?></textarea>
+
+注意：这里的textarea标签不像标准的text输入框那样具有value属性。         
+为了预先选择下拉菜单，可以把代码selected="selected"添加到合适的选项中。      
+
+	echo '<select name="year">';
+	for ($y = 2011;$y <= 2021;$y++){
+		echo "<option value=\"$y\"";
+		if ($year == $y){
+			echo 'selected="selected"';
+		}
+		echo ">$y</option>\n";
+	}
+	echo '</select>';
+
+黏性表单只是一种标准的HTML表单，它能记住你是如何填写它的。
