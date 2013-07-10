@@ -160,3 +160,35 @@ html表单是使用form标签和多种用于获取输出的元素创建的。如
 	echo '</select>';
 
 黏性表单只是一种标准的HTML表单，它能记住你是如何填写它的。
+
+	<?php
+	if($_SERVER['REQUEST_METHOD'] == 'POST'){
+	    if(isset($_POST['name'],$_POST['gender'],$_POST['zy'])){	        
+			echo '黏性表单';
+	    }else{
+	        echo 'error';
+	    }
+	}
+	?>
+	
+	<form action="" method="post">
+	<div>
+	用户名：<input name="name" type="text" value="<?php if(isset($_POST['name'])) echo $_POST['name']; ?>"/>
+	</div>
+	<div>
+	性别：<input type="radio" name="gender" value="M" <?php if (isset($_POST['gender']) && ($_POST['gender'] == 'M')) echo 'checked="checked"'; ?> />男
+	      <input type="radio" name="gender" value="F" <?php if (isset($_POST['gender']) && ($_POST['gender'] == 'F')) echo 'checked="checked"'; ?> />女
+	</div>
+	<div>
+	职业：
+	<select name="zy">
+	<option value="student"<?php if (isset($_POST['zy']) && ($_POST['zy'] == 'student')) echo 'selected="selected"'; ?>>学生</option>
+	<option value="zyzyz"<?php if (isset($_POST['zy']) && ($_POST['zy'] == 'zyzyz')) echo 'selected="selected"'; ?>>自由职业者</option>
+	<option value="teacher"<?php if (isset($_POST['zy']) && ($_POST['zy'] == 'teacher')) echo 'selected="selected"'; ?>>教师</option>
+	</select>
+	</div>
+	<div>
+	<input type="submit" name="submit" value="登陆" />
+	</div>
+	</form>
+
