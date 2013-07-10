@@ -55,3 +55,40 @@ function function_name(){
 
 设置默认参数值的最终结果是，当调用函数时，特定参数变为可选的。如果把一个值传递给它，就会使用传递的值；否则，就会使用默认值。         
 你可以根据需要为多个参数设置默认值，只要这些参数出现在函数定义的最后面即可。换句话说，必需的参数应该总是出现在最前面。        
+
+function create_radio($value,$k,$name='gender'){
+	echo '<input type="radio" name="'.$name.'" value="'.$value.'"';
+	if(isset($_POST[$name]) && ($_POST[$name] == $value)){
+		echo ' checked="checked"';
+	}
+	echo " /> $k ";
+}
+create_radio('M', '男');
+create_radio('F', '女');
+
+黏性表单、设置默认的参数值
+
+#####从函数返回值
+要让函数返回一个值，(比如一个字符串或一个数字)，或一个变量（这个函数已经产生了它的一个值）。当调用这个返回值的函数时，可以将函数结果赋予一个变量。
+
+function find_sign($month,$day){
+	//function code.
+	return $sign;
+}
+
+这个函数会返回给定月份和日期的所属星座。
+
+提示：
+ - return语句会终止代码执行，因此，在执行return语句之后，永远也不会运行函数内的任何代码。
+ - 一个函数可以具有多条return语句（例如，在switch语句或条件语句中），但是，至多只会调用其中的一条return语句。例如，函数通常会做以下事情：
+
+   function some_function() {if (/* condition */){return  TRUE;}else{return FALSE;}}
+
+   - 要让一个函数返回多个值，可以使用array()函数返回一个数组。
+
+	return array($var1,$var2)
+
+ - 在调用返回一个数组的函数时，可使用list()函数将数组元素赋予各个变量：
+
+	list($1,$2)=some_function();
+
