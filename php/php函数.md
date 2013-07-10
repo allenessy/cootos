@@ -79,10 +79,10 @@ function function_name(){
 这个函数会返回给定月份和日期的所属星座。          
              
 提示：          
- - return语句会终止代码执行，因此，在执行return语句之后，永远也不会运行函数内的任何代码。
- - 一个函数可以具有多条return语句（例如，在switch语句或条件语句中），但是，至多只会调用其中的一条return语句。例如，函数通常会做以下事情：
+- return语句会终止代码执行，因此，在执行return语句之后，永远也不会运行函数内的任何代码。
+- 一个函数可以具有多条return语句（例如，在switch语句或条件语句中），但是，至多只会调用其中的一条return语句。例如，函数通常会做以下事情：
 
-   function some_function() {if (/* condition */){return  TRUE;}else{return FALSE;}}
+   	function some_function() {if (/* condition */){return  TRUE;}else{return FALSE;}}
 
 - 要让一个函数返回多个值，可以使用array()函数返回一个数组。
 
