@@ -25,5 +25,5 @@
 
 实例：
 
-	select (now(),'%d %b %Y %T');
+	select date_format(now(),'%d %b %Y %T');
 
