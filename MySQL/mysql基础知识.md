@@ -88,8 +88,8 @@ MySQL数据类型
 <tr><td>密码</td><td>password</td><td>VARCHAR(45)</td><td></td><td>NOT NULL</td><td></td><td></td><td></td></tr>
 <tr><td>性别</td><td>gender</td><td>VARCHAR(10)</td><td></td><td>NOT NULL</td><td></td><td>DEFAULT 'M'</td><td></td></tr>
 <tr><td>生日</td><td>birthdate</td><td>VARCHAR(45)</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>密码提示问题</td><td>question</td><td>VARCHAR(45)</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>密码提示答案</td><td>answer</td><td>VARCHAR(45)</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>密码问题</td><td>question</td><td>VARCHAR(45)</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>密码答案</td><td>answer</td><td>VARCHAR(45)</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>地址</td><td>address</td><td>VARCHAR(45)</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>电话</td><td>phone</td><td>INT(11)</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>E-mail</td><td>email</td><td>VARCHAR(45)</td><td></td><td></td><td>UNIQUE</td><td></td><td></td></tr>
