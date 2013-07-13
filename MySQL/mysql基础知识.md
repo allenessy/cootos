@@ -83,7 +83,7 @@ MySQL数据类型
 #####选择列类型
 <table>
 <tr><td>备注</td><td>字段名称</td><td>数据类型</td><td>主键约束</td><td>非空约束</td><td>唯一性约束</td><td>默认约束</td><td>自动增加</td></tr>
-<tr><td>自增ID</td><td>id</td><td>INT</td><td>PRIMARY KEY</td><td>NOT NULL</td><td></td><td></td><td></td></tr>
+<tr><td>自增ID</td><td>id</td><td>INT</td><td>PRIMARY KEY</td><td>NOT NULL</td><td></td><td></td><td>AUTO_INCREMENT</td></tr>
 <tr><td>用户名</td><td>name</td><td>VARCHAR(45)</td><td></td><td>NOT NULL</td><td>UNIQUE</td><td></td><td></td></tr>
 <tr><td>密码</td><td>password</td><td>VARCHAR(45)</td><td></td><td>NOT NULL</td><td></td><td></td><td></td></tr>
 <tr><td>性别</td><td>gender</td><td>VARCHAR(10)</td><td></td><td>NOT NULL</td><td></td><td>DEFAULT 'M'</td><td></td></tr>
