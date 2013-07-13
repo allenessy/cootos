@@ -86,7 +86,7 @@ MySQL数据类型
 <tr><td>自增ID</td><td>id</td><td>INT</td><td>PRIMARY KEY</td><td>NOT NULL</td><td></td><td></td></tr>
 <tr><td>用户名</td><td>name</td><td>VARCHAR(45)</td><td></td><td>NOT NULL</td><td>UNIQUE</td><td></td></tr>
 <tr><td>密码</td><td>password</td><td>VARCHAR(45)</td><td></td><td>NOT NULL</td><td></td><td></td></tr>
-<tr><td>性别</td><td>gender</td><td>VARCHAR(10)</td><td></td><td>NOT NULL</td><td></td><td>DEFAULT M</td></tr>
+<tr><td>性别</td><td>gender</td><td>VARCHAR(10)</td><td></td><td>NOT NULL</td><td></td><td>DEFAULT 'M'</td></tr>
 <tr><td>生日</td><td>birthdate</td><td>VARCHAR(45)</td><td></td><td></td><td></td><td></td></tr>
 <tr><td>密码提示问题</td><td>question</td><td>VARCHAR(45)</td><td></td><td></td><td></td><td></td></tr>
 <tr><td>密码提示答案</td><td>answer</td><td>VARCHAR(45)</td><td></td><td></td><td></td><td></td></tr>
