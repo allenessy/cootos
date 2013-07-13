@@ -9,24 +9,27 @@
 最后一条规则意味着表不能有两个列的名称相同，数据库不能有两个表的名称相同。不过，可以在同一个数据库的两个不同的表中使用相同的列名（事实上你通常会这么做）。   
 查看当前存在的所有数据库：
 
-    show databases;
+    SHOW DATABASE;
 
 创建test数据库：
 
-    create database test;
+    CREATE DATABASE test;
 
 查看创建好的test数据库定义：
 
-    show create database test\G;
+    SHOW CREATE DATABASE test\G;
 
 删除数据库：
 
-    drop database test;
+    DROP DATABASE test;
 
 查看系统支持的存储引擎类型：
 
-    show engines\G;
+    SHOW ENGINES\G;
 
+选择当前数据库为test:
+
+    USE test;
 
 
 在创建数据库表时，MySQL要求明确指出每个列将包含哪一类信息。主要有3类信息，几乎所有的数据库应用程序都是如此：
