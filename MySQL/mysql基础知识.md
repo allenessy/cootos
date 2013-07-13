@@ -82,7 +82,7 @@ MySQL数据类型
 </table>
 #####选择列类型
 <table>
-<tr><td>项目名</td><td>列名</td><td>类型</td></tr>
+<tr><td>备注</td><td>字段名称</td><td>数据类型</td></tr>
 <tr><td>自增ID</td><td>id</td><td>INT</td></tr>
 <tr><td>用户名</td><td>name</td><td>VARCHAR(45)</td></tr>
 <tr><td>密码</td><td>password</td><td>VARCHAR(45)</td></tr>
