@@ -82,16 +82,16 @@ MySQL数据类型
 </table>
 #####选择列类型
 <table>
-<tr><td>备注</td><td>字段名称</td><td>数据类型</td><td>主键</td></tr>
-<tr><td>自增ID</td><td>id</td><td>INT</td><td>PRIMARY KEY</td></tr>
-<tr><td>用户名</td><td>name</td><td>VARCHAR(45)</td><td></td></tr>
-<tr><td>密码</td><td>password</td><td>VARCHAR(45)</td><td></td></tr>
-<tr><td>性别</td><td>gender</td><td>VARCHAR(10)</td><td></td></tr>
-<tr><td>生日</td><td>birthdate</td><td>VARCHAR(45)</td><td></td></tr>
-<tr><td>密码提示问题</td><td>question</td><td>VARCHAR(45)</td><td></td></tr>
-<tr><td>密码提示答案</td><td>answer</td><td>VARCHAR(45)</td><td></td></tr>
-<tr><td>地址</td><td>address</td><td>VARCHAR(45)</td><td></td></tr>
-<tr><td>电话</td><td>phone</td><td>INT(11)</td><td></td></tr>
-<tr><td>E-mail</td><td>email</td><td>VARCHAR(45)</td><td></td></tr>
-<tr><td>注册时间</td><td>registerdatetime</td><td>TIMESTAMP</td><td></td></tr>
+<tr><td>备注</td><td>字段名称</td><td>数据类型</td><td>主键约束</td><td>非空约束</td></tr>
+<tr><td>自增ID</td><td>id</td><td>INT</td><td>PRIMARY KEY</td><td>NOT NULL</td></tr>
+<tr><td>用户名</td><td>name</td><td>VARCHAR(45)</td><td></td><td>NOT NULL</td></tr>
+<tr><td>密码</td><td>password</td><td>VARCHAR(45)</td><td></td><td>NOT NULL</td></tr>
+<tr><td>性别</td><td>gender</td><td>VARCHAR(10)</td><td></td><td>NOT NULL</td></tr>
+<tr><td>生日</td><td>birthdate</td><td>VARCHAR(45)</td><td></td><td></td></tr>
+<tr><td>密码提示问题</td><td>question</td><td>VARCHAR(45)</td><td></td><td></td></tr>
+<tr><td>密码提示答案</td><td>answer</td><td>VARCHAR(45)</td><td></td><td></td></tr>
+<tr><td>地址</td><td>address</td><td>VARCHAR(45)</td><td></td><td></td></tr>
+<tr><td>电话</td><td>phone</td><td>INT(11)</td><td></td><td></td></tr>
+<tr><td>E-mail</td><td>email</td><td>VARCHAR(45)</td><td></td><td></td></tr>
+<tr><td>注册时间</td><td>registerdatetime</td><td>TIMESTAMP</td><td></td><td></td></tr>
 </table>
