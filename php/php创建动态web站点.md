@@ -55,10 +55,10 @@ index.php
     define('DB_NAME','cis');
     
     /** MySQL 数据库用户名 */
-    define('DB_USER', 'root');
+    define('DB_USER', '用户名');
     
     /** MySQL 数据库密码 */
-    define('DB_PASSWORD', 'xt246402');
+    define('DB_PASSWORD', '密码');
     
     /** MySQL 主机 */
     define('DB_HOST', 'localhost');
