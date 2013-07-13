@@ -31,6 +31,14 @@
 
     SHOW VARIABLES LIKE 'storage_engine';
 
+查看MySQL所支持的编码(字符集)：
+
+    SHOW CHARACTER SET;
+
+MySQL中的每种编码都有一种或多种校对规则（collation）。校对规则是在字符集内用于比较字符的一套规则。
+
+    SHOW COLLATION LIKE 'utf8%';
+
 选择当前数据库为test:
 
     USE test;
