@@ -27,6 +27,10 @@
 
     SHOW ENGINES\G;
 
+查看系统默认存储引擎：
+
+    SHOW VARIABLES LIKE 'storage_engine';
+
 选择当前数据库为test:
 
     USE test;
