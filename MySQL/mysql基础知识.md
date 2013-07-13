@@ -80,7 +80,9 @@ MySQL数据类型
 <td>SET</td><td>1、2、3、4或8字节</td><td>与ENUM一样，只不过每一列都可以具有多个可能的值</td>
 </tr>
 </table>
-#####选择列类型
+
+实例：
+
 <table>
 <tr><td>备注</td><td>字段名称</td><td>数据类型</td><td>主键约束</td><td>非空约束</td><td>唯一性约束</td><td>默认约束</td><td>自动增加</td></tr>
 <tr><td>自增ID</td><td>id</td><td>INT</td><td>PRIMARY KEY</td><td>NOT NULL</td><td></td><td></td><td>AUTO_INCREMENT</td></tr>
