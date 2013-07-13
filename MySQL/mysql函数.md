@@ -1,7 +1,7 @@
 ###格式化日期和时间
 在DATE_FORMAT()和TIME_FORMAT()函数中使用的参数
 <table>
-<tr><td>名词</td><td></td><td>用法</td><td>示例</td></tr>
+<tr><td>名词</td><td>用法</td><td>示例</td></tr>
 <tr><td>%e</td><td>一月中的某一天</td><td>1~31</td></tr>
 <tr><td>%d</td><td>一月中的某一天,用两位数表示</td><td>01~31</td></tr>
 <tr><td>%D</td><td>带后缀的天</td><td>1st~31st</td></tr>
