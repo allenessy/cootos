@@ -1,0 +1,54 @@
+###ul、li导航栏
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+    <head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cootos</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    </head>
+    <body>
+    <div class="nav">
+    <ul>
+    <li><a target="_self" href="">首页</a></li>
+    <li><a target="_self" href="">雨滴</a></li>
+    <li><a target="_self" href="">印记</a></li>
+    <li><a target="_self" href="">微博</a></li>
+    <li><a target="_self" href="">关于我们</a></li>
+    </ul>
+    </div>
+    </body>
+    </html>
+
+css样式表
+
+    @CHARSET "UTF-8";
+    body,div,ul,li{margin:0;padding:0}
+    ul,li{font-style:normal;list-style:none}
+    a,a:hover{text-decoration:none}
+    .nav{width:960px;margin:0 auto}
+    .nav ul{background:#363636;width:960px;height:26px;line-height:26px}
+    .nav li{border-right:1px solid #F5F5F5;float:left}
+    .nav li a{color:#FFFFFF;display:block;padding:0 28px}
+    .nav li a:hover{background:#D90013}
+
+###dl、dt、dd用户名登陆注册表单
+
+    <form action="" method="post">
+    <div class="form">
+    <dl>
+    <dt>用户名：</dt>
+    <dd><input type="text" name="user" /></dd>
+    </dl>
+    <dl>
+    <dt>密码：</dt>
+    <dd><input type="password" name="password" /></dd>
+    </dl>
+    </div>
+    </form>
+
+css样式表
+
+    .form dl{clear:left}
+    .form dt{text-align:right;width:75px;font-size:14px;float:left}
