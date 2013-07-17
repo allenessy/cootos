@@ -31,22 +31,21 @@ PHP中条件为真的情况有许多种。下面是常见的一些。
 `TRUE`、`true`、`True`等。    
 
 比较和逻辑运算符：
-
-    符号       含义          类型      示例
-    -------------------------------------------
-    ==         等于          比较     $x == $y
-    !=         不等于        比较     $x != $y
-    <          小于          比较     $x <  $y
-    >          大于          比较     $x >  $y
-    <=         小于或等于    比较     $x <= $y
-    >=         大于或等于    比较     $x >= $y
-    !          非            逻辑     !$x
-    &&         与            逻辑     $x && $y
-    AND        与            逻辑     $x and $y
-    ||         或            逻辑     $x || $y
-    OR         或            逻辑     $x or $y
-    XOR        异或          逻辑     $x XOR $y
-
+<table>
+<tr><td>符号</td><td>含义</td><td>类型</td><td>示例</td></tr>
+<tr><td>==</td><td>等于</td><td>比较</td><td>$x == $y</td></tr>
+<tr><td>!=</td><td>不等于</td><td>比较</td><td>$x != $y</td></tr>
+<tr><td><</td><td>小于</td><td>比较</td><td>$x <  $y</td></tr>
+<tr><td>></td><td>大于</td><td>比较</td><td>$x >  $y</td></tr>
+<tr><td><=</td><td>小于或等于</td><td>比较</td><td>$x <= $y</td></tr>
+<tr><td>>=</td><td>大于或等于</td><td>比较</td><td>$x >= $y</td></tr>
+<tr><td>!</td><td>非</td><td>逻辑</td><td>!$x</td></tr>
+<tr><td>&&</td><td>与</td><td>逻辑</td><td>$x && $y</td></tr>
+<tr><td>AND</td><td>与</td><td>逻辑</td><td>$x and $y</td></tr>
+<tr><td>||</td><td>或</td><td>逻辑</td><td>$x || $y</td></tr>
+<tr><td>OR</td><td>或</td><td>逻辑</td><td>$x or $y</td></tr>
+<tr><td>XOR</td><td>异或</td><td>逻辑</td><td>$x XOR $y</td></tr>
+</table>
 使用两个条件语句验证性别单选按钮。
 
     if (isset($_POST['gender'])){
