@@ -20,6 +20,22 @@ date_default_timezone_set() 函数设置用在脚本中所有日期/时间函数
 <tr><td>j</td><td>一月中的某一天</td><td>1~31</td></tr>
 <tr><td>d</td><td>一月中的某一天,用两位数表示</td><td>01~31</td></tr>
 <tr><td>jS</td><td>带后缀的天</td><td>1st~31st</td></tr>
+<tr><td>G</td><td>小时，24小时制</td><td>0~23</td></tr>
+<tr><td>H</td><td>小时，24小时制，用两位数字表示</td><td>00~23</td></tr>
+<tr><td>g</td><td>小时</td><td>1~12</td></tr>
+<tr><td>h</td><td>小时，用两位数字表示</td><td>01~12</td></tr>
+<tr><td>i</td><td>分钟</td><td>00~59</td></tr>
+<tr><td>s</td><td>秒</td><td>00~59</td></tr>
+<tr><td>a</td><td>上午或下午</td><td>am或pm</td></tr>
+<tr><td>A</td><td>上午或下午</td><td>AM或PM</td></tr>
+<tr><td>l</td><td>星期名称</td><td>Monday~Sunday</td></tr>
+<tr><td>D</td><td>简写的星期名称</td><td>Mon~Sun</td></tr>
+<tr><td>w</td><td>星期名称，数字表示</td><td>1~7</td></tr>
+<tr><td>W</td><td>一年中的星期数</td><td>1~52</td></tr>
+<tr><td>t</td><td>本月的天数</td><td>28~31</td></tr>
+<tr><td>z</td><td>今天是今年的第n天</td><td>1~365</td></tr>
+<tr><td>L</td><td>今年是否是闰年</td><td>0~1</td></tr>
+<tr><td>T</td><td>服务器的时间区域设置</td><td>UTC、PRC</td></tr>
 </table>
 
 实例：
