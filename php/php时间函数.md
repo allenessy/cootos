@@ -1,9 +1,8 @@
-
 date_default_timezone_set() 函数设置用在脚本中所有日期/时间函数的默认时区。
 
 设置中国时区
 
-  date_default_timezone_set('Asia/Shanghai');//'Asia/Shanghai' 亚洲/上海
+  	date_default_timezone_set('Asia/Shanghai');//'Asia/Shanghai' 亚洲/上海
 	date_default_timezone_set('Asia/Chongqing');//其中Asia/Chongqing'为“亚洲/重庆”
 	date_default_timezone_set('PRC');//其中PRC为“中华人民共和国”
 
