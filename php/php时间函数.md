@@ -1,0 +1,29 @@
+
+date_default_timezone_set() 函数设置用在脚本中所有日期/时间函数的默认时区。
+
+设置中国时区
+
+  date_default_timezone_set('Asia/Shanghai');//'Asia/Shanghai' 亚洲/上海
+	date_default_timezone_set('Asia/Chongqing');//其中Asia/Chongqing'为“亚洲/重庆”
+	date_default_timezone_set('PRC');//其中PRC为“中华人民共和国”
+
+注：以上3种方法，任意一个都可以满足我们需求。
+
+日期时间函数date()
+<table>
+<tr><td>名词</td><td>用法</td><td>示例</td></tr>
+<tr><td>Y</td><td>年份</td><td>2002</td></tr>
+<tr><td>y</td><td>年份</td><td>02</td></tr>
+<tr><td>F</td><td>月份名称</td><td>January~December</td></tr>
+<tr><td>M</td><td>简写的月份名称</td><td>Jan~Dec</td></tr>
+<tr><td>m</td><td>月份编号，用两位数字表示</td><td>01~12</td></tr>
+<tr><td>n</td><td>月份编号</td><td>1~12</td></tr>
+<tr><td>j</td><td>一月中的某一天</td><td>1~31</td></tr>
+<tr><td>d</td><td>一月中的某一天,用两位数表示</td><td>01~31</td></tr>
+<tr><td>jS</td><td>带后缀的天</td><td>1st~31st</td></tr>
+</table>
+
+实例：
+
+	$datetime=date('d M Y G:i:s');
+	echo $datetime;
