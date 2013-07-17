@@ -40,5 +40,5 @@ date_default_timezone_set() 函数设置用在脚本中所有日期/时间函数
 
 实例：
 
-	$datetime=date('d M Y G:i:s');
+	$datetime=date('d M Y H:i:s');
 	echo $datetime;
