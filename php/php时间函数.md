@@ -1,4 +1,4 @@
-在php.ini中设置时区
+在`php.ini`中设置时区
 
 	date.timezone = PRC
 
