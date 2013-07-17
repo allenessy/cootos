@@ -35,8 +35,8 @@ PHP中条件为真的情况有许多种。下面是常见的一些。
 <tr><td>符号</td><td>含义</td><td>类型</td><td>示例</td></tr>
 <tr><td>==</td><td>等于</td><td>比较</td><td>$x == $y</td></tr>
 <tr><td>!=</td><td>不等于</td><td>比较</td><td>$x != $y</td></tr>
-<tr><td><</td><td>小于</td><td>比较</td><td>$x <  $y</td></tr>
-<tr><td>></td><td>大于</td><td>比较</td><td>$x >  $y</td></tr>
+<tr><td>\<</td><td>小于</td><td>比较</td><td>$x <  $y</td></tr>
+<tr><td>\></td><td>大于</td><td>比较</td><td>$x >  $y</td></tr>
 <tr><td><=</td><td>小于或等于</td><td>比较</td><td>$x <= $y</td></tr>
 <tr><td>>=</td><td>大于或等于</td><td>比较</td><td>$x >= $y</td></tr>
 <tr><td>!</td><td>非</td><td>逻辑</td><td>!$x</td></tr>
