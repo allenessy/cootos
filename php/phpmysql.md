@@ -1,0 +1,41 @@
+<table>
+<tr><td>函数</td><td>说明</td></tr>
+<tr><td>mysql_connect()</td><td>打开一个到MySQL服务器的连接</td></tr>
+<tr><td>mysql_select_db()</td><td>选择MySQL数据库</td></tr>
+<tr><td>mysql_query()</td><td>发送一条MySQL查询</td></tr>
+<tr><td>mysql_fetch_array()</td><td></td></tr>
+<tr><td>mysql_fetch_row()</td><td></td></tr>
+</table>
+
+mysql_connect() 打开MySQL服务器连接
+
+mysql_connect('主机名:端口','用户名','密码')
+
+  $conn=mysql_connect('localhost','root','123456');
+
+mysql_select_db()  选择 MySQL 数据库
+
+	mysql_select_db(dbname,$conn);
+	
+mysql_query()   发送一条 MySQL 查询
+
+	$query="select * from radcheck username='$user'";
+	$result=mysql_query($query);
+
+mysql_fetch_array()  判断用户名是否存在
+
+	while($row=mysql_fetch_array($result)){
+		if($row['username']==$user){
+			$error=true;
+			echo '用户名已经存在<br />';
+		}
+	}
+
+mysql_fetch_row()  
+
+	while($row=mysql_fetch_row($result)){
+		if($row[1]==$user){
+			$error=true;
+			echo '用户名已经存在<br />';
+		}
+	}
