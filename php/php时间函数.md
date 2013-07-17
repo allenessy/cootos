@@ -1,14 +1,22 @@
-date_default_timezone_set() 函数设置用在脚本中所有日期/时间函数的默认时区。
+在php.ini中设置时区
+
+	date.timezone = PRC
+
+`date_default_timezone_set()` 函数设置用在脚本中所有日期/时间函数的默认时区。
 
 设置中国时区
 
   	date_default_timezone_set('Asia/Shanghai');//'Asia/Shanghai' 亚洲/上海
 	date_default_timezone_set('Asia/Chongqing');//其中Asia/Chongqing'为“亚洲/重庆”
 	date_default_timezone_set('PRC');//其中PRC为“中华人民共和国”
+	ini_set('date.timezone','Etc/GMT-8');
+	ini_set('date.timezone','PRC');
+	ini_set('date.timezone','Asia/Shanghai');
+	ini_set('date.timezone','Asia/Chongqing');
 
-注：以上3种方法，任意一个都可以满足我们需求。
+注：以上几种方法，任意一个都可以满足我们需求。
 
-日期时间函数date()
+日期时间函数`date()`
 <table>
 <tr><td>名词</td><td>用法</td><td>示例</td></tr>
 <tr><td>Y</td><td>年份</td><td>2002</td></tr>
