@@ -1,0 +1,9 @@
+###HTML转义字符对照表
+<table>
+<tr><td>字符</td><td>十进制</td><td>转义字符</td></tr>
+<tr><td>&quot;</td><td>&amp;#34;</td><td>&amp;quot;</td></tr>
+<tr><td>&amp;</td><td>&amp;#38;</td><td>&amp;amp;</td></tr>
+<tr><td>&lt;</td><td>&amp;#60;</td><td>&amp;lt;</td></tr>
+<tr><td>&gt;</td><td>&amp;#62;</td><td>&amp;gt;</td></tr>
+<tr><td>空格</td><td>&amp;#160;</td><td>&amp;nbsp;</td></tr>
+</table>
