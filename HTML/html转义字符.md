@@ -18,7 +18,7 @@
 <tr><td>&ordf;</td><td>&amp;#170;</td><td>&amp;ordf;</td></tr>
 <tr><td>&laquo;</td><td>&amp;#171;</td><td>&amp;laquo;</td></tr>
 <tr><td>&not;</td><td>&amp;#172;</td><td>&amp;not;</td></tr>
-<tr><td>&shy;</td><td>&amp;#173;</td><td>&amp;shy;</td></tr>
+<tr><td>/x7f</td><td>&amp;#173;</td><td>&amp;shy;</td></tr>
 <tr><td>&reg;</td><td>&amp;#174;</td><td>&amp;reg;</td></tr>
 <tr><td>&macr;</td><td>&amp;#175;</td><td>&amp;macr;</td></tr>
 <tr><td>&deg;</td><td>&amp;#176;</td><td>&amp;deg;</td></tr>
