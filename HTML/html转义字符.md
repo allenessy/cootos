@@ -7,12 +7,12 @@
 <tr><td>&gt;</td><td>&amp;#62;</td><td>&amp;gt;</td></tr>
 <tr><td>空格</td><td>&amp;#160;</td><td>&amp;nbsp;</td></tr>
 <tr><td>&iexcl;</td><td>&amp;#161;</td><td>&amp;iexcl;</td></tr>
-<tr><td>&cent;</td><td>&amp;#162;</td><td>&amp;cent;</td></tr>
-<tr><td>&pound;</td><td>&amp;#163;</td><td>&amp;pound;</td></tr>
+<tr><td>￠</td><td>&amp;#162;</td><td>&amp;cent;</td></tr>
+<tr><td>￡</td><td>&amp;#163;</td><td>&amp;pound;</td></tr>
 <tr><td>&curren;</td><td>&amp;#164;</td><td>&amp;curren;</td></tr>
-<tr><td>&yen;</td><td>&amp;#165;</td><td>&amp;yen;</td></tr>
-<tr><td>&brvbar;</td><td>&amp;#166;</td><td>&amp;brvbar;</td></tr>
-<tr><td>&sect;</td><td>&amp;#167;</td><td>&amp;sect;</td></tr>
+<tr><td>￥</td><td>&amp;#165;</td><td>&amp;yen;</td></tr>
+<tr><td>|</td><td>&amp;#166;</td><td>&amp;brvbar;</td></tr>
+<tr><td>§</td><td>&amp;#167;</td><td>&amp;sect;</td></tr>
 <tr><td>&uml;</td><td>&amp;#168;</td><td>&amp;uml;</td></tr>
 <tr><td>&copy;</td><td>&amp;#169;</td><td>&amp;copy;</td></tr>
 <tr><td>&ordf;</td><td>&amp;#170;</td><td>&amp;ordf;</td></tr>
