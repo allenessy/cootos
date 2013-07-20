@@ -19,3 +19,26 @@
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 3px;
 
+设置背景图片
+
+    background-image:url(bg.png);
+    background:url(bg.png);
+
+设置背景颜色
+
+    background-color: #000000;
+    background: #000000
+
+background: #00FF00 url(bgimage.gif) no-repeat fixed top;   
+设置背景如何重复背景图像   
+
+    background:url(bg.png) repeat-y;
+
+<table>
+<tr><td>值</td><td>描述</td></tr>
+<tr><td>repeat</td><td>默认。背景图像将在垂直方向和水平方向重复。</td></tr>
+<tr><td>repeat-x</td><td>背景图像将在水平方向重复。</td></tr>
+<tr><td>repeat-y</td><td>背景图像将在垂直方向重复。</td></tr>
+<tr><td>no-repeat</td><td>背景图像将仅显示一次。</td></tr>
+<tr><td>inherit</td><td>规定应该从父元素继承 background-repeat 属性的设置。</td></tr>
+</table>
