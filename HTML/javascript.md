@@ -74,3 +74,12 @@ javascript引用外部脚本
 
 弹出提示框输出：[object]，表明这是一个对象。
 
+#####插入特殊字符
+<table>
+<tr><td>\'</td><td>单引号</td><td>\"</td><td>双引号</td></tr>
+<tr><td>\&</td><td>和号</td><td>\\</td><td>反斜杠</td></tr>
+<tr><td>\r</td><td>回车符</td><td>\t</td><td>制表符</td></tr>
+<tr><td>\b</td><td>退格符</td><td>\f</td><td>换页符</td></tr>
+<tr><td>\n</td><td>换行符</td><td></td><td></td></tr>
+</table>
+
