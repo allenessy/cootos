@@ -45,7 +45,7 @@ background: #00FF00 url(bgimage.gif) no-repeat fixed top;
 
 定义文本是否有划线以及划线的方式
 
-text-decoration:none
+    text-decoration:none
 
 <table>
 <tr><td>值</td><td>描述</td></tr>
@@ -59,17 +59,17 @@ text-decoration:none
 
 实例：
 
-a{text-decoration:none}
-h1{text-decoration:none}
+    a{text-decoration:none}
+    h1{text-decoration:none}
 
 设置列表项标记的类型
 
-list-style-type:none;
-list-style:none;
+    list-style-type:none;
+    list-style:none;
 
 实例：
 
-ul,li{list-style:none};
+    ul,li{list-style:none};
 
 <table>
 <tr><td>值</td><td>描述</td></tr>
