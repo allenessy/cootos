@@ -105,3 +105,17 @@ overflow: hidden 隐藏溢出DIV内容或图片
 <tr><td>center</td><td>文本居中</td></tr>
 </table>
 
+float浮动
+
+<table>
+<tr><td>float:left</td><td>左浮动</td></tr>
+<tr><td>float:right</td><td>右浮动</td></tr>
+<tr><td>clear:both</td><td>清除浮动</td></tr>
+</table>
+
+实例：
+
+    <div style="background:#003366;">
+    <div style="float:left;width:30%;height:40px;background:#330033;"></div>
+    <div style="clear:both"></div>
+    </div>
