@@ -79,3 +79,29 @@ background: #00FF00 url(bgimage.gif) no-repeat fixed top;
 <tr><td>decimal</td><td>标记是数字。</td></tr>
 <tr><td>decimal-leading-zero</td><td>0开头的数字标记。(01, 02, 03, 等。)</td></tr>
 </table>
+
+css隐藏DIV及内容，完全隐藏内容与布局
+
+    display:none
+    <div style="display:none;">你是看不见我的</div>
+
+display:block可以让任何元素成块元素
+
+    a{display:block}
+
+overflow: hidden 隐藏溢出DIV内容或图片
+
+    overflow: hidden
+    <div style="overflow: hidden; width:30px; height:20px;">你是看不见我的。</div> 
+
+文本对齐方式
+
+    text-align:center
+
+<table>
+<tr><td>值</td><td>描述</td></tr>
+<tr><td>left</td><td>文本左对齐</td></tr>
+<tr><td>right</td><td>文本右对齐</td></tr>
+<tr><td>center</td><td>文本居中</td></tr>
+</table>
+
