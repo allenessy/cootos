@@ -251,6 +251,218 @@ break 用于执行完代码后跳出流程，虽然语法上可以省略，但�
 
 提示       
       
-可以有多个 case 条件判断        
-case 后面结果也不是仅限于数字，也可以是字符或其他 JavaScript 支持的类型          
-default 不是必须的，如果所有的 case 结果都不符，且没有设定 default 时，则不执行任何代码          
+可以有多个 case 条件判断               
+case 后面结果也不是仅限于数字，也可以是字符或其他 JavaScript 支持的类型               
+default 不是必须的，如果所有的 case 结果都不符，且没有设定 default 时，则不执行任何代码               
+           
+JavaScript for 循环         
+JavaScript for 循环用于反复执行一段代码，其语法如下：          
+运行        
+
+    for (expr1; expr2; expr3){
+        statement
+    }
+
+通常在已经确定执行次数的情况下使用 for 循环，下面的例子输出1到10：        
+运行        
+
+    <script type="text/javascript">
+    var i=1
+    for (i = 1; i <= 10; i++) {
+        document.write(i + "<br />")
+    }
+    </script>
+
+运行结果：    
+运行       
+       
+for 循环语法解读       
+       
+第一个表达式（expr1）在循环开始前无条件求值一次          
+expr2 在每次循环开始前求值，如果值为 TRUE，则继续循环，执行嵌套的循环语句；如果值为 FALSE，则终止循环。      
+expr3 在每次循环之后被求值（执行）      
+每个表达式都可以为空。如果expr2 为空意则将无限循环下去，但可以通过break来结束循环，如下例子：    
+运行    
+
+    var i=1
+    for (i = 1; ; i++) {
+        if (i > 10) {
+            break;
+        }
+        document.write(i + "<br />");
+    }
+
+该例子仍然输出1到10，但使用 if 条件判断，当 i>10 的时候，结束循环。      
+        
+提示         
+在使用循环语句的时候，我们通常要注意不要无限循环而造成程序“僵死”，另外还要注意循环条件（循环判断表达式），以确保循环结果正确。      
+      
+JavaScript while 循环       
+while 循环是 JavaScript 中最简单的循环，其语法为：          
+运行   
+
+    while (expr){
+        statement
+    }
+
+该语法表示，只要 expr 表达式为 TRUE，那么就一直执行 statement 直到 expr 为 FALSE为 止，statement 表示要执行的动作或逻辑。      
+下面的例子利用 while 循环输出1到10：       
+运行      
+
+    <script type="text/javascript">
+    var i = 1;
+    while (i <= 10) {
+       document.write(i + "<br />");
+       i++;
+    }
+    </script>
+
+运行结果：     
+运行       
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+
+do while循环   
+do while 循环和 while 循环非常相似，其区别只是在于 do while 保证必须执行一次，而 while 在表达式不成立时则可能不做任何操作。         
+do while 循环语法：      
+运行    
+
+    do {
+       statement
+    }while (expr)
+
+例子：   
+运行    
+
+    var i = 1;
+    do {
+       document.write(i + "<br />");
+       i++;
+    } while (i <= 10);
+
+该例子也是输出1到10，但与 while 循环不同的是，无论 i 的初始值是多少，都会将 i 的值至少输出1次。    
+   
+JavaScript for ... in    
+for ... in 语句用于循环操作数组或对象属性，语法如下：   
+运行     
+
+    for (变量 in 对象)
+    {
+        statement
+    }
+
+for ... in 实例     
+下面是一个使用 for ... in 语句遍历数组输出数组元素值的例子：         
+运行       
+
+    <script language="JavaScript">        
+    var array_1 = new Array('a',10.5,true);
+    var x;
+    for ( x in array_1 )
+    {
+        document.write( array_1[x] + "<br />" );
+    }      
+    </script>
+
+运行该例子，输出：       
+运行    
+
+    a
+    10.5
+    true
+
+直接输出 JavaScript 数组       
+当我们使用 alert() 或 document.write() 方法直接输出 JavaScript 数组时，JavaScript 会将数组元素转换成以 , 符号连接字符串输出，如下面例子所示：         
+运行         
+
+    <script language="JavaScript">   
+    var array_1 = new Array('a',10.5,true);
+    document.write( array_1 );
+    </script>
+
+运行该例子，输出：       
+运行    
+
+    a,10.5,true
+
+break 和 continue 语句对循环中的代码执行提供了更严格的控制。      
+break 和 continue 语句的不同之处       
+break 语句可以立即退出循环，阻止再次反复执行任何代码。      
+而 continue 语句只是退出当前循环，根据控制表达式还允许继续进行下一次循环。        
+例如：      
+运行       
+
+    var iNum = 0;
+                
+    for (var i=1; i<10; i++) {
+      if (i % 5 == 0) {
+        break;
+      }
+      iNum++;
+    }
+    alert(iNum);
+
+在以上代码中，for 循环从 1 到 10 迭代变量 i。在循环主体中，if 语句将（使用取模运算符）检查 i 的值是否能被 5 整除。如果能被 5 整除，将执行 break 语句。alert 显示 "4"，即退出循环前执行循环的次数。       
+如果用 continue 语句代替这个例子中的 break 语句，结果将不同：      
+运行     
+
+    var iNum = 0;
+               
+    for (var i=1; i<10; i++) {
+      if (i % 5 == 0) {
+        continue;
+      }
+      iNum++;
+    }
+    alert(iNum);
+
+这里，alert 将显示 "8"，即执行循环的次数。可能执行的循环总数为 9，不过当 i 的值为 5 时，将执行 continue 语句，会使循环跳过表达式 iNum++，返回循环开头。     
+与有标签的语句一起使用        
+break 语句和 continue 语句都可以与有标签的语句联合使用，返回代码中的特定位置。        
+通常，当循环内部还有循环时，会这样做，例如：       
+运行    
+
+    var iNum = 0;
+                
+    outermost:
+    for (var i=0; i<10; i++) {
+      for (var j=0; j<10; j++) {
+        if (i == 5 && j == 5) {
+        break outermost;
+      }
+      iNum++;
+      }
+    }
+                
+    alert(iNum);
+
+在上面的例子中，标签 outermost 表示的是第一个 for 语句。正常情况下，每个 for 语句执行 10 次代码块，这意味着 iNum++ 正常情况下将被执行 100 次，在执行完成时，iNum 应该等于 100。这里的 break 语句有一个参数，即停止循环后要跳转到的语句的标签。这样 break 语句不止能跳出内部 for 语句（即使用变量 j 的语句），还能跳出外部 for 语句（即使用变量 i 的语句）。因此，iNum 最后的值是 55，因为当 i 和 j 的值都等于 5 时，循环将终止。          
+可以以相同的方式使用 continue 语句：   
+运行    
+
+    var iNum = 0;
+                
+    outermost:
+    for (var i=0; i<10; i++) {
+      for (var j=0; j<10; j++) {
+        if (i == 5 && j == 5) {
+        continue outermost;
+      }
+      iNum++;
+      }
+    }
+                
+    alert(iNum);
+
+在上例中，continue 语句会迫使循环继续，不止是内部循环，外部循环也如此。当 j 等于 5 时出现这种情况，意味着内部循环将减少 5 次迭代，致使 iNum 的值为 95。        
+提示：可以看出，与  break 和 continue 联合使用的有标签语句非常强大，不过过度使用它们会给调试代码带来麻烦。要确保使用的标签具有说明性，同时不要嵌套太多层循环。       
+
