@@ -43,6 +43,31 @@ background: #00FF00 url(bgimage.gif) no-repeat fixed top;
 <tr><td>inherit</td><td>规定应该从父元素继承 background-repeat 属性的设置。</td></tr>
 </table>
 
+设置背景图片的显示范围      
+      
+向左偏移70px,向上偏移40px
+
+    background-position:-70px -40px
+
+向右偏移70px，向下偏移 40px
+
+    background-position:70px 40px
+
+scroll 背景图像是随对象内容滚动      
+fixed 背景图像固定     
+
+实例：       
+      
+背景属性：    
+背景属性：背景颜色 背景图片 背景是否重复 背景时候随浏览器滚动 背景平位置 背景垂直位置      
+background : background-color || background-image || background-repeat || background-attachment || background-position      
+
+    background:transparent url(bg.png) no-repeat scroll 70px 40px;
+
+transparent表示透明无颜色      
+no-repeat 表示图片不重复         
+scroll 表示背景图片随浏览器下拉而滚动         
+          
 定义文本是否有划线以及划线的方式
 
     text-decoration:none
