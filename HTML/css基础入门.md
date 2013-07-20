@@ -42,3 +42,40 @@ background: #00FF00 url(bgimage.gif) no-repeat fixed top;
 <tr><td>no-repeat</td><td>背景图像将仅显示一次。</td></tr>
 <tr><td>inherit</td><td>规定应该从父元素继承 background-repeat 属性的设置。</td></tr>
 </table>
+
+定义文本是否有划线以及划线的方式
+
+text-decoration:none
+
+<table>
+<tr><td>值</td><td>描述</td></tr>
+<tr><td>none</td><td>定义正常显示的文本</td></tr>
+<tr><td>underline</td><td>定义有下划线的文本</td></tr>
+<tr><td>overline</td><td>定义有上划线的文本</td></tr>
+<tr><td>line-through</td><td>定义直线穿过文本</td></tr>
+<tr><td>blink</td><td>定义闪烁的文本</td></tr>
+<tr><td>inherit</td><td>规定应该从父元素继承 text-decoration 属性的值。</td></tr>
+</table>
+
+实例：
+
+a{text-decoration:none}
+h1{text-decoration:none}
+
+设置列表项标记的类型
+
+list-style-type:none;
+list-style:none;
+
+实例：
+
+ul,li{list-style:none};
+
+<table>
+<tr><td>值</td><td>描述</td></tr>
+<tr><td>none</td><td>默认。标记是实心圆。</td></tr>
+<tr><td>circle</td><td>标记是空心圆。</td></tr>
+<tr><td>square</td><td>标记是实心方块。</td></tr>
+<tr><td>decimal</td><td>标记是数字。</td></tr>
+<tr><td>decimal-leading-zero</td><td>0开头的数字标记。(01, 02, 03, 等。)</td></tr>
+</table>
