@@ -4,7 +4,7 @@ javascript弹出消息对话框
 
 javascript输出文本
 
-    <script>document.write("输出文本");</script>
+    <script type="text/javascript">document.write("输出文本");</script>
 
 javascript引用外部脚本
 
