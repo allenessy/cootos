@@ -28,7 +28,6 @@
 
         vi /etc/sysctl.conf
 
-
  SSH执行以上命令，在该文件底部加入以下代码。
 
     xen.independent_wallclock = 1
@@ -64,12 +63,12 @@ SSH中依次逐行执行以上命令，即可替换默认时区，更新为上�
 * 2、添加开机自动启动项
  - （1）修改/etc/rc.local文件
 
-        vi /etc/rc.local
+    vi /etc/rc.local
 
  SSH执行以上命令。
  - （2）在适当位置加上以下命令
 
-        /usr/sbin/ntpdate us.pool.ntp.org
+    /usr/sbin/ntpdate us.pool.ntp.org
 
 
 
