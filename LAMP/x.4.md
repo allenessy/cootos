@@ -29,9 +29,9 @@
         vi /etc/sysctl.conf
 
 
-SSH执行以上命令，在该文件底部加入以下代码。
+ SSH执行以上命令，在该文件底部加入以下代码。
 
-        xen.independent_wallclock = 1
+    xen.independent_wallclock = 1
 
 保存并退出。
 
@@ -46,7 +46,7 @@ SSH执行以上命令，重新加载系统参数。
         rm -rf /etc/localtime    #删除当前默认时区
         ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
- - 复制替换默认时区为上海
+ 复制替换默认时区为上海
 
         yum install -y ntp        #安装时间同步服务（组件）
         ntpdate us.pool.ntp.org   #设置同步服务器
@@ -60,13 +60,13 @@ SSH中依次逐行执行以上命令，即可替换默认时区，更新为上�
 
     which ntpdate
 
-SSH执行以上命令，查询ntpdate组件所在路径。（可跳过）
+ SSH执行以上命令，查询ntpdate组件所在路径。（可跳过）
 * 2、添加开机自动启动项
  - （1）修改/etc/rc.local文件
 
         vi /etc/rc.local
 
-SSH执行以上命令。
+ SSH执行以上命令。
  - （2）在适当位置加上以下命令
 
         /usr/sbin/ntpdate us.pool.ntp.org
