@@ -4,8 +4,7 @@
 
     rm -rf /etc/localtime    #删除当前默认时区
     ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
-#复制替换默认时区为上海
+    #复制替换默认时区为上海
 
 #####二、手动修正时间
 
