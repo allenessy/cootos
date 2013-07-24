@@ -23,34 +23,38 @@
 此方法适用于大部分独立服务器和虚拟化（Xen、KVM）的Linux系统，如Centos及Debian，部分OpenVZ虚拟话系统可能无法修改。部分Xen VPS请使用下面方法：
 
 #####一、修正时间
+
 * 1、编辑/etc/sysctl.conf
 
-    vi /etc/sysctl.conf
+        vi /etc/sysctl.conf
 
 
 SSH执行以上命令，在该文件底部加入以下代码。
 
-    xen.independent_wallclock = 1
+        xen.independent_wallclock = 1
 
 保存并退出。
+
 * 2、执行以下命令
 
-    sysctl -p
+        sysctl -p
 
 SSH执行以上命令，重新加载系统参数。
+
 * 3、依次执行以下命令
 
-    rm -rf /etc/localtime    #删除当前默认时区
-    ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+        rm -rf /etc/localtime    #删除当前默认时区
+        ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-#复制替换默认时区为上海
+ - 复制替换默认时区为上海
 
-    yum install -y ntp        #安装时间同步服务（组件）
-    ntpdate us.pool.ntp.org   #设置同步服务器
-    date                      #查看时间（时区）是否生效
+        yum install -y ntp        #安装时间同步服务（组件）
+        ntpdate us.pool.ntp.org   #设置同步服务器
+        date                      #查看时间（时区）是否生效
 
 SSH中依次逐行执行以上命令，即可替换默认时区，更新为上海时间。若执行“date”后时间恢复正常，则表示修改成功。
 #####二、自动同步时间
+
 为了保证时间的准确性和或防止VPS和母机时间再一次同步，请设置开机时自动同步最新的时间。
 * 1、查询ntpdate组件所在位置
 
