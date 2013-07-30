@@ -9,6 +9,7 @@
  - 3.1.[JavaScript基础知识](3.1.md)
  - 3.2.[JavaScript变量](3.2.md)
  - 3.5.[JavaScript数组](3.5.md)
- - 3.7.[JavaScript函数](3.7.md)
+ - 3.6.[JavaScript函数](3.6.md)
+ - 3.7.[JavaScript实例](3.7.md)
 * 相关工具
  - x.1.[Adobe Dreamweaver CS6入门](x.1.md)
