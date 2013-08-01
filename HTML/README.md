@@ -12,5 +12,6 @@
  - 3.5.[JavaScript数组](3.5.md)
  - 3.6.[JavaScript函数](3.6.md)
  - 3.7.[JavaScript实例](3.7.md)
+ - 3.9.[JavaScript学习笔记](3.9.md)
 * 相关工具
  - x.1.[Adobe Dreamweaver CS6入门](x.1.md)
