@@ -1,4 +1,9 @@
 ###apache 绑定多个域名指定不同目录
+打开`httpd.conf`配置文件
+
+    vi /etc/httpd/conf/httpd.conf
+
+方法1：
 
     NameVirtualHost *:80
     
