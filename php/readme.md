@@ -2,6 +2,7 @@
  - 1.1.[php基础入门](1.1.md)
 * 第3章 PHP MySQL
  - 3.1.[php mysql函数](3.1.md)
+ - 3.2.[php pdo MySQL](3.2.md)
  - 3.5.[php 数组](3.5.md)
 * 第5章
  - 5.3.[php控制语句和运算符](5.3.md)
