@@ -16,5 +16,7 @@
  - 3.8.[JavaScript正则表达式](3.8.md)
  - 3.9.[JavaScript学习笔记](3.9.md)
  - 3.10.[JavaScript变量、作用域及内存](3.10.md)
+ - 3.11.[JavaScript内置对象](3.11.md)
+ - 3.12.[JavaScript面向对象和原型](3.12.md)
 * 相关工具
  - x.1.[Adobe Dreamweaver CS6入门](x.1.md)
