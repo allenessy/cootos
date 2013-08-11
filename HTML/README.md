@@ -18,5 +18,6 @@
  - 3.10.[JavaScript变量、作用域及内存](3.10.md)
  - 3.11.[JavaScript内置对象](3.11.md)
  - 3.12.[JavaScript面向对象和原型](3.12.md)
+ - 3.13.[JavaScript匿名函数和闭包](3.13.md)
 * 相关工具
  - x.1.[Adobe Dreamweaver CS6入门](x.1.md)
