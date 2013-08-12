@@ -70,6 +70,8 @@ SSH中依次逐行执行以上命令，即可替换默认时区，更新为上�
 
             /usr/sbin/ntpdate us.pool.ntp.org
 
+北京时间国内NTP服务器:
 
+    /usr/sbin/ntpdate ntp.sjtu.edu.cn       //上海交通大学网络中心NTP服务器地址
 
 
