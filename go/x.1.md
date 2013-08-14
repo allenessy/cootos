@@ -20,4 +20,5 @@ Go web测试: [http://play.golang.org/](http://play.golang.org/)
 ###Go框架
 go-mysql-driver: [https://github.com/go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)     
 revel: [https://github.com/robfig/revel](https://github.com/robfig/revel)     
-beego: [https://github.com/astaxie/beego](https://github.com/astaxie/beego)      
+beego: [https://github.com/astaxie/beego](https://github.com/astaxie/beego)    
+groupcache: [https://github.com/golang/groupcache](https://github.com/golang/groupcache)
