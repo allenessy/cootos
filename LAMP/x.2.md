@@ -88,6 +88,8 @@ vi /etc/selinux/config
 #SELINUX=enforcing      #注释掉
 #SELINUXTYPE=targeted   #注释掉
 SELINUX=disabled        #增加
+```
+```bash
 :wq!                    #保存退出
 ```
 链接不上SSH的话，关闭SELinux就可以了    
