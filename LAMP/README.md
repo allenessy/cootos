@@ -11,4 +11,5 @@
  - x.3.[用VMware Workstation打开ChromeOS-Vanilla镜像，提示no networks are available](x.3.md)
  - x.4.[Centos下系统时间和时区的修改和设置](x.4.md)
  - x.5.[apache 绑定多个域名指定不同目录](x.5.md)
+ - x.6.[MySQL 数据库备份和恢复](x.6.md)
  
