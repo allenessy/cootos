@@ -35,7 +35,7 @@ tar -zcvf /allen/phpmyadmin.tar.gz phpmyadmin
 cd /allen
 tar -zxvpf phpmyadmin.tar.gz -C /var/lib/mysql
 ```
-保留原文件属性，解压到/var/lib/mysql目录。
+保留原文件属性，解压到`/var/lib/mysql`目录。
 ```bash
 mkdir -pv /allen
 cd /var/lib/mysql
