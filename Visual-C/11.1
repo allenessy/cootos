@@ -1,0 +1,28 @@
+###第一个MFC应用程序
+```cpp
+#include <afxwin.h>
+
+class COurApp:public CWinApp
+{
+public:
+	virtual BOOL InitInstance() override;
+};
+
+class COurWnd:public CFrameWnd
+{
+public:
+	COurWnd()
+	{
+		Create(NULL,_T("Cootos"));
+	}
+};
+
+BOOL COurApp::InitInstance(void)
+{
+	m_pMainWnd=new COurWnd;
+	m_pMainWnd->ShowWindow(m_nCmdShow);
+	return TRUE;
+}
+
+COurApp AnApplication;
+```
