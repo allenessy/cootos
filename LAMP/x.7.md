@@ -24,7 +24,7 @@ gateway=
 cat >>/etc/sysconfig/network-scripts/ifcfg-eth0:0<<EOF
 DEVICE=eth0:0
 BOOTPROTO=static
-IPADDR=$ip
+IPADDR=$ip1
 NETMASK=$netmask
 GATEWAY=$gateway
 onboot=YES
@@ -33,7 +33,7 @@ EOF
 cat >>/etc/sysconfig/network-scripts/ifcfg-eth0:1<<EOF
 DEVICE=eth0:1
 BOOTPROTO=static
-IPADDR=$ip
+IPADDR=$ip2
 NETMASK=$netmask
 GATEWAY=$gateway
 onboot=YES
@@ -42,7 +42,7 @@ EOF
 cat >>/etc/sysconfig/network-scripts/ifcfg-eth0:2<<EOF
 DEVICE=eth0:2
 BOOTPROTO=static
-IPADDR=$ip
+IPADDR=$ip3
 NETMASK=$netmask
 GATEWAY=$gateway
 onboot=YES
