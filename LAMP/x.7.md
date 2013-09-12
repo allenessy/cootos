@@ -11,3 +11,42 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.0.1
 onboot=YES
 ```
+实例：
+```bash
+#!/bin/sh
+ip=
+ip0=
+ip1=
+ip2=
+netmask=
+gateway=
+
+cat >>/etc/sysconfig/network-scripts/ifcfg-eth0:0<<EOF
+DEVICE=eth0:0
+BOOTPROTO=static
+IPADDR=$ip
+NETMASK=$netmask
+GATEWAY=$gateway
+onboot=YES
+EOF
+
+cat >>/etc/sysconfig/network-scripts/ifcfg-eth0:1<<EOF
+DEVICE=eth0:1
+BOOTPROTO=static
+IPADDR=$ip
+NETMASK=$netmask
+GATEWAY=$gateway
+onboot=YES
+EOF
+
+cat >>/etc/sysconfig/network-scripts/ifcfg-eth0:2<<EOF
+DEVICE=eth0:2
+BOOTPROTO=static
+IPADDR=$ip
+NETMASK=$netmask
+GATEWAY=$gateway
+onboot=YES
+EOF
+
+service network restart
+```
