@@ -3,6 +3,17 @@
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
 ```
 ```bash
+DEVICE=eth0
+HWADDR=00:0C:29:5C:FE:6D
+TYPE=Ethernet
+ONBOOT=yes
+NM_CONTROLLED=yes
+BOOTPROTO=none
+IPADDR=192.168.0.35
+NETMASK=255.255.255.0
+GATEWAY=192.168.0.1
+DNS1=8.8.8.8
+DNS2=8.8.4.4
 #--------------
 IPADDR2=192.168.10.2
 PREFIX2=24
