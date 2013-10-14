@@ -148,3 +148,22 @@ delete_transient( 'dirsize_cache' );
 //exit("$new_file !! $url");
 return apply_filters( 'wp_handle_upload', array( 'file' => $new_file,'url' => $url, 'type' => $type ), 'upload' );
 ```
+出现乱码修改方法
+
+在`wp-includes`文件夹下找到wp-db.php文件，使用文字编辑器打开，在文件第1063行 `$this->select( $this->dbname,$this->dbh );` 后面加上：`$this->query("set names utf8");` 然后重新上传到云服务上，使用。（如果您已创建了数据库，请先删除原来创建的数据库，如果不删除，官方文字依然是乱码）请一定注意。
+
+替换百度`wp-ueditor`编辑器方法
+
+百度在wordpress开发了一个非常强大的编辑软件，附件wp-ueditor.zip,具体操作方法，将文件解压到`wp-content\plugins`目录下，在打开wordpress，`仪表盘`—-`插件`—–`UEditor`（点击下方的启用），即可在文章编辑页面中使用，用用你就知道它有多么的强大了，很轻松搞定图片上传和插入到文章中的问题。（推荐使用，因为默认编辑器上传的图片会变成超链接)
+[http://ueditor.baidu.com/website/](http://ueditor.baidu.com/website/)
+
+无法连接数据库解决方法
+
+出现 建立数据库连接时出错 但再次刷新下就又可以了。
+经过大量的测试 在 `wp-config.php` 的 尾行 加一行
+```php
+define('WP_ALLOW_REPAIR', true);
+```
+我的就是这么解决的。
+
+
