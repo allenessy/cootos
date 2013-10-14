@@ -39,7 +39,7 @@ apxs:Error: Command failed with rc=65536
 ```
 .....此处省略十万八千个字
 网上给出的解决方法是要给mod_auth_mysql.c打个补丁，该补丁可在这里下载到：
-[http://www.zoosau.de/wp-content/uploads/mod_auth_mysql-300-apache-22.patch](http://www.zoosau.de/wp-content/uploads/mod_auth_mysql-300-apache-22.patch)
+[mod_auth_mysql-300-apache-22.patch](mod_auth_mysql-300-apache-22.patch)
 
 将该补丁文件放置到mod_authz_mysql的目录里，执行如下打补丁命令：
 ```bash
