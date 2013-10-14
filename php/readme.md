@@ -17,3 +17,7 @@
  - 8.1.[错误类型与基本调试方法](8.1.md)
 * 第9章
  - 9.1.[php创建动态web站点](9.1.md)
+* 其他
+ - x.1.[WordPress](x.1.md)
+ - x.2.[SAE 安装WordPress 3.5.1](x.2.md)
+ - x.3.[BAE 安装WordPress 3.5.1](x.3.md)
