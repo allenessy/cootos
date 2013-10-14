@@ -38,25 +38,28 @@ WordPress默认的是`wp-content/uploads`，这里可以根据自己喜好来填
 第三步
 
 既然SAE没有提供修改代码的权限，那么更新对新手用户来说显得太“奢侈”了，而且这个功能会无端的消耗掉你的豆豆
-编辑wp-include/update.php，移到底部，你会发现一大串的add_action(....);
+编辑`wp-include/update.php`，移到底部，你会发现一大串的
+```php
+add_action(....);
 add_action( 'load-update-core.php', 'wp_version_check' );
 add_action( 'load-update-core.php', 'wp_update_themes' );
-
+```
 保留这两行，其他全部删除，在文件尾部再加入一句
+```php
 add_action( 'load-update-core.php', 'wp_update_plugins' );
-
+```
 这样只有你手动去点击 仪表盘->更新的时候，才会检测更新。
 
 第四步
 
 这好像是3.5才新加入的代码，用来判断上传文件的执行权限来提高安全性，SAE根本无需考虑代码安全性，它们的存在却会让系统报错。
-
+```php
 // Set correct file permissions
 $stat = stat( dirname( $new_file ));
 $perms = $stat['mode'] & 0000666;
 @ chmod( $new_file, $perms );
-
-找到上面这段代码，消灭它们，wp-admin/include/file.php中有2处，wp-include/class-wp-image-editor-gd.php中有一处，其他肯定还有，但是目前没有发现他们对系统有什么影响，只要找到这3处，删除代码即可。
+````
+找到上面这段代码，消灭它们，`wp-admin/include/file.php`中有2处，`wp-include/class-wp-image-editor-gd.php中`有一处，其他肯定还有，但是目前没有发现他们对系统有什么影响，只要找到这3处，删除代码即可。
 
 第五步
 
@@ -64,11 +67,12 @@ $perms = $stat['mode'] & 0000666;
 
 罪魁祸首在imagepng imagejpeg不能用Wrappers
 
-所以我们要修改缩略图的输出方式，打开wp-include/class-wp-image-editor.php找到如下一句代码
-
+所以我们要修改缩略图的输出方式，打开`wp-include/class-wp-image-editor.php`找到如下一句代码
+```php
 $result = call_user_func_array( $function, $arguments );
+```
 修改为
-
+```php
 //$result = call_user_func_array( $function, $arguments );
 $arguments_temp = $arguments;
 $arguments_temp[1] = SAE_TMP_PATH.'image_temp.dat';
@@ -76,7 +80,7 @@ $result = call_user_func_array( $function, $arguments_temp );
 if ($result) {
 file_put_contents($arguments[1],file_get_contents(SAE_TMP_PATH.'image_temp.dat'));
 }
-
+```
 到这里，WordPress For SAE 的移植已经基本结束了。
 
 开启SAE的MemoCache缓存
@@ -569,13 +573,13 @@ return;
 }
 }
 ```
-如果在非SAE环境中安装hyper-cache，它会在wp-content目录生成一个advanced-cache.php来保存配置，最好还是能在其他环境中配置好，然后再把这个文件上传到SAE来，设置$hyper_cache_path为一个前缀，而不是路径，例如$hyper_cache_path = 'hypercache_';，这样我们可以通过pkrget和pkrdelete来操作hyper-cache的缓存。
-options.php有个777的提示需要屏蔽，其他修改都在cache.php和plugin.php中，具体修改太过繁琐就不一一贴出来了。
+如果在非SAE环境中安装hyper-cache，它会在`wp-content`目录生成一个`advanced-cache.php`来保存配置，最好还是能在其他环境中配置好，然后再把这个文件上传到SAE来，设置$hyper_cache_path为一个前缀，而不是路径，例如`$hyper_cache_path = 'hypercache_'`;，这样我们可以通过pkrget和pkrdelete来操作hyper-cache的缓存。
+`options.php`有个777的提示需要屏蔽，其他修改都在`cache.php`和`plugin.php`中，具体修改太过繁琐就不一一贴出来了。
 
-数据库缓存插件 db-cache-reloaded-fix MYSQL也是资源大户，能省则省，同 hyper-cache 一样 db-cache-reloaded-fix 在非SAE环境中也会向wp-content中写入配置文件，一个db-config.ini，一个db.php。
+数据库缓存插件 db-cache-reloaded-fix MYSQL也是资源大户，能省则省，同 hyper-cache 一样 db-cache-reloaded-fix 在非SAE环境中也会向`wp-content`中写入配置文件，一个`db-config.ini`，一个`db.php`。
 
-db.php中define( 'DBCR_CACHE_DIR', DBCR_PATH.'/cache' );也最好修改成前缀，用来识别，我的是define( 'DBCR_CACHE_DIR', 'db-cache-reloaded-fix' );
+`db.php`中`define( 'DBCR_CACHE_DIR', DBCR_PATH.'/cache' )`;也最好修改成前缀，用来识别，我的是`define( 'DBCR_CACHE_DIR', 'db-cache-reloaded-fix' )`;
 
-其他的修改都在db-functions.php里了。
+其他的修改都在`db-functions.php`里了。
 
 好累，先到这里吧。
