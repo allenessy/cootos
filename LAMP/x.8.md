@@ -8,16 +8,17 @@ SVN通用搭建方式是以Apache作为网络服务器，通过mod_dav_svn模块
 2.mod_authz_mysql的安装
 下载mod_authz_mysql：
 [http://nchc.dl.sourceforge.net/project/modauthmysql/modauthmysql/3.0.0/mod_auth_mysql-3.0.0.tar.gz](http://nchc.dl.sourceforge.net/project/modauthmysql/modauthmysql/3.0.0/mod_auth_mysql-3.0.0.tar.gz)
+
 使用如下命令进行编译：
-#如果MySQL安装在可搜索路径下，用如下方法编译
+如果MySQL安装在可搜索路径下，用如下方法编译
 ```bash
 /usr/local/apache2/bin/apxs -c -lmysqlclient -lm -lz mod_auth_mysql.c
 ```
-#如果MySQL安装在其他路径下，我们需要制定MySQL库的路径
+如果MySQL安装在其他路径下，我们需要制定MySQL库的路径
 ```bash
 /usr/local/apache2/bin/apxs -c -I/usr/local/mysql/include -L/usr/local/mysql/lib -lmysqlclient_r -lm -lz mod_auth_mysql.c
 ```
-#命令行上可以同时指定多个库路径，假如按上述方法编译提醒找不到zlib库，可按如下方法编译
+命令行上可以同时指定多个库路径，假如按上述方法编译提醒找不到zlib库，可按如下方法编译
 ```bash
 /usr/local/apache2/bin/apxs -c -I/usr/local/mysql/include -L/usr/local/mysql/lib -L/usr/local/zlib -lmysqlclient_r -lm -lz mod_auth_mysql.c
 ```
@@ -51,9 +52,10 @@ vi mod_auth_mysql.c
 ```
 找到第908行 remote_ip修改为client_ip
 修改完重新编译
-```c
+```bash
 /usr/local/apache2/bin/apxs -c -I/usr/local/mysql/include -L/usr/local/mysql/lib -lmysqlclient_r -lm -lz mod_auth_mysql.c
-
+```
+```bash
 /usr/local/apr/build-1/libtool --silent --mode=compile gcc -std=gnu99 -prefer-pic -DLINUX=2 -D_REENTRANT -D_GNU_SOURCE -g -O2 -pthread -I/usr/local/apache2/include -I/usr/local/apr/include/apr-1 -I/usr/local/apr-util/include/apr-1 -I/usr/local/mysql/include -c -o mod_auth_mysql.lo mod_auth_mysql.c && touch mod_auth_mysql.slo
 mod_auth_mysql.c: In function 'mysql_check_auth':
 mod_auth_mysql.c:1273: warning: implicit declaration of function 'ap_requires'
