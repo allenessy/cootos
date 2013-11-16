@@ -14,6 +14,6 @@ PS:今天不小心把菜单栏隐藏掉了，重装sublime text2也不能解决�
 解决方法：按住`Alt`键，点击`View`->`Show Menu`,OK，重新启动，sublime text2试试。搞定了^o^     
 
 Emmet插件       
-[http://docs.emmet.io/](http://docs.emmet.io/)
+[http://docs.emmet.io/](http://docs.emmet.io/)      
 package control插件     
 [https://sublime.wbond.net/installation](https://sublime.wbond.net/installation)
