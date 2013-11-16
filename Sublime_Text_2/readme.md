@@ -15,3 +15,5 @@ PS:今天不小心把菜单栏隐藏掉了，重装sublime text2也不能解决�
 
 Emmet插件
 [http://docs.emmet.io/](http://docs.emmet.io/)
+package control插件
+[https://sublime.wbond.net/installation](https://sublime.wbond.net/installation)
