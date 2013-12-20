@@ -1,0 +1,234 @@
+a {
+	color:#039;
+	text-decoration:none
+}
+.skin-right-hack,body {
+	background-color:#fff
+}
+.skin-top {
+	background-color:#fff
+}
+.skin-top-right {
+	background-image:url(../img/skin_163blue/top_right.jpg)
+}
+.skin-left {
+	border-color:#bdbdbd;
+	background-color:#f5f5f5;
+	box-shadow:-1px 0 1px #f8f8f8 inset
+}
+.qr .nui-ico-empty,.qr .nui-ico-plus,.qr .nui-ico-receive,.qr .nui-ico-option,.og,.fn-bg {
+	background-image:url(../img/skin_163blue/bg.png);
+	background-repeat:no-repeat
+}
+.ua-ie9 .qd .nui-tabs-item,.ua-ie8 .qd .nui-tabs-item,.ua-ie7 .qd .nui-tabs-item,.ua-ie6 .qd .nui-tabs-item,.pv,.fn-bgx {
+	background-image:url(../img/skin_163blue/bgx.png)
+}
+.frame-main-cont-head-hasBorder {
+	border-color:#d9e1e7;
+	box-shadow:0 1px 0 #ecf0f3
+}
+.frame-main-cont-head-shadow {
+	-webkit-box-shadow:1px 2px 6px #e6e5e5;
+	-moz-box-shadow:1px 2px 6px #e6e5e5;
+	-ms-box-shadow:1px 2px 6px #e6e5e5;
+	-o-box-shadow:1px 2px 6px #e6e5e5;
+	box-shadow:1px 2px 6px #e6e5e5
+}
+.ir {
+	color:#222
+}
+.he,.webIM-tinfo,.webIM-tinfo a,.mP .nui-addr-symbol,.oH {
+	color:#666!important
+}
+.oj {
+	color:#bbb
+}
+.qp .nui-ipt {
+	border-color:#b2b2b2
+}
+.qa {
+	border-color:#b9c4cf;
+	background:#dae8f6;
+	background:-webkit-linear-gradient(top,#feffff,#dae8f6);
+	background:-moz-linear-gradient(top,#feffff,#dae8f6);
+	background:-o-linear-gradient(top,#feffff,#dae8f6);
+	background:-ms-linear-gradient(top,#feffff,#dae8f6);
+	background:linear-gradient(top,#feffff,#dae8f6);
+	color:#6a6a6a
+}
+.qd .nui-tabs-item-hover {
+	border-color:#a1acb8;
+	background:#c8dcf1;
+	background:-webkit-linear-gradient(top,#feffff,#c8dcf1);
+	background:-moz-linear-gradient(top,#feffff,#c8dcf1);
+	background:-o-linear-gradient(top,#feffff,#c8dcf1);
+	background:-ms-linear-gradient(top,#feffff,#c8dcf1);
+	background:linear-gradient(top,#feffff,#c8dcf1)
+}
+.qd .nui-tabs-item-active {
+	background:#a0b0c1;
+	border-color:#808d9b;
+	color:#6a6a6a
+}
+.qd .nui-tabs-item-focus {
+	border-color:#36c
+}
+.qd .nui-tabs-item-selected {
+	background:#135ba5;
+	background:-ms-linear-gradient(top,#196fc6,#135ba5);
+	background:-o-linear-gradient(top,#196fc6,#135ba5);
+	background:-moz-linear-gradient(top,#196fc6,#135ba5);
+	background:-webkit-linear-gradient(top,#196fc6,#135ba5);
+	background:linear-gradient(top,#196fc6,#135ba5);
+	border-color:#135aa4;
+	color:#fff
+}
+.pv {
+	z-index:4
+}
+.qd .nui-tabs-item-close {
+	color:#ccc
+}
+.qd .nui-tabs-item-close-hover,.qd .nui-tabs-item-close-focus {
+	color:#5e6164;
+	background:#cbdef2;
+	background:-webkit-linear-gradient(top,#fcfdfe,#cbdef2);
+	background:-moz-linear-gradient(top,#fcfdfe,#cbdef2);
+	background:-o-linear-gradient(top,#fcfdfe,#cbdef2);
+	background:-ms-linear-gradient(top,#fcfdfe,#cbdef2);
+	background:linear-gradient(top,#fcfdfe,#cbdef2);
+	border-color:#a1acb8
+}
+.qd .nui-tabs-item-close-active {
+	background:#a0b0c1;
+	border-color:#808d9b;
+	color:#4e5257
+}
+.qd .nui-tabs-item-selected .nui-tabs-item-close {
+	color:#a2c1e2
+}
+.qd .nui-tabs-item-selected .nui-tabs-item-close-hover,.qd .nui-tabs-item-selected .nui-tabs-item-close-focus {
+	color:#064483;
+	background:#7aa9da;
+	background:-webkit-linear-gradient(top,#aac7e6,#77a7d9);
+	background:-moz-linear-gradient(top,#aac7e6,#77a7d9);
+	background:-o-linear-gradient(top,#aac7e6,#77a7d9);
+	background:-ms-linear-gradient(top,#aac7e6,#77a7d9);
+	background:linear-gradient(top,#aac7e6,#77a7d9)
+}
+.qd .nui-tabs-item-selected .nui-tabs-item-close-active {
+	background:#064483;
+	color:#9bb4cd
+}
+.om {
+	-webkit-box-shadow:-2px 2px 6px RGBA(0,0,0,.1);
+	-moz-box-shadow:-2px 2px 6px RGBA(0,0,0,.1);
+	-ms-box-shadow:-2px 2px 6px RGBA(0,0,0,.1);
+	-o-box-shadow:-2px 2px 6px RGBA(0,0,0,.1);
+	box-shadow:-2px 2px 6px RGBA(0,0,0,.1)
+}
+.qr .nui-tree-item-label-hover,.qr .nui-tree-item-label:hover {
+	background-color:#ebebeb
+}
+.qr .nui-tree-item-label-selected,.qr .nui-tree-item-label-selected:hover {
+	background-color:#e6e6e6;
+	font-weight:bold
+}
+.qr .nui-tree-item-label-selected .nui-tree-item-text {
+	text-shadow:#fff 0 1px 0
+}
+.qr .nui-tree-item-ext .nui-ico {
+	color:#bfbfbf
+}
+.qr .nui-tree-item-ext .nui-ico:hover {
+	color:#222
+}
+.kT {
+	text-shadow:#fff 0 1px 0;
+	color:#3c6692
+}
+.X .nui-bg-dark {
+	background-color:#e6ecf5
+}
+.APP-editor-active {
+	border-color:#36C
+}
+.dr {
+	background:-ms-linear-gradient(left,#fefefe,#f6f6f6);
+	background:-o-linear-gradient(left,#fefefe,#f6f6f6);
+	background:-moz-linear-gradient(left,#fefefe,#f6f6f6);
+	background:-webkit-linear-gradient(left,#fefefe,#f6f6f6);
+	background:linear-gradient(left,#fefefe,#f6f6f6)
+}
+.ek .nui-tabs-item {
+	background:-ms-linear-gradient(top,#fff,#f5f5f5);
+	background:-o-linear-gradient(top,#fff,#f5f5f5);
+	background:-moz-linear-gradient(top,#fff,#f5f5f5);
+	background:-webkit-linear-gradient(top,#fff,#f5f5f5);
+	background:linear-gradient(top,#fff,#f5f5f5)
+}
+.ek .nui-tabs-item-selected {
+	background:-ms-linear-gradient(top,#fff,#fff);
+	background:-o-linear-gradient(top,#fff,#fff);
+	background:-moz-linear-gradient(top,#fff,#fff);
+	background:-webkit-linear-gradient(top,#fff,#fff);
+	background:linear-gradient(top,#fff,#fff)
+}
+.mv .nui-tabs-item {
+	background:-ms-linear-gradient(top,#fff,#f5f5f5);
+	background:-o-linear-gradient(top,#fff,#f5f5f5);
+	background:-moz-linear-gradient(top,#fff,#f5f5f5);
+	background:-webkit-linear-gradient(top,#fff,#f5f5f5);
+	background:linear-gradient(top,#fff,#f5f5f5)
+}
+.mv .nui-tabs-item-selected {
+	background:-ms-linear-gradient(top,#fff,#fff);
+	background:-o-linear-gradient(top,#fff,#fff);
+	background:-moz-linear-gradient(top,#fff,#fff);
+	background:-webkit-linear-gradient(top,#fff,#fff);
+	background:linear-gradient(top,#fff,#fff)
+}
+.bS {
+	background:-ms-linear-gradient(top,#ffffef,#ffffcf);
+	background:-o-linear-gradient(top,#ffffef,#ffffcf);
+	background:-moz-linear-gradient(top,#ffffef,#ffffcf);
+	background:-webkit-linear-gradient(top,#ffffef,#ffffcf);
+	background:linear-gradient(top,#ffffef,#ffffcf)
+}
+.fT {
+	color:#94a5b1
+}
+.mf,.mg {
+	border-color:#bcbcbc
+}
+.mg {
+	box-shadow:0 0 3px RGBA(0,0,0,.15);
+	background-color:#fff
+}
+.mg:focus,.mg:hover,.gH {
+	background-color:#fff;
+	border-color:#999
+}
+.dV {
+	color:#666
+}
+.kg {
+	border-color:#a3bdd0
+}
+@media screen and (-webkit-min-device-pixel-ratio:1.5) {
+	.skin-top-right {
+	background-image:url(../img/skin_163blue/2x/top_right.jpg);
+	-webkit-background-size:504px 88px;
+	background-size:504px 88px
+}
+.qr .nui-ico-empty,.qr .nui-ico-plus,.qr .nui-ico-receive,.qr .nui-ico-option,.og,.fn-bg {
+	background-image:url(../img/skin_163blue/2x/bg.png);
+	-webkit-background-size:176px 368px;
+	background-size:176px 368px
+}
+.pv,.fn-bgx {
+	background-image:url(../img/skin_163blue/2x/bgx.png);
+	-webkit-background-size:6px 1024px;
+	background-size:6px 1024px
+}
+}

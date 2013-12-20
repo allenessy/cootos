@@ -2,9 +2,12 @@
  - 1.1.[HTML基础知识](1.1.md)
  - 1.2.[HTML转义字符](1.2.md)
  - 1.3.[ul、li、dl、dt、dd](1.3.md)
+ - 1.9.[web font](1.9.md)
 * 2、CSS
  - 2.1.[CSS样式表](2.1.md)
  - 2.2.[CSS sprites](2.2.md)
+ - 2.3.[CSS 高级应用](2.3.md)
+ - 2.4.[clearfix清除浮动闭合容器之:after与:before](2.4.md)
 * 3、JavaScript
  - 3.0.[HTML中如何使用JavaScript](3.0.md)
  - 3.1.[JavaScript基础知识](3.1.md)
@@ -23,3 +26,5 @@
  - 3.14.[JavaScript BOM](3.14.md)
 * 相关工具
  - x.1.[Adobe Dreamweaver CS6入门](x.1.md)
+ - x.2.[公共CDN库](x.2.md)
+ - x.3.[photoshop c6快捷键](x.3.md)

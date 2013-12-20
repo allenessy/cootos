@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			网易邮箱5.0版
+		</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<style type="text/css">
+			/* test1114 */@font-face {font-family: 'nui';src: url('http://mimg.127.net/p/font/js5/v1/neteasefont-regular.eot');src:
+			url('http://mimg.127.net/p/font/js5/v1/neteasefont-regular.eot#iefix')
+			format('embedded-opentype'),url('http://mimg.127.net/p/font/js5/v1/neteasefont-regular.woff')
+			format('woff'),url('http://mimg.127.net/p/font/js5/v1/neteasefont-regular.ttf')
+			format('truetype'),url('http://mimg.127.net/p/font/js5/v1/neteasefont-regular.svg#neteasefontRegular')
+			format('svg')}@media screen and (-webkit-min-device-pixel-ratio: 1.5){.frame-isHD{width:300px}}
+		</style>
+		<script>
+			window.gMaintime = 0;
+			try {
+				window.gMaintime = (new Date()).getTime();
+			} catch(e) {} (function() {
+				var a = ['header', 'footer', 'section', 'aside', 'article', 'nav', 'hgroup', 'figure', 'figcaption', 'time', 'mark', 'output', 'meter'];
+				for (var i = 0,
+				m = a.length; i < m; i++) {
+					document.createElement(a[i]);
+				}
+			})();
+		</script>
+		<link href="" rel="stylesheet" type="text/css" id="globeCss" />
+		<script>
+			(function() {
+				var o = new Image();
+				gCssType = 'overlay';
+				o.onload = function() {
+					gCssType = 'base64';
+					_();
+				};
+				o.onerror = function() {
+					_();
+				};
+				o.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
+				function _() {
+					s = gCssType;
+					var nHd = window.devicePixelRatio;
+					var sStr = "";
+					if (s == "base64" && nHd > 1.5) {
+						sStr = "2x";
+					}
+					document.getElementById('globeCss').href = 'http://mimg.127.net/p/js5/5.1.0b1311091550/css/' + s + '_compress' + sStr + '.css';
+				}
+			})();
+		</script>
+		<style type="text/css">
+			.rW{width:69px;background-image:url(http://mimg.127.net/p/js5/lib/img/update_15g.gif)}@media
+			only screen and (-Webkit-min-device-pixel-ratio: 1.5) {.rW{background-image:url(http://mimg.127.net/p/js5/lib/img/update_15g.gif);background-size:69px
+			18px}} .gIbx-ext-title{float:right;margin-right:-30px;} .gIbx-ext-txtLink{text-decoration:none;}
+			.gIbx-ext-txtLink:hover{text-decoration:underline} .gIbx-ext-txtLink1{font-size:16px;color:#c00;}
+			.gIbx-ext-txtLink2{color:#1F8919;font-size:16px} .gIbx-ext-split{padding:0
+			4px;} .gIbx-ext-ctrl{position:absolute;right:0;top:0;width:25px;height:22px;overflow:hidden;padding-top:9px;}
+			.gIbx-ext-ctrl .nui-ico{height:7px;width:4px;margin-top:4px;margin-left:5px;vertical-align:top}
+			.gIbx-ext-ctrl .nui-ico-close{height:auto;width:14px;margin-top:1px;} .gIbx-ext-ctrl-item{color:#bfbfbf;margin-left:1px;float:left;width:16px;height:16px;overflow:hidden;}
+			.gIbx-ext-ctrl-item:hover{color:#555;} .gIbx-ext-title{top:4px;} .gIbx-ext-txtLink1{color:#c00;font-weight:bold;}
+			.gIbx-ext-txtLink2{font-weight: bold;}
+		</style>
+		<link href="http://mimg.127.net/p/js5/5.1.0b1311091550/css/skin_163blue.css"
+		rel="stylesheet" type="text/css" id="styleCss" title="16" />
+		<script type="text/javascript">
+			window.onerror = fErr;
+			window.gStep = {};
+			function fErr(sMsg, sUrl, nLine) {
+				try {
+					if (!window.gIsDebug) {
+						var bReported = false;
+						if (window.gLastError) {
+							if (gLastError.msg == sMsg && gLastError.url == sUrl && gLastError.line == nLine) {
+								bReported = true;
+							}
+						}
+						if (!bReported) {
+							if (!window.bShowedError && sUrl && nLine) {
+								window.bShowedError = true;
+								var sStep = '';
+								if (gStep.init === false) {
+									sStep = "初始化";
+								} else if (gStep.start === false) {
+									sStep = "启动";
+								}
+								if (sStep) {
+									var sInfo = '登录邮箱' + sStep + '遇到问题，请尝试以下方法:\n·检查杀毒软件和防火墙设置\n·清除浏览网页的缓存\n·清除浏览网页的Cookies\n·Ctrl+F5 强制刷新页面\n\n·国内用户请尝试 http://email2.163.com\n·海外用户请尝试 http://hw.mail.163.com\n\n如果问题依旧请向我们反馈\n\n信息:' + sMsg + '\n路径:' + sUrl + '\n行数:' + nLine;
+									alert(sInfo);
+								}
+							}
+							var sId = "errorIframe";
+							var oDoc = parent.document;
+							var oIframe = oDoc.getElementById(sId);
+							if (!oIframe) {
+								oIframe = oDoc.createElement("IFRAME");
+								oIframe.id = sId;
+								oIframe.style.display = "none"; (oDoc.body ? oDoc.body: oDoc.head).appendChild(oIframe);
+							}
+							var sSrc = "http://count.mail.163.com/beacon/webmail.gif?product=js5&t=d&sid=" + encodeURIComponent('xAlEuhocBtSVsoNfbvccysrLPNttNfto') + "&uid=" + encodeURIComponent('vpsnet@163.com') + "&line=" + encodeURIComponent(nLine) + "&url=" + encodeURIComponent(sUrl) + "&msg=" + encodeURIComponent(sMsg);
+							if (sStep) {
+								sSrc += '&step=' + encodeURIComponent(sStep);
+							}
+							oIframe.src = sSrc;
+							window.gLastError = {
+								'msg': sMsg,
+								'url': sUrl,
+								'line': nLine
+							};
+						}
+						return true;
+					} else {
+						window.title = ('信息:' + sMsg + '\n路径:' + sUrl + '\n行数:' + nLine);
+					}
+				} catch(exp) {}
+			}
+			function fGoto(f) {
+				if (window.gStarted) {
+					f();
+				} else {
+					window.gClick = f;
+				}
+			}
+		</script>
+		<script type="text/javascript" src="http://mimg.127.net/m/ext/gad_163.js">
+		</script>
+	</head>
+	<body class="ua-notie">
+		<b style="font-family:nui!important;position:absolute;left:-10px;top:-10px;font-size:0;line-height:0">
+			z
+		</b>
+		<b class="frame-isHD" style="visibility:hidden;position:absolute;left:0;top:-20px;line-height:normal;font-size:12px">
+			isHD
+		</b>
+		<header class="frame-top" id="dvFrameTop">
+			<div class="qp">
+				<h1 class="pP ou" id="h1Logo">
+					<a href="javascript:void(0);" class="ow">
+						<img src="http://mimg.127.net/logo/163logo.gif" alt="163邮箱" border="0"
+						id="imgLogo" />
+					</a>
+				</h1>
+				<div id="divMusic" class="APP-music ox" style="display:none;">
+					<b class="APP-music-logo" title="网易邮箱音乐盒">
+					</b>
+					<div id="divMusicPlayer" class="APP-music-box" style="display:none;">
+					</div>
+				</div>
+			</div>
+			<nav class="qq" id="dvTab" role="navigation">
+				<h1 class="pB">
+					邮箱标签
+				</h1>
+			</nav>
+		</header>
+		<section class="frame-main" role="tabpanel" aria-labeledby="h1MainTitle">
+			<h1 class="frame-main-title" id="h1MainTitle">
+				收件箱
+			</h1>
+			<div class="frame-main-nav" id="dvFrameMainNav">
+				<nav class="qr" role="navigation" aria-labeledby="dvNavTitle">
+					<h1 class="pC" tabindex="0" id="dvNavTitle">
+						左侧导航
+					</h1>
+					<div class="pQ" id="dvNavTop">
+					</div>
+					<div class="pj nui-scroll" id="navtree">
+					</div>
+				</nav>
+			</div>
+			<section class="frame-main-cont frame-main-cont-first" role="main" id="secContent">
+				<div id="dvContainer">
+					<div class="frame-main-cont-sptln" id="dvSplitter">
+						<span class="frame-main-cont-sptln-inner">
+							<span class="frame-main-cont-sptln-dot">
+							</span>
+							<span class="frame-main-cont-sptln-dot">
+							</span>
+							<span class="frame-main-cont-sptln-dot">
+							</span>
+						</span>
+					</div>
+					<div id="dvWelcomeModule" style="display:">
+						<div class="frame-main-cont-body nui-scroll frame-main-cont-body-noToolbar">
+							<div class="gWel" id="dvWelcomeNormal">
+								<div class="gWel-info" style="z-index:1;">
+									<div class="gWel-wL" style="height:72px;">
+										<div class="gWel-info-greet">
+											<div class="gWel-info-greet-text">
+												<span id="welcomeTrueName" style="cursor:pointer;">
+												</span>
+												<span id="spnWelcomeGreet">
+												</span>
+											</div>
+											<div id="dvWelcomeSecurity" class="gWel-info-greet-secure">
+											</div>
+											<div id="welcomeNameSpan" class="gWel-info-greet-ipt" style="display:none">
+												<input id="welcomeNameInput" type="text" class="gWel-info-greet-inputText"
+												maxlength="30" />
+												<a id="welcomeNameSubmit" href="javascript:void(0)" class="gWel-info-greet-submit">
+												</a>
+											</div>
+											<div class="gWel-info-greet-clear">
+											</div>
+										</div>
+										<div class="gWel-info-mail">
+											<span class="nui-txt-tips">
+												未读邮件：
+											</span>
+											<a id="aWelcomeInbox" class="nui-txt-link" href="javascript:void(0);">
+												收件箱
+												<span id="stWelcomeInbox">
+													11
+												</span>
+												封
+											</a>
+											，
+											<a id="aWelcomeOther" class="nui-txt-link" href="javascript:void(0);">
+												其他文件夹
+												<span id="stWelcomeOther">
+													0
+												</span>
+												封
+											</a>
+											<span id="dvWelcomeRelate" style="display:none">
+												&nbsp;
+												<span class="gWel-info-mail-sp">
+													|
+												</span>
+												&nbsp;&nbsp;
+												<a href="javascript:void(0)" onclick='Nav.entry("MailCenterInterface","","related");Log.cache({ "welc" : "related" } ,true);'
+												class="gWel-info-mail-link">
+													关联邮箱&nbsp;
+													<strong id="stWelcomeRelate" class="nui-txt-impt">
+													</strong>
+													&nbsp;封
+												</a>
+											</span>
+											<span id="dvWelcomeRelateAdd" style="display:none">
+												&nbsp;
+												<span class="gWel-info-mail-sp">
+													|
+												</span>
+												&nbsp;&nbsp;
+												<a href="javascript:void(0)" onclick='Nav.entry("MailCenterInterface",{type:"add"},"related");Log.cache({ "welc" : "relatedother" } ,true);'
+												class="gWel-info-mail-link">
+													关联其他邮箱
+												</a>
+											</span>
+											<span id="dvWelcomeBlog" style="display:none">
+												&nbsp;
+												<span class="gWel-info-mail-sp">
+													|
+												</span>
+												&nbsp;&nbsp;
+												<span class="nui-txt-tips">
+													博客：
+												</span>
+												<strong>
+													<a id="aWelComeBlogCount" onclick='Log.cache({ "welc" : "blog" } ,true);'
+													class="nui-txt-link" href="http://blog.163.com/" target="_blank">
+													</a>
+												</strong>
+											</span>
+											<span id="dvWelcomeOptimizer" style="display:none">
+												&nbsp;
+												<span class="gWel-info-mail-sp">
+													|
+												</span>
+												&nbsp;&nbsp;
+												<span class="nui-txt-tips" id="dvWelcomeOptimizerName">
+													健康度：
+												</span>
+												<a href="javascript:void(0);" class="nui-txt-link" id="dvWelcomeOptimizerCont">
+												</a>
+											</span>
+										</div>
+									</div>
+									<div class="gWel-wR">
+										<div id="dvWelcomeQuick" class="gWel-info-more" weatherUrl="weather.jsp?skin=1&color=003399&city=-1"
+										jifenUrl="/app/jifen/wel_js5_2.jsp?sid=xAlEuhocBtSVsoNfbvccysrLPNttNfto&uid=vpsnet@163.com&color=003399&p=0">
+											<span class="gWel-info-more-empty-text">
+												便捷功能读取中，请稍候……
+											</span>
+										</div>
+										<div id="dvWelcomeQuickSize" style="display:none;">
+											邮箱容量：
+											<div class="nui-progress">
+												<span class="nui-progress-bar" title="已使用0G" style="width:116px">
+													<span class="nui-progress-bar-inner" style="width:0.03%">
+													</span>
+												</span>
+												<span class="nui-progress-text">
+													3G
+												</span>
+											</div>
+										</div>
+										<div id="dvWelcomeQuickFunc" style="display:none;">
+											开通功能：
+											<a id="welcomePop" href="javascript:void(0);" class='nui-ico nui-ico-func nui-ico-func-pop'
+											title='已开通POP3服务' onclick='Nav.entry("OptionInterface",{module:"options.OptionOutLinkModule",linkName:"smtp"});return false;'>
+											</a>
+											<a id="welcomeImap" href="javascript:void(0);" class='nui-ico nui-ico-func nui-ico-func-imap'
+											title='已开通IMAP服务' class="ico ico-func ico-func-imap" onclick='Nav.entry("OptionInterface",{module:"options.OptionOutLinkModule",linkName:"smtp"});return false;'>
+											</a>
+											<a id="welcomeAutofwd" href="javascript:void(0);" style="display:none"
+											onclick='Nav.entry("OptionInterface","options.AutoForwardModule");return false;'>
+											</a>
+											<a id="welcomeLocate" href="javascript:void(0);" style="display:none"
+											onclick='Nav.entry("OptionInterface","options.LocalStorageModule");return false;'>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div id="dvWelcomeLoginAbnormal" class="gWel-tips" style="display:none;z-index:0">
+									<div class="nui-assistBlock nui-block">
+										<span class="nui-block-close nui-close" style="cursor:pointer;" onclick="this.parentNode.parentNode.style.display = 'none';try{$.fly('#dvWelcomeNormal .nui-layer').doms[0].style.top = '30px';}catch(e){} return false;">
+											<b class="nui-ico">
+												x
+											</b>
+										</span>
+										<span id="dvWelcomeLoginAbnormalTips">
+											温馨提示：您的网易邮箱账号可能存在登录异常。
+											<a class="gWel-lt-tips-a" href="">
+												查看详情
+											</a>
+										</span>
+									</div>
+								</div>
+								<div class="gWel-main" style="z-index:0;">
+									<div class="gWel-wL">
+										<div id="dvWelRcmd" class="gWel-main-recommand">
+											<div id="dvWelcomeTab" class="gWel-main-recommand-nav">
+												<div class="gWel-main-recommand-nav-borderBottom">
+												</div>
+												<div id="dvWelcomeTab-rcmd" class="gWel-main-recommand-nav-a gWel-main-recommand-nav-a-on">
+													<div class="gWel-main-recommand-nav-a-borderLeft">
+													</div>
+													<div class="gWel-main-recommand-nav-aText">
+														邮推荐
+													</div>
+												</div>
+												<div id="dvWelcomeTab-world" class="gWel-main-recommand-nav-a" style="display:none">
+													<div class="gWel-main-recommand-nav-aText">
+														看世界
+													</div>
+												</div>
+												<div id="dvWelcomeTab-life" class="gWel-main-recommand-nav-a" style="display:none">
+													<div class="gWel-main-recommand-nav-aText">
+														懂生活
+													</div>
+												</div>
+												<div id="dvWelcomeTab-buy" class="gWel-main-recommand-nav-a" style="display:none">
+													<div class="gWel-main-recommand-nav-aText">
+														乐网购
+													</div>
+												</div>
+												<div id="dvWelcomeTab-caipiao" class="gWel-main-recommand-nav-a" style="display:none">
+													<div class="gWel-main-recommand-nav-aText">
+														买彩票
+													</div>
+												</div>
+												<div id="dvWelcomeTab-t163" class="gWel-main-recommand-nav-a" style="display:none">
+													<div class="gWel-main-recommand-nav-aText">
+														玩微博
+													</div>
+												</div>
+												<div id="dvWelcomeTab-story" class="gWel-main-recommand-nav-a" style="display:none">
+													<div class="gWel-main-recommand-nav-aText">
+														读小说
+													</div>
+												</div>
+												<a title="推荐功能设置" id="dvWelcomeTab-settting" href="javascript:void(0)"
+												class="gWel-main-recommand-nav-setting" hidefocus="hidefocus">
+													<b class="nui-ico nui-ico-option">
+													</b>
+												</a>
+											</div>
+											<div id="dvWelcomePanel" class="gWel-main-recommand-cont">
+												<div id="dvWelcomeTab-rcmd-panel" class="gWel-main-recommand-cont-panel">
+													<div id="dvWelcomeTab-rcmd-panel-cnt" class="gWel-main-recommand-cont-rcmd">
+														<script>
+															try {
+																document.write(fExtWelRcmd()[0].html);
+															} catch(e) {
+																document.write('<div class="gWel-main-recommand-cont-rcmd-loading"><b class="nui-ico nui-ico-loading"></b>加载中，请稍候...</div>');
+															}
+														</script>
+													</div>
+													<div id="dvWelcomeTab-rcmd-panel-ctrl" class="gWel-main-recommand-cont-rcmdctrl">
+													</div>
+												</div>
+												<div id="dvWelcomeTab-world-panel" loaded="n" class="gWel-main-recommand-cont-default"
+												style="display:none">
+													<iframe loadurl="http://news.163.com/special/163mail_2012/?color=003399"
+													allowTransparency="allowTransparency" class="gWel-main-recommand-cont-iframe"
+													frameborder="0" scrolling="no">
+													</iframe>
+												</div>
+												<div id="dvWelcomeTab-life-panel" loaded="n" class="gWel-main-recommand-cont-default"
+												style="display:none">
+													<iframe loadurl="http://www.lofter.com/mailEntry.do?color=003399&mail50"
+													allowTransparency="allowTransparency" class="gWel-main-recommand-cont-iframe"
+													frameborder="0" scrolling="no">
+													</iframe>
+												</div>
+												<div id="dvWelcomeTab-buy-panel" class="gWel-main-recommand-cont-panel"
+												style="display:none">
+													<div id="dvWelcomeTab-buy-panel-cnt" class="gWel-main-recommand-cont-rcmd"
+													style="padding:12px 12px 37px 12px">
+														<iframe loaded="n" loadurl="http://caipiao.163.com/mailPromote.html?color=003399&from=163mail&customizetype=default&uid=vpsnet@163.com"
+														allowTransparency="allowTransparency" class="gWel-main-recommand-cont-iframe"
+														frameborder="0" scrolling="no" style="display:none">
+														</iframe>
+														<iframe loaded="n" loadurl="http://yxp.163.com/cindex/iframeMail2/" allowTransparency="allowTransparency"
+														class="gWel-main-recommand-cont-iframe" frameborder="0" scrolling="no"
+														style="display:none">
+														</iframe>
+														<iframe loaded="n" loadurl="http://quan.163.com/promotion/mail.do" allowTransparency="allowTransparency"
+														class="gWel-main-recommand-cont-iframe" frameborder="0" scrolling="no"
+														style="display:none">
+														</iframe>
+													</div>
+													<div id="dvWelcomeTab-buy-panel-ctrl" class="gWel-main-recommand-cont-rcmdctrl">
+													</div>
+												</div>
+												<div id="dvWelcomeTab-caipiao-panel" loaded="n" class="gWel-main-recommand-cont-default"
+												style="display:none">
+													<iframe loadurl="http://caipiao.163.com/mailPromote.html?color=003399&from=163mail&customizetype=customize&uid=vpsnet@163.com"
+													allowTransparency="allowTransparency" class="gWel-main-recommand-cont-iframe"
+													frameborder="0" scrolling="no">
+													</iframe>
+												</div>
+												<div id="dvWelcomeTab-t163-panel" loaded="n" class="gWel-main-recommand-cont-default"
+												style="display:none">
+													<iframe loadurl="http://t.163.com/rank/mailRecommand.do?color=003399&from=163mail&customizetype=default&uid=vpsnet@163.com"
+													allowTransparency="allowTransparency" class="gWel-main-recommand-cont-iframe"
+													frameborder="0" scrolling="no">
+													</iframe>
+												</div>
+												<div id="dvWelcomeTab-story-panel" loaded="n" class="gWel-main-recommand-cont-default"
+												style="display:none">
+													<iframe loadurl="http://yuedu.163.com/special/0021rt/emailrecommend.html?color=003399&from=163mail&customizetype=default&uid=vpsnet@163.com"
+													allowTransparency="allowTransparency" class="gWel-main-recommand-cont-iframe"
+													frameborder="0" scrolling="no">
+													</iframe>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="gWel-wR">
+										<div id="dvWelcomeRightUp" class="gWel-main-upShow">
+										</div>
+										<div id="dvWelcomeRightDown">
+										</div>
+									</div>
+								</div>
+								<div class="gWel-footer">
+									<a onclick="Log.cache({ 'welc' : 'qiye' } ,true);" href="http://qiye.163.com/?f=w163.com"
+									target="_blank" class="gWel-lt-foot-a nui-txt-link">
+										企业邮箱
+									</a>
+									<span class="gWel-lt-foot-span">
+										|
+									</span>
+									<a onclick="Log.cache({ 'welc' : 'vip163' } ,true);" href="http://sms.vip.163.com/apps/upgrade/embeddedUpgrade.mx"
+									target="_blank" class="gWel-lt-foot-a nui-txt-link">
+										升级VIP服务
+									</a>
+									<span class="gWel-lt-foot-span">
+										|
+									</span>
+									<a onclick="Log.cache({ 'welc' : 'domainstat' } ,true);$E('interface.OutlinkInterface', function(outlink){outlink.goOutlink({key : 'domainstat', showDefTree : true});});"
+									href="javascript:void(0);" class="gWel-lt-foot-a nui-txt-link">
+										他域邮件监测
+									</a>
+									<span class="gWel-lt-foot-span">
+										|
+									</span>
+									<a onclick="Log.cache({ 'welc' : 'client' } ,true);" href="http://mail.163.com/html/client/"
+									target="_blank" class="gWel-lt-foot-a nui-txt-link">
+										邮箱客户端
+									</a>
+									<span class="gWel-lt-foot-span">
+										|
+									</span>
+									<a href="javascript:void(0);" onclick="$E('interface.OptionInterface',function(OptionInterface){OptionInterface.entry({module:'mobile_browser',link:'opt_mobileBrowser'})});Log.cache({ 'welc' : 'mobiserv' } ,true);"
+									target="_blank" class="gWel-lt-foot-a nui-txt-link">
+										手机服务
+									</a>
+									<span id="spFeedback" style="display:none">
+										<span class="gWel-lt-foot-span">
+											|
+										</span>
+										<a onclick="Log.cache({ 'welc' : 'footfaq' } ,true);" class="gWel-lt-foot-a-sp nui-txt-link"
+										href="http://mail.163.com/html/mail5faq/" target="_blank">
+											邮箱常见问题解答
+										</a>
+									</span>
+								</div>
+							</div>
+							<div id="dvWelcomeGame">
+							</div>
+						</div>
+					</div>
+					<div id="dvContainerView">
+					</div>
+				</div>
+			</section>
+		</section>
+		<footer class="skin" id="skin">
+			<div class="skin-item skin-top">
+			</div>
+			<div class="skin-item skin-top-left">
+			</div>
+			<div class="skin-item skin-top-right">
+			</div>
+			<div class="skin-item skin-left">
+			</div>
+			<div class="skin-item skin-left-top">
+			</div>
+			<div class="skin-item skin-right">
+			</div>
+			<div class="skin-item skin-right-hack">
+			</div>
+			<div class="skin-item skin-bottom">
+			</div>
+			<div class="skin-item skin-bottom-left">
+			</div>
+			<div class="skin-item skin-bottom-right">
+			</div>
+			<div class="skin-item skin-fullScreen" id="skinFullScreen">
+			</div>
+		</footer>
+		<iframe frameborder="0" style="display:none" id="ifrDownUrl" name="ifrDownUrl"
+		src="about:blank">
+		</iframe>
+		<span id="spnCheckCssLoaded" class="frame-isLoaded">
+		</span>
+		<span id="spnCheckFont" class="nui-fGetout">
+			zz
+		</span>
+		<script type="text/javascript">
+			var gUser = {
+				style: '1',
+				uid: 'vpsnet@163.com',
+				suid: '',
+				sid: 'xAlEuhocBtSVsoNfbvccysrLPNttNfto',
+				cosid: '104',
+				searchid: 'true',
+				limitMessageCount: '48000',
+				topMailCount: '10',
+				isUnlimit: false,
+				color: '003399',
+				css: 'skin_163blue',
+				skin: '01',
+				ursCookie: 'ol6UaG_XxAQegfqgQYNaK9FY2hVfMpBHqw7Hzfw3nZKebtsWYb2sMPhIGW4IiHMIgREeBxESi9lG.EcC9z61npkjl8b8vUo4cW9ky20jdin900isXiEJDaq7yenLK5knW1PS7gW6r0wCL',
+				ursAlias: '',
+				sessRelate: '',
+				authenticated2: "false",
+				newCenter: true,
+				allowRecallBeforeDays: "15"
+			};
+			var gEnvironment = {
+				readUrl: 'read/readhtml.jsp?ssid=1sVaD%2fII5NqeETg38tAkQLW3d1KTVjznMolXO5UaMu4%3d',
+				host: location.hostname,
+				domain: '163.com',
+				ver: 'js5',
+				build: '5.1.0b1311091550',
+				now: 1386849986703,
+				cacheRootPath: "http://mimg.127.net/p/js5/",
+				cacheJsPath: "http://mimg.127.net/p/js5/5.1.0b1311091550/js/",
+				cacheCssPath: "http://mimg.127.net/p/js5/5.1.0b1311091550/css/",
+				cacheImgPath: "http://mimg.127.net/p/js5/5.1.0b1311091550/img/",
+				packageName: "netease.mail.js5",
+				isDebug: false,
+				mimgUrl: "http://mimg.127.net/"
+			};
+			try {
+				switch (gEnvironment.mimgUrl) {
+				case 'http://mimg.127.net/':
+					break;
+				case 'http://mimg2.127.net/':
+					break;
+				case 'http://mimg3.127.net/':
+					break;
+				case 'http://mimg4.127.net/':
+					break;
+				default:
+					gEnvironment.mimgUrl = 'http://mimg.127.net/';
+				}
+			} catch(e) {}
+			var gAttrs = {
+				user: {
+					'user_creation_date': new Date(2013, 5, 20),
+					'addo': null,
+					'afterdel': null,
+					'aftersend_saveaddr': 1,
+					'app_city': null,
+					'autosavedraft': 1,
+					'birthday': null,
+					'city': null,
+					'clearinterval': 0,
+					'def_sec_folder': null,
+					'displaysender': null,
+					'firstpage': 0,
+					'forwardactive': null,
+					'forwarddes': null,
+					'gender': null,
+					'helptips': null,
+					'huodong_option': '0000010000001000',
+					'junkfilter': null,
+					'junkfriend': 1,
+					'junkpic': 1,
+					'junkrefuse': 1,
+					'keepspamdays': -1,
+					'lastdate': new Date(2013, 11, 8, 13, 20, 43),
+					'maxlist': 20,
+					'mms_enabled': 0,
+					'nick_name': null,
+					'ntes_buzz': '00000000000000e0',
+					'ntes_compose': null,
+					'ntes_config': '{"tab":[]}',
+					'ntes_contact': null,
+					'ntes_custom': null,
+					'ntes_defaultsender': null,
+					'ntes_defined': null,
+					'ntes_global': '0020000000000000',
+					'ntes_htmlbar': 0,
+					'ntes_inbox': null,
+					'ntes_labs': null,
+					'ntes_letter': null,
+					'ntes_option': null,
+					'ntes_product': null,
+					'ntes_rd_config': '0000000000000000000000000000000000000000000000000000000000000000',
+					'ntes_rd_temp': null,
+					'ntes_service': '{"dock":[[1,1],["m1",1],["m8",1],[7,1,1],["m5",0],["m4",0],["m3",0],["m2",0],["m6",0],["m0",0]]}',
+					'ntes_skin': '0000010000000000',
+					'op_readreceipt': null,
+					'province': '0',
+					'refuselist': null,
+					'replyf': null,
+					'safelist': null,
+					'save_sent': 0,
+					'showmusicbar': 0,
+					'style': 1,
+					'time_zone': null,
+					'true_name': null
+				},
+				cos: {
+					'pref_quota': 3072,
+					'perm_func_netfolder': false,
+					'perm_func_address_book': true,
+					'perm_func_schedule_send': true,
+					'perm_func_antivirus': true,
+					'perm_mail_webmail': true,
+					'perm_mail_pop': true,
+					'perm_mail_smtp': true,
+					'perm_mail_imap': true,
+					'perm_mail_filter': true,
+					'perm_webmail_sendmail': true,
+					'perm_webmail_html_editor': true,
+					'perm_webmail_signature': true,
+					'pref_webmail_max_signatures': 10,
+					'perm_webmail_pop_agent': true,
+					'perm_webmail_mail_sorting': true,
+					'perm_webmail_mail_get_rfc': true,
+					'perm_webmail_disp_pref': true,
+					'perm_webmail_mail_search': true,
+					'pref_smtp_max_num_rcpts': 40,
+					'pref_smtp_max_send_mail_size': 72000,
+					'pref_alias_num': 3,
+					'perm_mail_sms_notify': true,
+					'perm_smtp_auth_disabled': false,
+					'perm_mail_autoreply': true,
+					'perm_mail_autoforward': true,
+					'perm_ssl_pop': true,
+					'perm_ssl_smtp': true,
+					'perm_ssl_imap': true,
+					'perm_ssl_http': true,
+					'perm_filter_anti_spam': true,
+					'pref_antivirus_engine': '',
+					'pref_smtp_max_recv_mail_size': 72000,
+					'pref_smtp_max_mail_count': 48000,
+					'pref_webmail_style': '0=1&0=2&0=3&0=5&0=6&0=7&0=8&0=9&0=10&0=11&0=12&0=1',
+					'perm_webmail_voicemail': false,
+					'perm_webmail_videomail': false,
+					'pref_netfolder_quota': 10,
+					'pref_netfolder_max_file_size': 51200,
+					'pref_netfolder_max_file_count': 10000,
+					'perm_func_wap': true,
+					'pref_flow_limit': 'smtp:400,web:5000,webrcv:4000,websnd:3000,c_pop:500,imap:4000',
+					'perm_share': false,
+					'perm_advanced_imaging': true,
+					'pref_package_download': 1,
+					'pref_webmail_faces': '@all',
+					'perm_mail_fulltext_search': true,
+					'perm_ssl': true,
+					'perm_webmail_mmmail': true,
+					'pref_mail_archive_save_days': 0,
+					'perm_recall_mail': false,
+					'perm_func_trs': false,
+					'pref_trs_quota': 1024,
+					'pref_trs_max_file_size': 1048576,
+					'pref_trs_max_file_count': 200,
+					'pref_trs_file_expiry': 7,
+					'perm_mail_threading': false,
+					'pref_mail_preserving_days': 0,
+					'perm_attachment_manager': true,
+					'perm_web_login': true,
+					'perm_mail_summary': false,
+					'perm_active_sync': true,
+					'perm_webmail_oab': true,
+					'perm_send_virtual_user': true,
+					'perm_mail_smime': true,
+					'perm_mail_cipher': true,
+					'pref_mail_archive_lite_quota': 0,
+					'perm_calendar_sync': false,
+					'perm_mbox_share': false,
+					'pref_oab_scope': '1',
+					'perm_archive_personal_qry': false,
+					'perm_func_task': true,
+					'pref_max_folder_nest_level': 5,
+					'pref_mail_folders': 100,
+					'pref_mail_rules': 100,
+					'pref_pab_contacts': 3000,
+					'pref_pop_agent_accounts': 8,
+					'pref_upload_size': -1,
+					'pref_webmail_risky_suffix': ''
+				},
+				subcos: '',
+				folders: [{
+					'id': 1,
+					'name': '收件箱',
+					'flags': {
+						'system': true
+					},
+					'stats': {
+						'messageCount': 13,
+						'messageSize': 30684,
+						'unreadMessageCount': 11,
+						'unreadMessageSize': 25774
+					}
+				},
+				{
+					'id': 2,
+					'name': '草稿箱',
+					'flags': {
+						'system': true
+					},
+					'stats': {
+						'messageCount': 0,
+						'messageSize': 0,
+						'unreadMessageCount': 0,
+						'unreadMessageSize': 0
+					}
+				},
+				{
+					'id': 3,
+					'name': '已发送',
+					'flags': {
+						'system': true
+					},
+					'stats': {
+						'messageCount': 0,
+						'messageSize': 0,
+						'unreadMessageCount': 0,
+						'unreadMessageSize': 0
+					}
+				},
+				{
+					'id': 4,
+					'name': '已删除',
+					'flags': {
+						'system': true
+					},
+					'keepPeriod': 7,
+					'stats': {
+						'messageCount': 280,
+						'messageSize': 935768,
+						'unreadMessageCount': 238,
+						'unreadMessageSize': 718069
+					}
+				},
+				{
+					'id': 5,
+					'name': '垃圾邮件',
+					'flags': {
+						'system': true
+					},
+					'keepPeriod': 1,
+					'stats': {
+						'messageCount': 0,
+						'messageSize': 0,
+						'unreadMessageCount': 0,
+						'unreadMessageSize': 0
+					}
+				},
+				{
+					'id': 6,
+					'name': '病毒文件夹',
+					'flags': {
+						'system': true
+					},
+					'stats': {
+						'messageCount': 0,
+						'messageSize': 0,
+						'unreadMessageCount': 0,
+						'unreadMessageSize': 0
+					}
+				},
+				{
+					'id': 7,
+					'name': '广告邮件',
+					'flags': {
+						'system': true
+					},
+					'keepPeriod': 7,
+					'stats': {
+						'messageCount': 0,
+						'messageSize': 0,
+						'unreadMessageCount': 0,
+						'unreadMessageSize': 0
+					}
+				},
+				{
+					'id': 18,
+					'name': '订阅邮件',
+					'flags': {
+						'system': true
+					},
+					'keepPeriod': 30,
+					'stats': {
+						'messageCount': 0,
+						'messageSize': 0,
+						'unreadMessageCount': 0,
+						'unreadMessageSize': 0
+					}
+				}],
+				folderStats: {
+					'1,3,18': {
+						'messageCount': 13,
+						'messageSize': 30684,
+						'unreadMessageCount': 11,
+						'unreadMessageSize': 25774
+					},
+					'3,18': {
+						'messageCount': 0,
+						'messageSize': 0,
+						'unreadMessageCount': 0,
+						'unreadMessageSize': 0
+					}
+				},
+				tags: [['%26003%', null, 0, 0, -1, 0, 0, -1], ['%29027%', null, 1, 5421, -1, 0, 0, -1], ['%28037%', null, 0, 0, -1, 0, 0, -1]],
+				senders: {
+					'audited': [],
+					'unaudited': []
+				},
+				popAccounts: [] || [],
+				alias: []
+			};
+			if (gAttrs.user.maxlist == 0) {
+				gAttrs.user.maxlist = 20;
+			}
+			try {
+				document.execCommand("BackgroundImageCache", false, true);
+			} catch(e) {}
+		</script>
+		<script type="text/javascript" id="scriptReadAd" For="adRead" Event="FSCommand(command,args)">
+			DoFSCommand(command, args);
+		</script>
+		<script type="text/javascript">
+			gCommon = {
+				packageName: gEnvironment.packageName,
+				cacheJsPath: gEnvironment.cacheJsPath,
+				isDebug: gEnvironment.isDebug,
+				time: new Date(gEnvironment.now),
+				newwin: false,
+				unnormalids: [2, 4, 5, 6, 7, 15],
+				nolistids: [4, 5, 7, 15],
+				nounreadids: [4, 5]
+			};
+		</script>
+		<script type="text/javascript" src="http://mimg.127.net/external/mailpromote.js">
+		</script>
+		<script type="text/javascript" src="http://mimg.127.net/p/js5/5.1.0b1311091550/js/fix_v17_min.js">
+		</script>
+		<script type="text/javascript" src="http://mimg.127.net/p/js5/5.1.0b1311091550/js/p0.js">
+		</script>
+		<script type="text/javascript">
+			if (window.fFix) {
+				fFix("p0");
+			};
+		</script>
+		<script type="text/javascript">
+			window.gJsrestime = 0;
+			try {
+				window.gJsrestime = (new Date()).getTime();
+			} catch(e) {}
+			gStep.init = false;
+			netease.mail.js5.init();
+			gStep.init = true;
+		</script>
+		<script type="text/javascript" src="http://mimg.127.net/p/js5/5.1.0b1311091550/js/p1.js">
+		</script>
+		<script type="text/javascript">
+			if (window.fFix) {
+				fFix("p1");
+			}
+		</script>
+		<script type="text/javascript">
+			gStep.start = false;
+			netease.mail.js5.start();
+			gStep.start = true;
+		</script>
+		<script type="text/javascript" id="scriptReadAd" For="adRead" Event="FSCommand(command,args)">
+			DoFSCommand(command, args);
+		</script>
+	</body>
+
+</html>

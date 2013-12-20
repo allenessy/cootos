@@ -3,6 +3,8 @@
 * 第3章 PHP MySQL
  - 3.1.[php mysql函数](3.1.md)
  - 3.2.[php pdo MySQL](3.2.md)
+ - 3.3.[php pdo MySQL封装库](3.3.md)
+ - 3.4.[PHP SaeMySql封装库](3.4.md)
  - 3.5.[php 数组](3.5.md)
 * 第5章
  - 5.3.[php控制语句和运算符](5.3.md)
@@ -17,6 +19,8 @@
  - 8.1.[错误类型与基本调试方法](8.1.md)
 * 第9章
  - 9.1.[php创建动态web站点](9.1.md)
+* 第10章 PHP实例讲解
+ - 10.1.[php基础实例](10.1.md)
 * 其他
  - x.1.[WordPress](x.1.md)
  - x.2.[SAE 安装WordPress 3.5.1](x.2.md)
