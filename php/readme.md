@@ -6,7 +6,6 @@
  - 1.5.[字符串](1.5.md)
 * 第3章 PHP MySQL
  - 3.1.[php mysql函数](3.1.md)
- - 3.2.[php pdo MySQL](3.2.md)
  - 3.3.[php pdo MySQL封装库](3.3.md)
  - 3.4.[PHP SaeMySql封装库](3.4.md)
  - 3.5.[php 数组](3.5.md)
