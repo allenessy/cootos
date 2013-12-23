@@ -43,7 +43,10 @@ Markdown 支持有序列表和无序列表。
 ```
 [http://www.baidu.com](http://www.baidu.com)
 ```
-
+###图片
+```
+![img.png](img.png)
+```
 ###代码区块
 `//`为注释，不用输入
 ```
