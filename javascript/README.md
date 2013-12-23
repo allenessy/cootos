@@ -4,6 +4,7 @@
  - 1.9.[window函数](1.9.md)
 * javascript 高级
  - 2.1.[正则表达式](2.1.md)
+ - 2.2.[数组](2.2.md)
 * AJAX
  - 6.1.[AJAX-jQuery的load()方法](6.1.md)
  - 6.2.[AJAX-jQuery的get()方法](6.2.md)
