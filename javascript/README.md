@@ -7,6 +7,7 @@
  - 2.2.[数组](2.2.md)
  - 2.3.[Document对象](2.3.md)
  - 2.4.[创建新Document对象](2.4.md)
+ - 2.5.[浏览器](2.5.md)
 * AJAX
  - 6.1.[AJAX-jQuery的load()方法](6.1.md)
  - 6.2.[AJAX-jQuery的get()方法](6.2.md)
