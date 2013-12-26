@@ -11,16 +11,16 @@
 `Insert`           替换当前字符    
 
 #####注释
-`Ctrl+/`			注释整行
-`Ctrl+Shift+/`		注释代码块
+`Ctrl+/`			注释整行			
+`Ctrl+Shift+/`		注释代码块			
 
 #####折叠、展开代码
-`Ctrl+Shift+[`		折叠代码
-`Ctrl+Shift+]`		展开代码
+`Ctrl+Shift+[`		折叠代码			
+`Ctrl+Shift+]`		展开代码			
 
 
 
-PS:今天不小心把菜单栏隐藏掉了，重装sublime text2也不能解决，网上也没找到对应的快捷键。      
+PS:今天不小心把菜单栏隐藏掉了，重装sublime text3也不能解决，网上也没找到对应的快捷键。      
 解决方法：按住`Alt`键，点击`View`->`Show Menu`,OK，重新启动，sublime text2试试。搞定了^o^     
 
 Emmet插件       
