@@ -17,3 +17,5 @@
  - x.5.[apache 绑定多个域名指定不同目录](x.5.md)
  - x.6.[MySQL 数据库备份和恢复](x.6.md)
  - x.7.[centos 单网卡 多IP](x.7.md)
+ - x.8.[mod_auth_mysql](x.8.md)
+ - x.9.[SQLSTATE[HY000] [2002] No such file or directory](x.9.md)
