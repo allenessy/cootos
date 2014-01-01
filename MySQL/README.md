@@ -7,5 +7,8 @@
 * freeradius 数据库
  - 3.1.[freeradius 基础入门](3.1.md)
  - 3.2.[freeeadius与mysql的最大连接数](3.2.md)
+* MySQL 高级
+ - 5.2.[时间运算](5.2.md)
+ - 5.3.[将日期和时间格式化的函数](5.3.md)
 * 其他
  - x.1.[MySQL Workbench](x.1.md)
