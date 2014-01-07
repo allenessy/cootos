@@ -19,5 +19,7 @@
  - 6.4.[AJAX-jQuery的ajax()方法](6.4.md)
 * jQuery
  - 7.7.[jQuery 解析JSON数据](7.7.md)
+* Node.js
+ - 8.1.[下载安装Node.js](8.1.md)
 * JS库
  - x.1.[JS库](x.1.md)
