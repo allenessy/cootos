@@ -1,0 +1,136 @@
+#####cd命令
+切换目录 			
+cd [目录]
+```bash
+cd /	//切换到根目录
+cd ..	//回到上一级目录
+```
+#####pwd命令
+显示当前所在的工作目录
+```bash
+pwd
+```
+#####touch命令
+创建空文件			
+touch [文件名]
+```bash
+touch newfile
+```
+#####mkdir
+创建新目录
+mkdir [目录名]
+```bash
+mkdir newdir
+```
+#####cp命令
+复制文件或目录
+```text
+cp  -R [源文件或目录][目的目录]
+ 	-R 复制目录
+```
+复制文件
+```bash
+touch one two the
+mkdir /test
+cp one two the /test
+ls -la /test
+```
+复制目录
+```bash
+cp -R /etc /test 		//复制/etc目录到/test目录下
+cp -R . /test    		//复制当前目录下的所有内容到/test目录
+```
+ctrl+c 可以终止一个命令
+#####mv命令
+移动文件、改名			
+mv [源文件或目录][目的目录] 			
+改名
+```bash
+mv one ones
+mv /test/one /test/ones
+```
+移动文件到/test目录下
+```bash
+mv one /test
+mv one /test/ones
+```
+#####rm命令
+删除文件
+```text		
+rm -r [文件或目录]
+   -r 删除目录
+   -f 强制性删除
+```
+删除文件
+```bash
+rm file
+```
+删除目录
+```bash
+rm -r dir
+```
+强制性删除
+```bash
+rm -rf dir
+```
+#####cat命令
+显示文件内容			
+cat [文件名]
+```bash
+cat /etc/my.cnf
+```
+#####more命令
+分页显示文件内容
+```text
+(空格)或f	显示下一页
+(Enter)		显示下一行
+q或Q 		退出
+```
+```bash
+more /etc/my.cnf
+```
+#####head命令
+查看文件的前几行,默认显示10行
+```text		
+head -num [文件名]
+     -num 显示文件的前num行
+```
+```bash
+head -5 /etc/my.cnf
+```
+#####tail命令
+查看文件的最后几行,默认显示10行		
+```text
+tail -num [文件名]
+	 -num 显示文件的最后num行
+	 -f   动态显示文件内容
+```
+```bash
+tail -f /var/log/messages
+```
+#####ln命令
+产生链接文件
+```text
+ln -s [源文件][目标文件]
+   -s 创建软链接
+```
+创建软链接文件,软链接指向源文件，是一个符号链接
+```bash
+ln -s /etc/my.cnf /test/my.cnf
+ls -l /etc/my.cnf /test/my.cnf
+```
+创建一个硬链接文件,硬链接文件于拷贝，并且同步更新
+```bash
+ln /etc/my.cnf /test/my.cnf
+ls -l /etc/my.cnf /test/my.cnf
+```
+当删除源文件后，软链接无法访问，硬链接依然存在，并可以正常访问。
+```bash
+touch one
+ln -s one one.a
+ln one one.b
+ls -i
+```
+硬链接不能跨文件系统			
+我们会发现硬链接的i节点是一样的，所以系统向两个文件，都写入了内容，所有文件都是有i节点的，如果没有，那就访问不了,i节点就是数字标识
+
