@@ -21,5 +21,6 @@
  - 7.7.[jQuery 解析JSON数据](7.7.md)
 * Node.js
  - 8.1.[下载安装Node.js](8.1.md)
+ - 8.2.[一个基础的HTTP服务器](8.2.md)
 * JS库
  - x.1.[JS库](x.1.md)
