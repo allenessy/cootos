@@ -13,6 +13,7 @@
  - 2.2.[grep命令](2.2.md)
  - 2.3.[正则表达式](2.3.md)
  - 2.4.[命令的执行](2.4.md)
+ - 2.5.[here文档](2.5.md)
 * 常见错误
  - x.1.[-bash: ./one.sh: Permission denied](x.1.md)
  - x.2.[-bash: ./one.sh: /bin/sh^M: bad interpreter: No such file or directory](x.2.md)
