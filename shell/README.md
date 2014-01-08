@@ -8,6 +8,7 @@
  - 1.7.[case语句](1.7.md)
  - 1.8.[命令列表](1.8.md)
  - 1.9.[函数](1.9.md)
+ - 2.0.[命令](2.0.md)
 * 常见错误
  - x.1.[-bash: ./one.sh: Permission denied](x.1.md)
  - x.2.[-bash: ./one.sh: /bin/sh^M: bad interpreter: No such file or directory](x.2.md)
