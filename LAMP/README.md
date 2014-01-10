@@ -12,8 +12,8 @@
  - 1.2.[LAMP](1.2.md)
  - 1.3.[编译安装MySQL](1.3.md)
  - 1.5.[编译安装Pure-FTPd](1.5.md)
-* bash编程
- - 2.1.[bash基础入门](2.1.md)
+* Linux常用命令
+ - 2.1.[cp 命令](2.1.md)
 * VPN
  - 3.1.[PPTPD](3.1.md)
  - 3.3.[SOCKS5](3.3.md)
