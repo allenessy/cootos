@@ -34,5 +34,6 @@
  - 11.2.[MFC快速入门](11.2.md)
  - 11.3.[MFC 写的一个简单的登陆界面](11.3.md)
 * 连接MySQL数据库
+ - x.0.[boost库](x.0.md)
  - x.1.[MySQL Connector/C](x.1.md)
  - x.2.[MySQL Connector/C++](x.2.md)
