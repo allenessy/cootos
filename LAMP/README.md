@@ -31,3 +31,4 @@
  - x.8.[mod_auth_mysql](x.8.md)
  - x.9.[SQLSTATE[HY000] [2002] No such file or directory](x.9.md)
  - x.10.[Found a swap file by the name](x.10.md)
+ - x.11.[修改本地DNS](x.11.md)
