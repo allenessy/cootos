@@ -18,6 +18,7 @@
  - 2.3.[telnet命令](2.3.md)
 * VPN
  - 3.1.[PPTPD](3.1.md)
+ - 3.2.[L2TP](3.2.md)
  - 3.3.[SOCKS5](3.3.md)
  - 3.4.[freeradius](3.4.md)
  - 3.5.[OpenVPN](3.5.md)
