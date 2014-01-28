@@ -9,3 +9,7 @@
 ```text
 17.151.36.30 	gs.apple.com
 ```
+itunes下载的升级文件保存在
+```text
+C:\Users\用户名\AppData\Roaming\Apple Computer\iTunes\iPhone Software Updates
+```
