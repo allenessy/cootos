@@ -42,7 +42,7 @@ int main()
 		fprintf(stderr, "mysql_init failed\n");
 		return EXIT_FAILURE;
 	}
-	conn_ptr = mysql_real_connect(conn_ptr, "localhost", "root", "xt246402", "mysql", 0, NULL, 0);
+	conn_ptr = mysql_real_connect(conn_ptr, "localhost", "root", "secret", "mysql", 0, NULL, 0);
 
 	if (conn_ptr){
 		printf("Connection sucess\n");
