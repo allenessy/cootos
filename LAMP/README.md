@@ -22,6 +22,11 @@
  - 3.3.[SOCKS5](3.3.md)
  - 3.4.[freeradius](3.4.md)
  - 3.5.[OpenVPN](3.5.md)
+* Debian
+ - 4.1.[Debian安装](4.1.md)
+ - 4.2.[Debian手动设置IP地址](4.2.md)
+ - 4.3.[Debian vi编译器使用方法](4.3.md)
+ - 4.4.[Debian 配置apt-get源安装SSH](4.4.md)
 * 常见问题
  - x.1.[Vmware克隆一个centos系统但网卡不能用的问题](x.1.md)
  - x.2.[修改SSH端口_免密码证书登录](x.2.md)
@@ -35,3 +40,4 @@
  - x.10.[Found a swap file by the name](x.10.md)
  - x.11.[修改本地DNS](x.11.md)
  - x.12.[苹果验证服务器](x.12.md)
+ - x.13.[Linux查看操作系统和内核版本](x.13.md)
