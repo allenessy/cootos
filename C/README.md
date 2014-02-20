@@ -4,6 +4,7 @@
  - 0.3.[string.h](0.3.md)
  - 0.4.[errno.h](0.4.md)
  - 0.5.[getopt.h](0.5.md)
+ - 0.6.[signal.h](0.6.md)
 * 基础知识
  - 1.0.[gcc、gdb使用方法](1.0.md)
  - 1.1.[c程序入门](1.1.md)
@@ -61,7 +62,9 @@
  - 8.7.[int argc, char *argv](8.7.md)
  - 8.8.[fcntl文件锁函数](8.8.md)
  - 8.9.[exec函数族](8.9.md)
- - 9.10.[使用FD_CLOEXEC实现close-on-exec](8.10.md)
+ - 8.10.[使用FD_CLOEXEC实现close-on-exec](8.10.md)
+ - 8.11.[F_SETFL、F_GETFL使用说明](8.11.md)
+ - 8.12.[select函数非阻塞socket编程](8.12.md)
 * 使用C语言访问 MySQL 数据库
  - 9.0.[连接MySQL](9.0.md)
 * 错误
