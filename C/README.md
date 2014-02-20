@@ -59,6 +59,9 @@
  - 8.5.[IO函数](8.5.md)
  - 8.6.[va_stat函数可变参数，不限定参数个数...](8.6.md)
  - 8.7.[int argc, char *argv](8.7.md)
+ - 8.8.[fcntl文件锁函数](8.8.md)
+ - 8.9.[exec函数族](8.9.md)
+ - 9.10.[使用FD_CLOEXEC实现close-on-exec](8.10.md)
 * 使用C语言访问 MySQL 数据库
  - 9.0.[连接MySQL](9.0.md)
 * 错误
