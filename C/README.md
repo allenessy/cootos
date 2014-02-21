@@ -65,6 +65,7 @@
  - 8.10.[使用FD_CLOEXEC实现close-on-exec](8.10.md)
  - 8.11.[F_SETFL、F_GETFL使用说明](8.11.md)
  - 8.12.[select函数非阻塞socket编程](8.12.md)
+ - 8.13.[setsockopt函数,设置套接口的选项](8.13.md)
 * 使用C语言访问 MySQL 数据库
  - 9.0.[连接MySQL](9.0.md)
 * 错误
