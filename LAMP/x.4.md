@@ -74,6 +74,7 @@ vi /etc/rc.local
 ```bash
 /usr/sbin/ntpdate ntp.sjtu.edu.cn       //上海交通大学网络中心NTP服务器地址
 ```
+
 #####自动校对北京时间shell脚本
 ```bash
 #/bin/sh
