@@ -27,6 +27,9 @@
  - 4.2.[Debian手动设置IP地址](4.2.md)
  - 4.3.[Debian vi编译器使用方法](4.3.md)
  - 4.4.[Debian 配置apt-get源安装SSH](4.4.md)
+* FreeBSD
+ - 5.1.[FreeBSD安装](5.1.md)
+ - 5.2.[FreeBSD设置SSH](5.2.md)
 * 常见问题
  - x.1.[Vmware克隆一个centos系统但网卡不能用的问题](x.1.md)
  - x.2.[修改SSH端口_免密码证书登录](x.2.md)
