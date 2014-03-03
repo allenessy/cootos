@@ -37,6 +37,8 @@
 * Windows编程
  - 15.0.[第一个Windows程序、WinMain、MessageBox](15.0.md)
  - 15.1.[Windows数据类型](15.1.md)
+ - 15.2.[WNDCLASS结构类型](15.2.md)
+ - 15.3.[Socket通信](15.3.md)
 * 连接MySQL数据库
  - x.0.[boost库](x.0.md)
  - x.1.[MySQL Connector/C](x.1.md)
